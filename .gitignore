@@ -1,5 +1,6 @@
 # VS Code
 .vscode/
+.prettierignore
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
