@@ -1,44 +1,89 @@
 # Square Circle Holiday Park
 
+![last commit](https://img.shields.io/github/last-commit/malmgrenola/square-circles) ![w3c-validation](https://img.shields.io/w3c-validation/default?targetUrl=https%3A%2F%2Fgoogle.com%2F) ![file count](https://img.shields.io/github/directory-file-count/malmgrenola/square-circles)
+
 [View the live project here.](http://endoftheinternet.com/)
+
+## Description
 
 This is the main website for Square Circles Holiday Park. It is designed to be responsible and accessible on a range of devices, making it easy to navigate for potential campers and team members.
 
 ![Screenshot image](wireframes/screenshot.png)
 
+## Table of contents
+
+- [Square Circle Holiday Park](#square-circle-holiday-park)
+- [Description](#description)
+- [Table of Contents](#table-of-contents)
+- [UX](#ux)
+  - [User stories](#user-stories)
+  - [Design](#design)
+  - [Wireframes](#wireframes)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+  - [Languages Used](#languages-used)
+  - [Frameworks, Libraries & Programs Used](#frameworks--libraries---programs-used)
+- [Data models](#data-models)
+- [Testing](#testing)
+  - [Testing User Stories from User Experience (UX) Section](#testing-user-stories-from-user-experience--ux--section>)
+  - [Further Testing](#further-testing)
+  - [Known bugs](#known-bugs)
+- [Deployment](#deployment)
+- [Development](#development)
+- [Credits](#credits)
+  - [Code](#code)
+  - [Content](#content)
+  - [Media](#media)
+  - [Acknowledgements](#acknowledgements)
+
 ## User Experience (UX)
+
+[( Back to Top )](#table-of-contents)
 
 ### User stories
 
 #### Viewing and Navigation goals
 
-- As an individual, I Want to be able to do something so that I can achieve the goal Im after.
-- As an individual, I Want to be able to do something else so that I can achieve another goal.
+1. As a customer, I want to be able to view and list all products so that I can decide what to purchase.
+2. As an customer, I want to be able to view the totals of my purchases at anytime so that I can spend a little more without over budget.
+3. As a site user, I want to come in direct contact so I can ask any questions.
+4. As a site user, I want to see how the facilities looks, so I can decide if it is what Im looking to purchase.
 
 #### Registration and user accounts goals
 
-- As an individual, I Want to be able to do something so that I can achieve the goal Im after.
-- As an individual, I Want to be able to do something else so that I can achieve another goal.
+1. As an site user, I Want to be able to register for an account so that I can have a personal account and be able to view my details.
+2. As an site user, I Want to be able to login and logout so that I can access my personal account information.
+3. As an site user, I Want to be able to recover my password in case i forget it so that I can recover access to my account.
+4. As an site user, I Want to be able to have a personalized user profile so I can view my personal order history and reservations.
 
 #### Sorting and searching goals
 
-- As an individual, I Want to be able to do something so that I can achieve the goal Im after.
-- As an individual, I Want to be able to do something else so that I can achieve another goal.
+1. As an site user, I Want to be able to list the products so that I can quickly identify the best priced product and identify the category.
+2. As an site user, I Want to be able to sort the list of products so that I can quickly find what Im looking for.
+3. As an site user, I Want to be able to search for a product by name or description so that I can find a specific product I'd like to purchase.
+4. As an site user, I Want to be able to see what I've searched for and the number of results so I can quickly see whether the product I want is available.
+
+#### Make Reservation goals
+
+1. As a site user, I want to check for availability based on dates, so I know if I can purchase a reservation that fits in my calendar.
 
 #### Purchasing and checkout goals
 
-- As an individual, I Want to be able to do something so that I can achieve the goal Im after.
-- As an individual, I Want to be able to do something else so that I can achieve another goal.
+1. As a customer, I want to be able to schedule a reservation and put it into a basket.
+2. As a customer, I want to be able to make purchases based on my basket items.
 
 #### Check in goals
 
-- As an individual, I Want to be able to do something so that I can achieve the goal Im after.
-- As an individual, I Want to be able to do something else so that I can achieve another goal.
+1. As a visitor I want to be able to check in so I can get access to the facilities.
 
 #### Review and rate goals
 
-- As an individual, I Want to be able to do something so that I can achieve the goal Im after.
-- As an individual, I Want to be able to do something else so that I can achieve another goal.
+1. As a visitor, I want to review and rate the facilities so I can let others know what I think.
+
+#### Site owner Administration goals
+
+1. As a company administrator, I want to be able to administrate the reservations.
+2. As a company administrator, I want to be able to administrate the products the facilities has to offer.
 
 <!-- Section kept as source for writing ideas
 - #### First Time Visitor Goals
@@ -64,11 +109,26 @@ This is the main website for Square Circles Holiday Park. It is designed to be r
 
 #### Colour Scheme
 
-- The two main colours used are Square Circle white, and black.
+Colors are selected with the help of the machine learning color generator [Huemint](https://huemint.com/about/)
+
+<!--
+https://huemint.com/bootstrap-basic/#palette=fce0c8-ffffff-591535-984464-d55886-ecc8d8
+
+https://huemint.com/bootstrap-basic/#palette=fce0c8-ffffff-591535-984464-d55886-ecc8d8
+
+https://huemint.com/website-2/#palette=fffeec-2d2e30-0079b2-d82b68
+
+https://huemint.com/bootstrap-basic/#palette=fffeec-ffffff-2d2e30-d82b68-0079b2-25b76b
+
+-->
 
 #### Typography
 
-- No special font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly. No special font is a clean font used when no fot is selected, so it is both attractive and appropriate.
+Typography on the website is selected and combined based on the [deep learning project](https://github.com/Jack000/fontjoy) [fontjoy](https://fontjoy.com/).
+
+- [Assistant](https://fonts.google.com/specimen/Assistant) is the main font used throughout the whole website.
+- [PT Sans Caption](https://fonts.google.com/specimen/PT+Sans+Caption) is used for captions.
+- [Fira Sans](https://fonts.google.com/specimen/Fira+Sans) is used for headers.
 
 #### Imagery
 
@@ -82,6 +142,8 @@ This is the main website for Square Circles Holiday Park. It is designed to be r
 
 ## Features
 
+[( Back to Top )](#table-of-contents)
+
 - Responsive on all device sizes
 - Interactive elements
 - User registration and accounts
@@ -92,6 +154,8 @@ This is the main website for Square Circles Holiday Park. It is designed to be r
 
 ## Technologies Used
 
+[( Back to Top )](#table-of-contents)
+
 ### Languages Used
 
 - [HTML5](https://en.wikipedia.org/wiki/HTML5)
@@ -101,7 +165,7 @@ This is the main website for Square Circles Holiday Park. It is designed to be r
 
 ### Frameworks, Libraries & Programs Used
 
-1. [Bootstrap 45.1:](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
+1. [Bootstrap 5.1:](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
    - Bootstrap was used to assist with the responsiveness and styling of the website.
 1. [Google Fonts:](https://fonts.google.com/)
    - Google fonts were used to import fonts into the style.css file which is used on all pages throughout the project.
@@ -120,7 +184,13 @@ This is the main website for Square Circles Holiday Park. It is designed to be r
 1. [Visual Studio Code:](https://code.visualstudio.com/)
    - Visual Studio Code was used as Integrated development environment (IDE).
 
+## Data models
+
+[( Back to Top )](#table-of-contents)
+
 ## Testing
+
+[( Back to Top )](#table-of-contents)
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
@@ -253,12 +323,16 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 ## Deployment
 
+[( Back to Top )](#table-of-contents)
+
 The project was deployed to Heroku using the following steps...
 
 1. ...
 2. ...
 
 ## Development
+
+[( Back to Top )](#table-of-contents)
 
 1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
 2. Under the repository name, click "Clone or download".
@@ -335,6 +409,8 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 ## Credits
 
+[( Back to Top )](#table-of-contents)
+
 ### Code
 
 - [Bootstrap5](https://getbootstrap.com/docs/5.1/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
@@ -346,7 +422,6 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 ### Content
 
 - All content was written by the developer.
-
 - Psychological properties of colours text in the README.md was found [here](http://www.colour-affects.co.uk/psychological-properties-of-colours)
 
 ### Media
