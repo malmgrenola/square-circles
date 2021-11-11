@@ -6,7 +6,9 @@
 
 ## Description
 
-This is the main website for Square Circles Holiday Park. It is designed to be responsible and accessible on a range of devices, making it easy to navigate for potential campers and team members.
+This is the main website for Square Circles Holiday Park. A facility hosting guests who needs a place to stay.
+
+It is designed to be responsible and accessible on a range of devices, making it easy to navigate for potential campers and team members.
 
 ![Screenshot image](wireframes/screenshot.png)
 
@@ -82,8 +84,9 @@ This is the main website for Square Circles Holiday Park. It is designed to be r
 
 #### Site owner Administration goals
 
-1. As a company administrator, I want to be able to administrate the reservations.
-2. As a company administrator, I want to be able to administrate the products the facilities has to offer.
+1. As a site owner, I want to be able to administrate the reservations.
+2. As a cite owner, I want to be able to administrate the products the facilities has to offer.
+3. as a site owner, I want to be able to add and remove images so I can let site users know how the facilities looks.
 
 <!-- Section kept as source for writing ideas
 - #### First Time Visitor Goals
@@ -160,11 +163,13 @@ Typography on the website is selected and combined based on the [deep learning p
 
 - [HTML5](https://en.wikipedia.org/wiki/HTML5)
 - [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
-- [Python](https://www.python.org/)
 - [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [Python](https://www.python.org/)
 
 ### Frameworks, Libraries & Programs Used
 
+1. [Django](https://www.djangoproject.com/)
+   - Django framework is used for this web app
 1. [Bootstrap 5.1:](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
    - Bootstrap was used to assist with the responsiveness and styling of the website.
 1. [Google Fonts:](https://fonts.google.com/)
@@ -173,6 +178,8 @@ Typography on the website is selected and combined based on the [deep learning p
    - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
 1. [jQuery:](https://jquery.com/)
    - jQuery came with Bootstrap to make the navbar responsive but was also used for the smooth scroll function in JavaScript.
+1. [boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html#)
+   - Used to create, configure, and manage AWS services.
 1. [Git](https://git-scm.com/)
    - Git was used for version control by utilizing the GitPod terminal to commit to Git and Push to GitHub.
 1. [GitHub:](https://github.com/)
@@ -183,6 +190,8 @@ Typography on the website is selected and combined based on the [deep learning p
    - Balsamiq was used to create the [wireframes](wireframes/) during the design process.
 1. [Visual Studio Code:](https://code.visualstudio.com/)
    - Visual Studio Code was used as Integrated development environment (IDE).
+1. [small.chat](https://small.chat/)
+   - small.chat is used tp create a on site chat button for site visitors to use
 
 ## Data models
 
@@ -334,27 +343,26 @@ The project was deployed to Heroku using the following steps...
 
 [( Back to Top )](#table-of-contents)
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. Under the repository name, click "Clone or download".
-3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
-4. Open Git Bash
-5. Change the current working directory to the location where you want the cloned directory to be made.
-6. Type `git clone`, and then paste the URL you copied in Step 3.
+It is advisable to use [virtual environments and packages](https://docs.python.org/3/tutorial/venv.html) with python application.
+These guidelines includes help in add this project as a virtual environment in your local development setup.
 
-```
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-```
+### Perquisites
 
-7. Press Enter. Your local clone will be created.
+1. Confirm that python3 is installed by running `python3 --version` and confirm it's `Python 3.x.x` or higher.
 
-```
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-> Cloning into `CI-Clone`...
-> remote: Counting objects: 10, done.
-> remote: Compressing objects: 100% (8/8), done.
-> remove: Total 10 (delta 1), reused 10 (delta 1)
-> Unpacking objects: 100% (10/10), done.
-```
+1. Log in to GitHub and fork the [GitHub Square Circles Repository](https://github.com/malmgrenola/square-circles)
+1. Click "Code" and the copy url button on your fork.
+1. in a terminal run `git clone https://github.com/YOUR-GITHUB-NAME/square-circles.git` - to clone the repository to your local drive.
+1. in a terminal run `cd square-circles` - to change directory to project root folder.
+1. in a terminal run `python3 -m venv venv` - ta create a virtual environment.
+1. in a terminal run `source venv/bin/activate` to activate the virtual environment.
+1. in a terminal run `python3 -m pip install -r requirements.txt`
+1. in a terminal run `python3 manage.py migrate && python3 manage.py createsuperuser` - to migrate the database and start the create superuser process.
+1. answer the questions to create a superuser.
+1. in a terminal run `python3 manage.py runserver` to start the server.
+1. ...
+
+`pip freeze > requirements.txt`
 
 Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 
