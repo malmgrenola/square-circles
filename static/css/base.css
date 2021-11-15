@@ -1,3 +1,38 @@
+:root {
+  --bs-primary: #d82b68 !important;
+  --bs-secondary: #0079b2 !important;
+  --bs-success: #00af7b !important;
+  --bs-info: #25b76b !important;
+  --bs-warning: #d5d400 !important;
+  --bs-danger: #e34400 !important;
+  --bs-light: #fffeec !important;
+  --bs-dark: #2d2e30 !important;
+  --bs-primary-rgb: 216, 43, 104 !important;
+  --bs-secondary-rgb: 0, 121, 178 !important;
+  --bs-success-rgb: 0, 175, 123 !important;
+  --bs-info-rgb: 37, 183, 107 !important;
+  --bs-warning-rgb: 213, 212, 0 !important;
+  --bs-danger-rgb: 227, 68, 0 !important;
+  --bs-light-rgb: 255, 254, 236 !important;
+  --bs-dark-rgb: 45, 46, 48 !important;
+}
+
+body {
+  font-family: "Assistant", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 h6 {
+  font-family: "Fira Sans", sans-serif;
+}
+
 html {
   height: 100%;
+}
+
+.header-caption {
+  font-family: "PT Sans Caption", sans-serif;
 }
