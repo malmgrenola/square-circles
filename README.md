@@ -1,14 +1,14 @@
 # Square Circle Holiday Park
 
-![last commit](https://img.shields.io/github/last-commit/malmgrenola/square-circles) ![w3c-validation](https://img.shields.io/w3c-validation/default?targetUrl=https%3A%2F%2Fgoogle.com%2F) ![file count](https://img.shields.io/github/directory-file-count/malmgrenola/square-circles)
+![last commit](https://img.shields.io/github/last-commit/malmgrenola/square-circles)
 
 [View the live project here.](http://endoftheinternet.com/)
 
 ## Description
 
-This is the main website for Square Circles Holiday Park. A facility hosting guests who needs a place to stay.
+This is the main website for Square Circles Holiday Park. A facility hosting guests who needs a place to stay with their caravan, mobile home or tent. Square holiday park also facilitate cabins and activities.
 
-It is designed to be responsible and accessible on a range of devices, making it easy to navigate for potential campers and team members.
+The website is designed to be responsible and accessible on a range of devices, making it easy to navigate for potential campers and team members.
 
 ![Screenshot image](wireframes/screenshot.png)
 
@@ -114,6 +114,8 @@ It is designed to be responsible and accessible on a range of devices, making it
 
 Colors are selected with the help of the machine learning color generator [Huemint](https://huemint.com/about/)
 
+![colors image](wireframes/colors.png)
+
 <!--
 https://huemint.com/bootstrap-basic/#palette=fce0c8-ffffff-591535-984464-d55886-ecc8d8
 
@@ -130,8 +132,8 @@ https://huemint.com/bootstrap-basic/#palette=fffeec-ffffff-2d2e30-d82b68-0079b2-
 Typography on the website is selected and combined based on the [deep learning project](https://github.com/Jack000/fontjoy) [fontjoy](https://fontjoy.com/).
 
 - [Assistant](https://fonts.google.com/specimen/Assistant) is the main font used throughout the whole website.
-- [PT Sans Caption](https://fonts.google.com/specimen/PT+Sans+Caption) is used for captions.
 - [Fira Sans](https://fonts.google.com/specimen/Fira+Sans) is used for headers.
+- [PT Sans Caption](https://fonts.google.com/specimen/PT+Sans+Caption) is used for captions.
 
 #### Imagery
 
@@ -139,9 +141,9 @@ Typography on the website is selected and combined based on the [deep learning p
 
 ### Wireframes
 
-- Home Page Wireframe - [View](https://github.com/)
-- Mobile Wireframe - [View](https://github.com/)
-- Contact Us Page Wireframe - [View](https://github.com/)
+All wireframes can be found in the [wireframes folder](wireframes). They are all organised with bootstraps style prefix and descriptive name.
+
+- Home Page Wireframe - ([Large screen](wireframes/md_home.png)) ([small screen](wireframes/sm_home.png))
 
 ## Features
 
@@ -186,12 +188,16 @@ Typography on the website is selected and combined based on the [deep learning p
    - GitHub is used to store the projects code after being pushed from Git.
 1. [Photoshop:](https://www.adobe.com/ie/products/photoshop.html)
    - Photoshop was used to create the logo, resizing images and editing photos for the website.
-1. [Balsamiq:](https://balsamiq.com/)
-   - Balsamiq was used to create the [wireframes](wireframes/) during the design process.
+1. [Adobe XD:](https://www.adobe.com/products/xd.html)
+   - Adobe XD was used to create the [wireframes](wireframes/) during the design process.
 1. [Visual Studio Code:](https://code.visualstudio.com/)
    - Visual Studio Code was used as Integrated development environment (IDE).
 1. [small.chat](https://small.chat/)
    - small.chat is used tp create a on site chat button for site visitors to use
+
+<!--
+https://github.com/dangrossman/daterangepicker
+-->
 
 ## Data models
 
@@ -431,10 +437,11 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 - All content was written by the developer.
 - Psychological properties of colours text in the README.md was found [here](http://www.colour-affects.co.uk/psychological-properties-of-colours)
+- reviews https://www.kaggle.com/andrewmvd/trip-advisor-hotel-reviews & https://www.kaggle.com/soumikrakshit/anime-faces & https://www.kaggle.com/nltkdata/names
 
 ### Media
 
-- All Images were created by the developer.
+https://pikwizard.com/photo/blue-and-white-camping-tent-during-night-time/a1d82feb940d8d6fc8462233c328f5b2
 
 ### Acknowledgements
 
