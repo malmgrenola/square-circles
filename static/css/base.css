@@ -1,5 +1,6 @@
 :root {
   --bs-primary: #d82b68 !important;
+  --bs-primary-active: #aa184b !important;
   --bs-secondary: #0079b2 !important;
   --bs-success: #00af7b !important;
   --bs-info: #25b76b !important;
@@ -35,4 +36,47 @@ html {
 
 .header-caption {
   font-family: "PT Sans Caption", sans-serif;
+}
+
+.btn-rounded {
+  border-radius: 2rem;
+}
+
+.sc.btn-primary {
+  color: #fff;
+  background-color: #d82b68;
+  border-color: #d82b68;
+}
+.sc.btn-primary:hover {
+  color: #fff;
+  background-color: #aa184b;
+  border-color: #aa184b;
+}
+
+.sc.btn-primary:focus {
+  box-shadow: none;
+}
+
+.search {
+  background-color: white;
+  border-radius: 2rem;
+  padding: 0 20px 0 5px;
+}
+.search i {
+  color: rgba(0, 0, 0, 0.5);
+  margin: auto 5px;
+}
+
+input[type="search" i] {
+  appearance: auto;
+  box-sizing: border-box;
+  border: none;
+  padding: 1px 2px;
+}
+
+input[type="search" i]:focus-visible {
+  outline: -webkit-focus-ring-color auto 1px;
+  outline-color: -webkit-focus-ring-color;
+  outline-style: auto;
+  outline-width: 0;
 }
