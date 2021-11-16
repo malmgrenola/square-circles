@@ -196,6 +196,10 @@ All wireframes can be found in the [wireframes folder](wireframes). They are all
    - small.chat is used tp create a on site chat button for site visitors to use
 1. [Fontello](https://fontello.com/)
    - Fontello is used to generate missing icons needed.
+1. [django-allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)
+   - used for user account authentication.
+1. [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/install.html)
+   - Used to control the rendering behaviour of forms.
 
 <!--
 https://github.com/dangrossman/daterangepicker

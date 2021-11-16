@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-v5kn1^_wyheu!5byubx@t0^+msbe#q3e&)8+g3px6(8qkh7o@g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
 
 SITE_ID = 1
 
@@ -57,7 +57,8 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'home'
+    'home',
+    'crispy_forms',
 ]
 
 AUTHENTICATION_BACKENDS = [
@@ -85,6 +86,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'square_circles.urls'
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -101,9 +104,20 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
             ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]
+
+# Display error messages as bootstrap danger alert https://docs.djangoproject.com/en/3.2/ref/settings/#message-tags
+from django.contrib.messages import constants as message_constants
+
+MESSAGE_TAGS = {
+    message_constants.ERROR: 'danger',
+}
 
 WSGI_APPLICATION = 'square_circles.wsgi.application'
 

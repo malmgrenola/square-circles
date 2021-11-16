@@ -27,9 +27,31 @@ body {
   margin-top: 116px;
 }
 
+/* ---------------------------- Navbar */
+
 section {
   /* screen height - footer height - navbar height */
-  min-height: calc(100vh - 330px - 116px);
+  min-height: calc(100vh - 312px - 116px);
+}
+
+@media (max-width: 991px) {
+  .navbar-brand img {
+    width: 250px;
+  }
+  body {
+    margin-top: 95px;
+  }
+  section {
+    /* screen height - footer height - navbar height */
+    min-height: calc(100vh - 168px - 95px);
+  }
+}
+
+@media (max-width: 776px) {
+  section {
+    /* screen height - footer height - navbar height */
+    min-height: calc(100vh - 72px - 95px);
+  }
 }
 
 .header-caption {
@@ -42,12 +64,16 @@ h3,
 h4,
 h5 h6 {
   font-family: "Fira Sans", sans-serif;
+  text-align: center;
+  color: #2d2e30;
 }
 
 .btn-rounded {
   border-radius: 2rem;
 }
 
+/* ---------------------------- Override bootstrap colours */
+/* ---------------------------- Buttons */
 .sc.btn-primary {
   color: #fff;
   background-color: #d82b68;
@@ -61,6 +87,13 @@ h5 h6 {
 
 .sc.btn-primary:focus {
   box-shadow: none;
+}
+
+/* ---------------------------- Alerts */
+.alert-success {
+  color: white;
+  background-color: #00af7b;
+  border-color: #2c9375;
 }
 
 /* ---------------------------- Search bar */
@@ -91,8 +124,20 @@ input[type="search" i]:focus-visible {
 }
 
 /* ---------------------------- Footer */
-footer {
-  font-size: 13.75em;
+footer i {
+  font-size: 13em;
+}
+
+@media (max-width: 991px) {
+  footer i {
+    font-size: 7em;
+  }
+}
+
+@media (max-width: 776px) {
+  footer i {
+    font-size: 3em;
+  }
 }
 
 .footer-link {
@@ -101,4 +146,50 @@ footer {
 
 .footer-link:hover {
   color: rgba(255, 255, 255, 0.3);
+}
+
+/* ---------------------------- Allauth */
+
+.allauth-content .box {
+  background-color: white;
+  border: 1px solid #d82b68;
+  border-radius: 1em;
+  min-width: 50%;
+}
+
+.allauth-content p {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.allauth-content .form-group {
+  margin-top: 10px;
+}
+.allauth-content [type="submit"] {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.allauth-content label {
+  color: #2d2e30;
+  font-weight: 600;
+}
+.allauth-content .form-group {
+  margin-top: 10px;
+}
+
+/* ---------------------------- Messages */
+.message-container .alert {
+  display: inline-block;
+  padding: 2px;
+  margin: 10px;
+}
+
+.message-container .btn-alert {
+  position: relative;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  padding: 0.3em;
+  font-size: 0.75em;
+  color: inherit;
 }
