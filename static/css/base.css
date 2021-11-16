@@ -18,8 +18,22 @@
   --bs-dark-rgb: 45, 46, 48 !important;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: "Assistant", sans-serif;
+  margin-top: 116px;
+}
+
+section {
+  /* screen height - footer height - navbar height */
+  min-height: calc(100vh - 330px - 116px);
+}
+
+.header-caption {
+  font-family: "PT Sans Caption", sans-serif;
 }
 
 h1,
@@ -28,14 +42,6 @@ h3,
 h4,
 h5 h6 {
   font-family: "Fira Sans", sans-serif;
-}
-
-html {
-  height: 100%;
-}
-
-.header-caption {
-  font-family: "PT Sans Caption", sans-serif;
 }
 
 .btn-rounded {
@@ -57,10 +63,13 @@ html {
   box-shadow: none;
 }
 
+/* ---------------------------- Search bar */
 .search {
   background-color: white;
   border-radius: 2rem;
   padding: 0 20px 0 5px;
+  height: 30px;
+  margin-bottom: 10px;
 }
 .search i {
   color: rgba(0, 0, 0, 0.5);
@@ -79,4 +88,17 @@ input[type="search" i]:focus-visible {
   outline-color: -webkit-focus-ring-color;
   outline-style: auto;
   outline-width: 0;
+}
+
+/* ---------------------------- Footer */
+footer {
+  font-size: 13.75em;
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-link:hover {
+  color: rgba(255, 255, 255, 0.3);
 }

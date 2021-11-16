@@ -194,6 +194,8 @@ All wireframes can be found in the [wireframes folder](wireframes). They are all
    - Visual Studio Code was used as Integrated development environment (IDE).
 1. [small.chat](https://small.chat/)
    - small.chat is used tp create a on site chat button for site visitors to use
+1. [Fontello](https://fontello.com/)
+   - Fontello is used to generate missing icons needed.
 
 <!--
 https://github.com/dangrossman/daterangepicker
