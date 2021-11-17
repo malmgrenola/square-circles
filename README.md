@@ -50,6 +50,7 @@ The website is designed to be responsible and accessible on a range of devices, 
 2. As an customer, I want to be able to view the totals of my purchases at anytime so that I can spend a little more without over budget.
 3. As a site user, I want to come in direct contact so I can ask any questions.
 4. As a site user, I want to see how the facilities looks, so I can decide if it is what Im looking to purchase.
+5. As a site user, I want to get in contact with site owners, so I can get help if needed.
 
 #### Registration and user accounts goals
 
@@ -200,6 +201,8 @@ All wireframes can be found in the [wireframes folder](wireframes). They are all
    - used for user account authentication.
 1. [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/install.html)
    - Used to control the rendering behaviour of forms.
+1. [coverage](https://coverage.readthedocs.io/en/6.1.2/)
+   - Used to measure code coverage tests
 
 <!--
 https://github.com/dangrossman/daterangepicker
@@ -444,6 +447,7 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 - All content was written by the developer.
 - Psychological properties of colours text in the README.md was found [here](http://www.colour-affects.co.uk/psychological-properties-of-colours)
 - reviews https://www.kaggle.com/andrewmvd/trip-advisor-hotel-reviews & https://www.kaggle.com/soumikrakshit/anime-faces & https://www.kaggle.com/nltkdata/names
+- https://crownpointcampingarea.com/sitemap.html
 
 ### Media
 
