@@ -377,11 +377,17 @@ These guidelines includes help in add this project as a virtual environment in y
 1. in a terminal run `python3 manage.py runserver` to start the server.
 1. ...
 
-`pip freeze > requirements.txt`
-
 Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 
+### Development Cheat Sheet
+
+- update env requirements: `pip freeze > requirements.txt`
+- erase and clean app data: `python3 manage.py migrate <App> zero`
+- Erase and clean database: `python3 manage.py flush`
+- apply app fixtures: ``
+
 <!--
+
 ### GitHub Pages
 
 The project was deployed to GitHub Pages using the following steps...
@@ -455,4 +461,4 @@ https://pikwizard.com/photo/blue-and-white-camping-tent-during-night-time/a1d82f
 
 ### Acknowledgements
 
-- My Mentor for continuous helpful feedback.
+- https://stackoverflow.com/questions/2969348/django-ordering-numerical-value-with-order-by
