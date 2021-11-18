@@ -123,6 +123,24 @@ input[type="search" i]:focus-visible {
   outline-width: 0;
 }
 
+/* ---------------------------- Product */
+@media (min-width: 768px) {
+  #products .card:nth-child(even) .product-image {
+    order: 0;
+  }
+
+  #products .card:nth-child(odd) .product-image {
+    order: 1;
+  }
+
+  #products .card:nth-child(even) .product-content {
+    order: 1;
+  }
+
+  #products .card:nth-child(odd) .product-content {
+    order: 0;
+  }
+}
 /* ---------------------------- Footer */
 footer i {
   font-size: 13em;

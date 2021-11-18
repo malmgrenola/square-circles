@@ -26,20 +26,9 @@ class PitchAdmin(admin.ModelAdmin):
     search_fields = ('name', 'description')
 
     def get_queryset(self, request):
-        queryset = super().get_queryset(request)
-        
-        queryset = queryset.annotate(  
-            _name_as_number = Cast('name', IntegerField())).order_by('_name_as_number','name')
-        print(queryset)
+        queryset = super().get_queryset(request).annotate(  
+            _name_as_number = Cast('name', IntegerField())).order_by('_name_as_number','name',)
         return queryset
-
-    def name_as_number(self,obj):
-        obj._name_as_number
-
- 
-  
-
-    name_as_number.admin_order_field = '_name_as_number'
 
     pass
 
