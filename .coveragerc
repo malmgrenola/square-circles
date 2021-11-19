@@ -2,5 +2,9 @@
 [run]
 branch = True
 
+# no need to test internal stuff like manage.py
+omit =
+    manage.py
+
 [html]
 directory = coverage_html_report
