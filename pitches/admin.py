@@ -29,6 +29,3 @@ class PitchAdmin(admin.ModelAdmin):
         queryset = super().get_queryset(request).annotate(  
             _name_as_number = Cast('name', IntegerField())).order_by('_name_as_number','name',)
         return queryset
-
-    pass
-

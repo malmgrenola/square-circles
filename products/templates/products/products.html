@@ -2,6 +2,9 @@
 {% load static%}
 
 {% block page_header %}
+{% if query != 'None_None' %}
+    {{ products|length }} Product{% if products|length > 1 %}s{% endif %}{% if query %} found for <strong>"{{ query }}"</strong>{% endif %}
+{% endif %}
 <div class="row">
     <div class="col">
         <h1>Products</h1>
@@ -15,8 +18,6 @@
         <div class="col-md-auto py-auto my-4 box">
             Products page
         </div>
-
-        
         {% for product in products %}
         <div class="card mb-3 ps-0">
             <div class="row g-0 ">

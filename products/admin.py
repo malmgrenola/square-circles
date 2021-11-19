@@ -19,7 +19,6 @@ class ProductAdmin(admin.ModelAdmin):
     inlines = [
         PitchesInline,
     ]
-    pass
 
 
 @admin.register(Category)
@@ -30,7 +29,6 @@ class CategoryAdmin(admin.ModelAdmin):
     list_display = (
         'name',
     )
-    pass
 
 @admin.register(Pitch_assign)
 class PitchesAdmin(admin.ModelAdmin):

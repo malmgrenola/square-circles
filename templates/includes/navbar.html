@@ -7,10 +7,10 @@
     </button>
     <div class="collapse navbar-collapse align-items-end" id="navbarCollapse">
             <div class="flex-column flex-fill">
-                <form class="d-flex justify-content-center">
+                <form class="d-flex justify-content-center" method="GET" action="{% url 'products' %}">
                     <div class="d-flex search">
                     <i class="fas fa-search"></i>
-                    <input class="" type="search" placeholder="Search" aria-label="Search">
+                    <input class="search_input" name="q" type="search" placeholder="Search" aria-label="Search" value="{{ query }}">
                     </div>
                 </form>
                 <ul class="navbar-nav flex-md-row justify-content-center align-items-center text-uppercase">
