@@ -1,9 +1,9 @@
 from django.contrib import admin
-from . models import Product,Category,Pitches
+from . models import Product,Category,Pitch_assign
 
 
 class PitchesInline(admin.TabularInline):
-    model = Pitches
+    model = Pitch_assign
     # def get_queryset(self, request):
     #     field = super(PitchesInline, self).formfield_for_foreignkey(db_field, request, **kwargs)
     #     qs = super(PitchesInline, self).get_queryset(request)
@@ -32,7 +32,7 @@ class CategoryAdmin(admin.ModelAdmin):
     )
     pass
 
-@admin.register(Pitches)
+@admin.register(Pitch_assign)
 class PitchesAdmin(admin.ModelAdmin):
     pass
 

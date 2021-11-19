@@ -7,13 +7,9 @@ class Category(models.Model):
         verbose_name_plural = 'Categories'
 
     name = models.CharField(max_length=254)
-    friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
     def __str__(self):
         return self.name
-
-    # def get_friendly_name(self):
-    #     return self.friendly_name
 
 
 class Product(models.Model):
@@ -28,7 +24,7 @@ class Product(models.Model):
         return self.name
 
 
-class Pitches(models.Model):
+class Pitch_assign(models.Model):
     product = models.ForeignKey(Product, null=True, blank=True, on_delete=models.SET_NULL)
     pitch = models.OneToOneField(Pitch, null=False, on_delete=models.CASCADE)
 

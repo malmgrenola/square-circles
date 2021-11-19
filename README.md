@@ -203,6 +203,8 @@ All wireframes can be found in the [wireframes folder](wireframes). They are all
    - Used to control the rendering behaviour of forms.
 1. [coverage](https://coverage.readthedocs.io/en/6.1.2/)
    - Used to measure code coverage tests
+1. [dbdiagram.io](https://dbdiagram.io/home)
+   - Used to draw Entity-Relationship Diagrams
 1. mock <-- Remove depending on manage.py test
 
 <!--
@@ -212,6 +214,9 @@ https://github.com/dangrossman/daterangepicker
 ## Data models
 
 [( Back to Top )](#table-of-contents)
+
+Products can have assigned camping pitches the relation between them is handled in the table `Pitch_assign`
+![data model](/wireframes/square-circles.png)
 
 ## Testing
 
