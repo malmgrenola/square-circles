@@ -385,7 +385,7 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 - update env requirements: `pip freeze > requirements.txt`
 - erase and clean app data: `python3 manage.py migrate <App> zero`
 - Erase and clean database: `python3 manage.py flush`
-- apply app fixtures: ``
+- apply all app fixtures: `python manage.py loaddata initial_data`
 
 <!--
 
@@ -456,9 +456,34 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 - reviews https://www.kaggle.com/andrewmvd/trip-advisor-hotel-reviews & https://www.kaggle.com/soumikrakshit/anime-faces & https://www.kaggle.com/nltkdata/names
 - https://crownpointcampingarea.com/sitemap.html
 
+https://crownpointcampingarea.com/PDF/CrownPointSiteMap_April2019_150_9.pdf
+https://polladrasholidaypark.co.uk/seasonal-touring-pitches/
+
 ### Media
 
 https://pikwizard.com/photo/blue-and-white-camping-tent-during-night-time/a1d82feb940d8d6fc8462233c328f5b2
+https://www.pexels.com/sv-se/foto/man-bil-fordon-husvagn-753603/
+https://www.pexels.com/sv-se/foto/ljus-semester-kvinna-kreativ-7510676/
+https://www.pexels.com/sv-se/foto/kall-sno-tra-landskap-6367172/
+https://www.pexels.com/sv-se/foto/sommar-metall-bil-fordon-8607100/
+https://unsplash.com/photos/-Avc2AiE1_Q
+https://pixabay.com/sv/photos/husvagn-camping-campingplats-vild-3132180/
+https://www.pexels.com/sv-se/foto/tra-landskap-tradgard-trad-1144694/
+https://www.pexels.com/sv-se/foto/sno-landskap-natur-himmel-1290877/
+https://www.pexels.com/sv-se/foto/kall-sno-tra-ljus-3551230/
+https://www.pexels.com/sv-se/foto/kall-sno-tra-landskap-749231/
+https://www.pexels.com/sv-se/foto/natur-by-byggnad-konstruktion-4992384/
+https://www.pexels.com/sv-se/foto/vag-skog-trad-cykel-100582/
+https://www.pexels.com/sv-se/foto/arkitektur-bassangkant-hotell-simbassang-261327/
+https://www.pexels.com/sv-se/foto/stad-himmel-byggnad-flicka-7514005/
+https://www.pexels.com/sv-se/foto/kvinna-sitter-kraft-kondition-2475878/
+https://www.pexels.com/sv-se/foto/hav-strand-havsstrand-camping-2582818/
+https://www.pexels.com/sv-se/foto/landskap-natur-sommar-trad-2819554/
+https://www.pexels.com/sv-se/foto/kall-sno-landskap-natur-950058/
+https://www.pexels.com/sv-se/foto/dagsljus-farg-fargrik-hdr-206648/
+https://www.pexels.com/sv-se/foto/natur-kvinna-trad-sitter-6861137/
+
+https://realfavicongenerator.net/
 
 ### Acknowledgements
 
