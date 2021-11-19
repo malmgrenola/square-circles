@@ -203,6 +203,7 @@ All wireframes can be found in the [wireframes folder](wireframes). They are all
    - Used to control the rendering behaviour of forms.
 1. [coverage](https://coverage.readthedocs.io/en/6.1.2/)
    - Used to measure code coverage tests
+1. mock <-- Remove depending on manage.py test
 
 <!--
 https://github.com/dangrossman/daterangepicker
@@ -462,3 +463,4 @@ https://pikwizard.com/photo/blue-and-white-camping-tent-during-night-time/a1d82f
 ### Acknowledgements
 
 - https://stackoverflow.com/questions/2969348/django-ordering-numerical-value-with-order-by
+- https://medium.com/python-pandemonium/how-to-test-your-imports-1461c1113be1
