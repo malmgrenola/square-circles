@@ -17,8 +17,7 @@ class TestViews(TestCase):
 
     def test_can_tamp_with_url_on_sort_products(self):
         response = self.client.get(f'/products/?sort=fish')
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'products/products.html')
+        self.assertEqual(response.status_code, 302)
 
     def test_can_filter_products_category(self):
         response = self.client.get(f'/products/?c=fish')

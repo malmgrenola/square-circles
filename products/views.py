@@ -23,10 +23,15 @@ def all_products(request):
         direction = "-" if len(data) == 2 and data[0] == "desc" else ""
 
         try:
+            # Only validated fields can be sorted
+            if (not field == "price" and not field == "name" and not field == "category"):
+                raise ValueError
+
             products = products.order_by(f'{direction}{field}')
         except:
             # Triggers when user tamper with url manually... in a non suppoorted way!
             messages.error(request, "There is an error sorting your data!")
+            return redirect(reverse('products'))
 
     if 'c' in request.GET:
         categories = request.GET['c'].split(',')

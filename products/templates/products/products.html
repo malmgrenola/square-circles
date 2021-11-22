@@ -17,18 +17,18 @@
         </div>
         <div class="col text-end box">
             <div class="btn-group">
-                <button type="button" class="btn btn-primary sc dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                <button type="button" id="order-by" class="btn btn-primary sc dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                     Sort by...
                 </button>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item order-item" href="{% url 'products' %}?sort=price">Price (low to high)</a></li>
                     <li><a class="dropdown-item order-item" href="{% url 'products' %}?sort=desc:price">Price (high to low)</a></li>
                     <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item order-item" href="{% url 'products' %}?sort=desc:name">Name (A-Z)</a></li>
-                    <li><a class="dropdown-item order-item" href="{% url 'products' %}?sort=name">Name (Z-A)</a></li>
+                    <li><a class="dropdown-item order-item" href="{% url 'products' %}?sort=name">Name (A-Z)</a></li>
+                    <li><a class="dropdown-item order-item" href="{% url 'products' %}?sort=desc:name">Name (Z-A)</a></li>
                     <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item order-item" href="{% url 'products' %}?sort=desc:category">Category (A-Z)</a></li>
-                    <li><a class="dropdown-item order-item" href="{% url 'products' %}?sort=category">Category (Z-A)</a></li>
+                    <li><a class="dropdown-item order-item" href="{% url 'products' %}?sort=category">Category (A-Z)</a></li>
+                    <li><a class="dropdown-item order-item" href="{% url 'products' %}?sort=desc:category">Category (Z-A)</a></li>
                 </ul>
             </div>
         </div>
@@ -76,6 +76,11 @@
                 const text = $(this).text().replace(new RegExp(`${q}`, 'ig'), '<strong>\$&</strong>');
                 $(this).html(text);;
             });
+            // Set sort dropdown value
+            const sort = String(new URL(window.location).searchParams.get('sort'))
+            const data = sort === 'null' ? ['...'] : sort.split(':')
+            const field = data.length === 2 ? data[1] : data[0]
+            $('#order-by').html(`Sort by ${field}`)
         });
     </script>
 
