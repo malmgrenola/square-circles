@@ -227,6 +227,18 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 - [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://github.com/)
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://github.com/)
 
+[Coverage](https://coverage.readthedocs.io/en/6.1.2/) is used for testing and coverage report.
+
+to run a test use the terminal command `coverage run manage.py test` in the root directory.
+
+it's possible to generate a test with the terminal command `coverage html`, a folder named `coverage_html_report` is generated.
+
+It's possible to read the report by opening the file `index.html` in a browser.
+
+### Test Report
+
+![test report](/wireframes/testreport.png)
+
 ### Testing User Stories from User Experience (UX) Section
 
 #### Test Viewing and Navigation goals

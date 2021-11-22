@@ -62,10 +62,9 @@ h1,
 h2,
 h3,
 h4,
-h5 h6 {
+h5,
+h6 {
   font-family: "Fira Sans", sans-serif;
-  text-align: center;
-  color: #2d2e30;
 }
 
 .btn-rounded {
@@ -124,20 +123,49 @@ input[type="search" i]:focus-visible {
 }
 
 /* ---------------------------- Product */
+
+#products .card {
+  background-color: var(--bs-secondary);
+  color: white;
+  cursor: pointer;
+}
+#products .card:hover {
+  cursor: pointer;
+}
+
+#products .sc.btn-primary {
+  border: 1px white solid;
+}
+
+.card img {
+  width: auto;
+  height: 100%;
+  max-height: 300px;
+  object-fit: scale-down;
+}
+
+.query-format strong {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 @media (min-width: 768px) {
-  #products .card:nth-child(even) .product-image {
-    order: 0;
+  .card img {
+    max-height: 500px;
   }
 
   #products .card:nth-child(odd) .product-image {
-    order: 1;
+    order: 0;
   }
 
-  #products .card:nth-child(even) .product-content {
+  #products .card:nth-child(even) .product-image {
     order: 1;
   }
 
   #products .card:nth-child(odd) .product-content {
+    order: 1;
+  }
+
+  #products .card:nth-child(even) .product-content {
     order: 0;
   }
 }
