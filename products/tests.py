@@ -34,6 +34,15 @@ class TestViews(TestCase):
         self.assertEqual(response.request['QUERY_STRING'], 'q=')
         self.assertEqual(response.status_code, 302)
 
+    def test_session_availability(self):
+        item = Product.objects.create(
+            name='Test product item', price=22.5, description="Item description")
+        session = self.client.session
+        session["availability"] = {'start': '2021-10-01', 'end': '2021-10-03'}
+        session.save()
+        response = self.client.get('/products/')
+        self.assertEqual(response.status_code, 200)
+
 
 class TestModels(TestCase):
 

@@ -40,7 +40,7 @@
         {% for product in products %}
             <div class="card mb-3 px-0">
                 <data value="{{product.id}}">
-                    <div class="row g-0 ">
+                    <div class="row g-0">
                         <div class="col-md-4 product-image">
                             {% if product.image %}
                                 <img src="{{ MEDIA_URL }}{{product.image}}" alt="{{ product.name }} image" class="img-fluid rounded-start">
@@ -52,11 +52,22 @@
                             {% endif %}
                         </div>
                         <div class="col-md-8 product-content">
-                            <div class="card-body">
-                                <h4 class="card-title query-format">{{product.name}}</h4>
+                            <div class="card-body position-relative">
+                                {% if product.available == 0 %}
+                                <span class="position-absolute top-0 end-0 badge rounded-pill bg-primary">
+                                   Not available in the period between {{reservations_availability.start}} and {{reservations_availability.end}}
+                                </span>
+                         
+                                {% endif %}
+                                <div class="product-header "><h4 class="card-title query-format">{{product.name}} ({{ product.available }})</h4>
+                                
+                                </div
+                                
+                                
                                 <p class="card-text query-format">{{product.description}}</p>
                                 <h5 class="card-text">€ {{product.price}}</h5>
-                                <button class="btn sc btn-primary btn-rounded " type="submit">BOOK NOW</button>
+                                <button class="btn sc btn-primary btn-rounded" type="submit" {% if product.available == 0 %}disabled{% endif %}>{% if reservations_availability.start != None and reservations_availability.end != None %}BOOK NOW{% else %}Check availability{% endif %}</button>
+                                
                             </div>
                         </div>
                     </div>
@@ -87,8 +98,15 @@
     <script>
         $('.card').click(function(e) {
             // Handle product detail click
+            const type = $('#availability')[0].tagName
             const id = $(this).children('data').eq(0).val()
-            console.log(`Goto to product detail: ${id}`)
+
+            if (type === 'BUTTON'){
+                var drp = $('#availability').data('daterangepicker');
+                console.log(drp)
+                drp.show();
+            }
+            console.log(`Goto to product detail: ${id} ${type}`)
         })
     </script>
 
