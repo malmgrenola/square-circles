@@ -58,7 +58,6 @@
       <section>
         {% block page_header %}
         {% endblock %}
-        
         {% block content %}
         {% endblock %}
       </section>
@@ -85,17 +84,26 @@
             minDate: minDate,
             maxDate: maxDate, 
             maxYear: minDate.getFullYear()+1,
-          }, function(start, end, label) {
-            console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
           });
 
           function positionDatePicker(){
             const topValue = parseInt($('.daterangepicker').eq(0).css('top'), 10) 
             $('.daterangepicker').eq(0).css('top', `${topValue + 10}px`);
           }
+          
+          function setDates(ev, {startDate, endDate}){ 
+            const csrfToken = "{{ csrf_token }}";
+            const data = {'csrfmiddlewaretoken': csrfToken, 'startDate': startDate.format('YYYY-MM-DD'), 'endDate': endDate.format('YYYY-MM-DD')};
+            const url = `{% url 'set_availability' %}`;
+            $.post(url, data)
+            .done(function() {
+                location.reload();
+         });
+          }
 
           $('#availability').on('show.daterangepicker', positionDatePicker);  // Apply posiition when picker opens up
           $('#availability').on('showCalendar.daterangepicker', positionDatePicker);  // Apply posiition when a selection is done in picker
+          $('#availability').on('apply.daterangepicker', setDates);
         });
       </script>
       

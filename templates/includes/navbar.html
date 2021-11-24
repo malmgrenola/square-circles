@@ -53,7 +53,17 @@
                     {% endif %}
                     
                 </ul>
+                {% if reservations_availability.start != None and reservations_availability.end != None %}
+                <div id="availability" class="d-flex flex-row align-items-center availability-box rounded">
+                    <div class="mx-2 text-end">
+                        <p><strong>{{reservations_availability.start}}</strong> to <strong>{{reservations_availability.end}}</strong></p>
+                        <p><strong>{{reservations_availability_duration}} nights</strong></p>    
+                    </div>
+                    <div class="mx-2"><i class="fas fa-edit"></i></div>
+                </div>
+                {% else %}
                 <button id="availability" class="btn sc btn-primary btn-rounded " type="submit">Check availability</button>
+                {% endif %}
             </div>
         </div>
 </nav>

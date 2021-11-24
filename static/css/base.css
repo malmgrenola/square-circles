@@ -154,6 +154,15 @@ input[type="search" i]:focus-visible {
   outline-width: 0;
 }
 
+.availability-box {
+  color: #fff;
+  background-color: #d82b68;
+}
+
+.availability-box p {
+  margin-bottom: 0;
+}
+
 /* ---------------------------- Product */
 
 #products .card {
