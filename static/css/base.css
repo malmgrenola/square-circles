@@ -71,6 +71,38 @@ h6 {
   border-radius: 2rem;
 }
 
+.daterangepicker {
+  color: inherit;
+  background-color: #d82b68;
+  border-radius: 4px;
+  border: none;
+  top: 119px;
+}
+
+.daterangepicker td.active,
+.daterangepicker td.active:hover {
+  background-color: #d82b68;
+  color: #fff;
+}
+
+.daterangepicker .drp-selected {
+  color: #fff;
+}
+
+.daterangepicker:after {
+  top: -6px;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #d82b68;
+  border-left: 6px solid transparent;
+}
+
+.daterangepicker.opensleft:before {
+  right: 61px;
+}
+
+.daterangepicker.opensleft:after {
+  right: 63px;
+}
 /* ---------------------------- Override bootstrap colours */
 /* ---------------------------- Buttons */
 .sc.btn-primary {

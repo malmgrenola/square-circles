@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+from django.contrib.messages import constants as message_constants
 import os
 
 from pathlib import Path
@@ -48,18 +49,19 @@ LOGIN_REDIRECT_URL = '/'
 
 INSTALLED_APPS = [
     'django.contrib.admin',
-    'django.contrib.auth', # required by django-allauth
+    'django.contrib.auth',  # required by django-allauth
     'django.contrib.contenttypes',
     'django.contrib.sessions',
-    'django.contrib.messages', # required by django-allauth
+    'django.contrib.messages',  # required by django-allauth
     'django.contrib.staticfiles',
-    'django.contrib.sites', # required by django-allauth
+    'django.contrib.sites',  # required by django-allauth
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'home',
     'products',
     'pitches',
+    'reservations',
     'crispy_forms',
 ]
 
@@ -101,10 +103,11 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request', # required by django-allauth
+                'django.template.context_processors.request',  # required by django-allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
+                'reservations.contexts.reservations',
             ],
             'builtins': [
                 'crispy_forms.templatetags.crispy_forms_tags',
@@ -115,7 +118,6 @@ TEMPLATES = [
 ]
 
 # Display error messages as bootstrap danger alert https://docs.djangoproject.com/en/3.2/ref/settings/#message-tags
-from django.contrib.messages import constants as message_constants
 
 MESSAGE_TAGS = {
     message_constants.ERROR: 'danger',
