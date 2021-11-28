@@ -59,11 +59,11 @@ def all_products(request):
         queries = Q(name__icontains=query) | Q(description__icontains=query)
         products = products.filter(queries)
 
-    availability = request.session.get('availability', {})
+    travel_info = request.session.get('travel_info', {})
 
-    if not availability == {}:
-        q_check_in = datetime.strptime(availability['start'], '%Y-%m-%d')
-        q_check_out = datetime.strptime(availability['end'], '%Y-%m-%d')
+    if not travel_info == {}:
+        q_check_in = datetime.strptime(travel_info['check_in'], '%Y-%m-%d')
+        q_check_out = datetime.strptime(travel_info['check_out'], '%Y-%m-%d')
 
         for product in products:
             total = Pitch_assign.objects.filter(
