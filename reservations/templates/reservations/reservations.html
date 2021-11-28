@@ -2,9 +2,49 @@
 {% load static%}
 
 {% block page_header %}
-    reservations header
+    <h1>reservation</h1>
 {% endblock %}
 
 {% block content %}
-    reservations content
+    <div class="row justify-content-md-center mx-1">
+        <div class="col my-4">
+            {% if not reservations %}
+            No reservations yet.
+            {% endif %}
+            <table class="table table-sm table-borderless box sc-table">
+                <tbody class="">
+                {% for reservation in reservations %}
+                    <tr class="w-25 sc-row">
+                        <td class="py-3">
+                        {% if reservation.product.image %}
+                                    <img src="{{ MEDIA_URL }}{{reservation.product.image}}" alt="{{ reservation.product.name }} image" class="image-thumbnail">
+                                {% else %}
+                                    <svg class="bd-placeholder-img image-thumbnail" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                        <rect width="100%" height="100%" fill="#868e96"></rect>
+                                        <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image</text>
+                                    </svg>
+                                {% endif %}
+                        </td>
+                        <td class="py-3">
+                            <p><strong>{{reservation.product.name}}</strong></p>
+                        </td>
+                        <td class="py-3">
+                            <p>Between {{ reservation.travel_info.check_in }} and {{ reservation.travel_info.check_out }}</p>
+                            <p>{{reservation.travel_info.nights}} nights</p>
+                        </td>
+                        <td class="py-3"><p>€ {{reservation.product.price}}</p></td>
+                        <td class="py-3"><p><strong>€ {{reservation.total}}</strong></p></td>
+                        <td class="py-3"><p><a href="{% url 'remove_reservation' forloop.counter0 %}"><i class="far fa-times-circle"></i></a></p></td>
+                    </tr>
+                {% endfor %}
+                <tr>
+                    <td colspan="3"</td>
+                    <td><strong>Grand total</strong></td>
+                    <td>{{reservations_grand_total}}</td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+  </div>
 {% endblock %}

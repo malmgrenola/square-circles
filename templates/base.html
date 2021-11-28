@@ -93,8 +93,8 @@
           
           function setDates(ev, {startDate, endDate}){ 
             const csrfToken = "{{ csrf_token }}";
-            const data = {'csrfmiddlewaretoken': csrfToken, 'startDate': startDate.format('YYYY-MM-DD'), 'endDate': endDate.format('YYYY-MM-DD')};
-            const url = `{% url 'set_availability' %}`;
+            const data = {'csrfmiddlewaretoken': csrfToken, 'check_in': startDate.format('YYYY-MM-DD'), 'check_out': endDate.format('YYYY-MM-DD')};
+            const url = `{% url 'set_travel_info' %}`;
             $.post(url, data)
             .done(function() {
                 location.reload();

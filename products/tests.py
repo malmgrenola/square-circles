@@ -43,6 +43,13 @@ class TestViews(TestCase):
         response = self.client.get('/products/')
         self.assertEqual(response.status_code, 200)
 
+    def test_get_product_detail(self):
+        item = Product.objects.create(
+            name='Test product item', price=22.5, description="Item description")
+        response = self.client.get(f'/products/{item.id}/')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'products/product_detail.html')
+
 
 class TestModels(TestCase):
 

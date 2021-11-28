@@ -3,19 +3,19 @@
 
 {% block page_header %}
     <div class="row align-items-end mx-1 py-4" id='products'>
-        <div class="col box">
+        <div class="col">
             {% if query != 'None_None' %}
                 {{ products|length }} Product{% if products|length > 1 %}s{% endif %}{% if query %} found for <strong>"{{ query }}"</strong>{% endif %}
             {% endif %}
         </div>
-        <div class="col-md-auto box">
+        <div class="col-md-auto">
             {% for c in categories %}
                 <a class="category-badge text-decoration-none" href="{% url 'products' %}?c={{ c.name|urlencode  }}">
                     <span class="p-2 mt-2 badge bg-secondary">{{ c.name }}</span>
                 </a>
             {% endfor %}
         </div>
-        <div class="col text-end box">
+        <div class="col text-end">
             <div class="btn-group">
                 <button type="button" id="order-by" class="btn btn-primary sc dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                     Sort by...
@@ -59,15 +59,17 @@
                                 </span>
                          
                                 {% endif %}
-                                <div class="product-header "><h4 class="card-title query-format">{{product.name}} ({{ product.available }})</h4>
-                                
-                                </div
-                                
-                                
+                                <div class="product-header"><h4 class="card-title query-format">{{product.name}} ({{ product.available }})</h4></div>
                                 <p class="card-text query-format">{{product.description}}</p>
                                 <h5 class="card-text">€ {{product.price}}</h5>
-                                <button class="btn sc btn-primary btn-rounded" type="submit" {% if product.available == 0 %}disabled{% endif %}>{% if reservations_availability.start != None and reservations_availability.end != None %}BOOK NOW{% else %}Check availability{% endif %}</button>
-                                
+                                <p>{{ reservations_availability|length }}</p>
+                                {% if product.available > 0 %}
+                                    <a class="btn sc btn-primary btn-rounded" href="/products/{{product.id}}">READ MORE</a>
+                                    <a class="btn sc btn-primary btn-rounded" href="{% url 'add_reservation' product.id %}">Add to reservation</a>
+                                {% else %}
+                                    <a class="btn sc btn-primary btn-rounded" href="/products/{{product.id}}">READ MORE</a>
+                                    <a class="btn sc btn-primary btn-rounded" href="{% url 'add_reservation' product.id %}">Add to reservation</a>
+                                {% endif %}                                
                             </div>
                         </div>
                     </div>
@@ -83,9 +85,11 @@
         $(document).ready(function () {
             // Highligt all text user searched for
             const q = new URL(window.location).searchParams.get('q')
+            
             $('.query-format').each(function() {
                 const text = $(this).text().replace(new RegExp(`${q}`, 'ig'), '<strong>\$&</strong>');
-                $(this).html(text);;
+                $(this).html(text);
+                console.log(q)
             });
             // Set sort dropdown value
             const sort = String(new URL(window.location).searchParams.get('sort'))
@@ -100,12 +104,6 @@
             // Handle product detail click
             const type = $('#availability')[0].tagName
             const id = $(this).children('data').eq(0).val()
-
-            if (type === 'BUTTON'){
-                var drp = $('#availability').data('daterangepicker');
-                console.log(drp)
-                drp.show();
-            }
             console.log(`Goto to product detail: ${id} ${type}`)
         })
     </script>

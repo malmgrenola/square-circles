@@ -237,6 +237,8 @@ It's possible to read the report by opening the file `index.html` in a browser.
 
 ### Test Report
 
+It's possible to run test test using coverage with this command `coverage run manage.py test`
+
 ![test report](/wireframes/testreport.png)
 
 ### Testing User Stories from User Experience (UX) Section
