@@ -24,7 +24,7 @@
                         <a class="nav-link" href="{% url 'products' %}?c=hostel,cabins">Cabin</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'products' %}?c=a  ctivities">Activities</a>
+                        <a class="nav-link" href="{% url 'products' %}?c=activities">Activities</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Map</a>
@@ -38,7 +38,7 @@
                 <ul class="navbar-nav flex-md-row align-items-center justify-content-center">
                     {% if request.user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link py-1 pb-3" href="#"><i class="far fa-user"></i> <u>My page</u></a>
+                        <a class="nav-link py-1 pb-3" href="{% url 'profile' %}"><i class="far fa-user"></i> <u>My page</u></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link py-1 pb-3" href="{% url 'account_logout' %}"><i class="fas fa-sign-out-alt"></i> <u>Sign out</u></a>
@@ -62,7 +62,7 @@
                     <div class="mx-2"><i class="fas fa-edit"></i></div>
                 </div>
                 {% else %}
-                <button id="availability" class="btn sc btn-primary btn-rounded " type="submit">Check availability</button>
+                <button id="availability" class="btn sc btn-primary btn-rounded" type="submit">Check availability</button>
                 {% endif %}
             </div>
         </div>
