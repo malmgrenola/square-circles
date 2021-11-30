@@ -53,23 +53,19 @@
                         </div>
                         <div class="col-md-8 product-content">
                             <div class="card-body position-relative">
-                                {% if product.available == 0 %}
                                 <span class="position-absolute top-0 end-0 badge rounded-pill bg-primary">
-                                   Not available in the period between {{reservations_availability.start}} and {{reservations_availability.end}}
+                                    {% if product.available == 0 %}
+                                        Not available
+                                    {% else %}
+                                        {{product.available}} available
+                                    {% endif %}
                                 </span>
-                         
-                                {% endif %}
                                 <div class="product-header"><h4 class="card-title query-format">{{product.name}} ({{ product.available }})</h4></div>
                                 <p class="card-text query-format">{{product.description}}</p>
                                 <h5 class="card-text">€ {{product.price}}</h5>
                                 <p>{{ reservations_availability|length }}</p>
-                                {% if product.available > 0 %}
-                                    <a class="btn sc btn-primary btn-rounded" href="/products/{{product.id}}">READ MORE</a>
-                                    <a class="btn sc btn-primary btn-rounded" href="{% url 'add_reservation' product.id %}">Add to reservation</a>
-                                {% else %}
-                                    <a class="btn sc btn-primary btn-rounded" href="/products/{{product.id}}">READ MORE</a>
-                                    <a class="btn sc btn-primary btn-rounded" href="{% url 'add_reservation' product.id %}">Add to reservation</a>
-                                {% endif %}                                
+                                <a class="btn sc btn-primary btn-rounded" href="/products/{{product.id}}">READ MORE</a>
+                                <a class="btn sc btn-primary btn-rounded {% if product.available == 0 %}disabled{% endif %} " href="{% url 'add_reservation' product.id %}">Add to reservation</a>                                                         
                             </div>
                         </div>
                     </div>

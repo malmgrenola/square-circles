@@ -65,7 +65,9 @@ def all_products(request):
         q_check_in = datetime.strptime(travel_info['check_in'], '%Y-%m-%d')
         q_check_out = datetime.strptime(travel_info['check_out'], '%Y-%m-%d')
 
-        for product in products:
+    for product in products:
+
+        if not travel_info == {}:
             total = Pitch_assign.objects.filter(
                 product=product.id).count()
 
@@ -75,7 +77,10 @@ def all_products(request):
             reserved = Reservation.objects.filter(queries).count()
 
             product.available = total - reserved
-            product.save()
+        else:
+            product.available = 0
+
+        product.save()
 
     context = {
         'products': products,
