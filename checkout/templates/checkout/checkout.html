@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% load static%}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <h1>Checkout</h1>
+{% endblock %}
+
+{% block content %}
+<div class="row justify-content-md-center mx-1">
+        <div class="col my-4">
+            <table class="table table-sm table-borderless box sc-table">
+                <tbody class="">
+                {% for reservation in reservations %}
+                    <tr class="w-25 sc-row">
+                        <td class="py-3">
+                        {% if reservation.product.image %}
+                                    <img src="{{ MEDIA_URL }}{{reservation.product.image}}" alt="{{ reservation.product.name }} image" class="image-thumbnail">
+                                {% else %}
+                                    <svg class="bd-placeholder-img image-thumbnail" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                        <rect width="100%" height="100%" fill="#868e96"></rect>
+                                        <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image</text>
+                                    </svg>
+                                {% endif %}
+                        </td>
+                        <td class="py-3">
+                            <p><strong>{{reservation.product.name}}</strong></p>
+                        </td>
+                        <td class="py-3"><p>€ {{reservation.product.price}}</p></td>
+                        <td class="py-3"><p><strong>€ {{reservation.total}}</strong></p></td>
+                    </tr>
+                {% endfor %}
+                <tr>
+                    <td colspan="3"</td>
+                    <td><strong>Grand total</strong></td>
+                    <td>{{basket_grand_total}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+  </div>
+<div class="row justify-content-md-center mx-1">
+    <div class="col my-4 box">
+        <p class="text-muted">Please fill out the form below to complete your order</p>
+        <form action="{% url 'checkout' %}" method="POST" id="payment-form">
+            {% csrf_token %}
+            <fieldset class="rounded px-3 mb-5 box">
+                <legend class="fieldset-label small text-black px-2 w-auto">Details</legend>
+                {{ order_form|crispy }}
+                {% if user.is_authenticated %}
+                    <label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
+                    <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
+                {% else %}
+                    <label class="form-check-label" for="id-save-info">
+                        <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
+                        <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
+                    </label>
+                {% endif %}
+            </fieldset>
+            <fieldset class="px-3 box">
+                <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
+                <!-- A Stripe card element will go here -->
+                <div class="mb-3" id="card-element"></div>
+                <!-- Used to display form errors -->
+                <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                <!-- Pass the client secret to the view so we can get the payment intent id -->
+                <input type="hidden" value="{{ client_secret }}" name="client_secret">
+            </fieldset>
+
+            <div class="submit-button text-right mt-5 mb-2">                    
+                <a href="{% url 'reservation' %}" class="btn btn-outline-black rounded-0">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="font-weight-bold">Modify Reservation</span>
+                </a>
+                <button id="submit-button" class="btn btn-black rounded-0">
+                    <span class="font-weight-bold">Complete Order</span>
+                    <span class="icon">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                </button>
+                <p class="small text-danger my-0">
+                    <span class="icon">
+                        <i class="fas fa-exclamation-circle"></i>
+                    </span>
+                    <span>Your card will be charged <strong>€{{ reservations_grand_total|floatformat:2 }}</strong></span>
+                </p>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block extra_body_js %}
+    {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+{% endblock %}

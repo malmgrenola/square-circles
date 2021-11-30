@@ -201,10 +201,14 @@ All wireframes can be found in the [wireframes folder](wireframes). They are all
    - used for user account authentication.
 1. [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/install.html)
    - Used to control the rendering behaviour of forms.
+1. [Django-environ](https://pypi.org/project/python-environ/)
+   - Used to handle environment variables.
 1. [coverage](https://coverage.readthedocs.io/en/6.1.2/)
    - Used to measure code coverage tests
 1. [dbdiagram.io](https://dbdiagram.io/home)
    - Used to draw Entity-Relationship Diagrams
+1. [Stripe](https://stripe.com/)
+   - Used to make card payments
 1. mock <-- Remove depending on manage.py test
 
 <!--

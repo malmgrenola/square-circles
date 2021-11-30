@@ -72,6 +72,7 @@ INSTALLED_APPS = [
     'pitches',
     'reservations',
     'profiles',
+    'checkout',
     'crispy_forms',
 ]
 
@@ -194,3 +195,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Stripe
+STRIPE_CURRENCY = env('STRIPE_CURRENCY')
+STRIPE_API_KEY = env('STRIPE_API_KEY')
+STRIPE_PUBLIC_KEY = env('STRIPE_PUBLIC_KEY')

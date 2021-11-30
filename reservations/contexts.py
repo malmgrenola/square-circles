@@ -3,7 +3,7 @@ from django.shortcuts import get_object_or_404
 from datetime import date, datetime
 
 
-def reservations(request):
+def reservations_contents(request):
 
     reservations = request.session.get('reservations', [])
     travel_info = request.session.get('travel_info', {})
