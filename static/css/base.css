@@ -43,11 +43,18 @@ svg.image-thumbnail {
   border-radius: 4px;
 }
 
+.sc-table {
+  background-color: white;
+  border: 1px solid #d82b6836;
+  border-radius: 1em;
+  min-width: 50%;
+}
+
 .sc-table p {
   margin-bottom: 0;
 }
 .sc-row {
-  border-bottom: 1px solid #d82b68;
+  border-bottom: 1px solid #d82b6836;
 }
 
 tbody .sc-row:last-child {
