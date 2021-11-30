@@ -1,6 +1,6 @@
 from products.models import Product
 from django.shortcuts import get_object_or_404
-from datetime import date, datetime
+from datetime import datetime
 
 
 def reservations_contents(request):

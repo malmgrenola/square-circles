@@ -50,7 +50,7 @@ svg.image-thumbnail {
   border-bottom: 1px solid #d82b68;
 }
 
-.sc-row:last-child {
+tbody .sc-row:last-child {
   border-bottom: 0;
 }
 

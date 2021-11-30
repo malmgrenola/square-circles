@@ -7,17 +7,17 @@ from .models import Order, OrderLineItem
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
 from products.models import Product
+from reservations.models import Reservation
 from reservations.contexts import reservations_contents
+from datetime import datetime
 import stripe
 import json
 
 
 @require_http_methods(["POST"])
 def cache_checkout_data(request):
-    print(1, "Checkout")
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
-        print(2, pid)
         stripe.api_key = settings.STRIPE_API_KEY
         stripe.PaymentIntent.modify(pid, metadata={
             'basket': json.dumps(request.session.get('basket', {})),
@@ -36,9 +36,9 @@ def checkout(request):
     """ A view that renders the checkout page """
 
     reservations = request.session.get('reservations', [])
+    date_format = "%Y-%m-%d"
 
     if request.method == 'POST':
-        print("POST CHECKOUT")
         form_data = {
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
@@ -60,6 +60,16 @@ def checkout(request):
                 )
                 order_line_item.save()
 
+                reservation = Reservation(
+                    order=order,
+                    product=product,
+                    check_in=datetime.strptime(
+                        reservation['check_in'], date_format),
+                    check_out=datetime.strptime(
+                        reservation['check_out'], date_format)
+                )
+                reservation.save()
+
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
     else:
@@ -69,19 +79,21 @@ def checkout(request):
                 request, "There's nothing in your basket at the moment")
             return redirect(reverse('home'))
 
-        # stripe.api_key = settings.STRIPE_API_KEY
-        # intent = stripe.PaymentIntent.create(
-        #     amount=2200,
-        #     currency=settings.STRIPE_CURRENCY,
-        #     payment_method_types=['card'],
-        # )
         current_basket = reservations_contents(request)
         grand_total = current_basket['reservations_grand_total']
         stripe_total = round(grand_total * 100)
-        print("PaymentIntent.create> ",
-              {'amount': stripe_total,
-               'currency': settings.STRIPE_CURRENCY,
-               'payment_method_types': ['card'], })
+
+        if stripe_total == 0:
+            messages.error(
+                request, "There is nothing to charge the card")
+            return redirect(reverse('reservation'))
+
+        stripe.api_key = settings.STRIPE_API_KEY
+        intent = stripe.PaymentIntent.create(
+            amount=stripe_total,
+            currency=settings.STRIPE_CURRENCY,
+            payment_method_types=['card'],
+        )
 
         if request.user.is_authenticated:
             try:
@@ -97,7 +109,7 @@ def checkout(request):
             order_form = OrderForm()
         context = {
             'order_form': order_form,
-            # 'client_secret': intent.client_secret,
+            'client_secret': intent.client_secret,
             'stripe_public_key': settings.STRIPE_PUBLIC_KEY,
         }
         return render(request, 'checkout/checkout.html', context)
@@ -112,6 +124,13 @@ def checkout_success(request, order_number):
         # Attach the user's profile to the order
         order.user_profile = profile
         order.save()
+
+        # Attach the user's profile to the reservation
+        reservations = Reservation.objects.filter(order=order)
+
+        for reservation in reservations:
+            reservation.user_profile = profile
+            reservation.save()
 
         # Save the user's info
         if save_info:

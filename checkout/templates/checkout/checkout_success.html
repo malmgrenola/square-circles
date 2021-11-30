@@ -1,1 +1,26 @@
-Checkout success
+{% extends "base.html" %}
+{% load static%}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <h1>Checkout Success</h1>
+{% endblock %}
+{% block content %}
+<p>{{order}}</p>
+<p>{{order.full_name}}</p>
+<p>{{order.email}}</p>
+<p>{{order.phone_number}}</p>
+<p>{{order.date}}</p>
+<p>{{order.grand_total}}</p>
+<p>{{order.original_basket}}</p>
+<p>{{order.stripe_pid}}</p>
+{% for item in order.lineitems.all %}
+    <p>{{item.product.name}}</p>
+    <p>{{item.product.quantity}}</p>
+    <p>{{item.product.lineitem_total}}</p>
+{% endfor %}
+
+{% endblock %}
