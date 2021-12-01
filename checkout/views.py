@@ -49,7 +49,7 @@ def checkout(request):
             order = order_form.save(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
-            order.original_reservations = json.dumps(reservations)
+            order.original_basket = json.dumps(reservations)
             order.save()
             for reservation in reservations:
                 product = Product.objects.get(id=reservation['product_id'])

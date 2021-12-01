@@ -12,6 +12,19 @@ from .forms import ReservationForm
 def reservation(request):
     """ render reservations view and handle create reservations"""
 
+    if request.method == 'POST':
+        messages.success(
+            request, f'Successfully updated travel information on your reservation')
+        reservations = request.session.get('reservations', [])
+        print(1, reservations)
+        reservation = reservations[int(request.POST['reservation_index'])]
+
+        reservation['check_in'] = request.POST['check_in']
+        reservation['check_out'] = request.POST['check_out']
+
+        request.session['reservations'] = reservations
+
+        return HttpResponse(status=200)
     return render(request, 'reservations/reservations.html')
 
 
@@ -75,6 +88,7 @@ def set_travel_info(request):
                 reservation['travel_info'] = travel_info
             request.session['reservations'] = reservations
 
+        messages.success(request, f'Travel information updated')
     else:
         messages.error(request, f'Unable to set your travel information')
 

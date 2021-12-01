@@ -6,14 +6,22 @@
 {% endblock %}
 
 {% block page_header %}
-    <h1>Checkout</h1>
+    <div class="row justify-content-md-center mx-1">
+        <div class="col my-4 text-center">
+            <h1>Checkout</h1>
+        </div>
+    </div>
 {% endblock %}
 
 {% block content %}
-<div class="box border-2 my-4">
     <div class="row justify-content-md-center mx-1">
-            <div class="col my-4">
-                <table class="table table-sm table-borderless box sc-table">
+            <div class="col-12 col-lg-10 my-4 box">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-muted">Reservations</p>
+                    </div>
+                </div>
+                <table class="table table-sm table-borderless sc-table">
                     <thead>
                         <tr class="w-25 sc-row">
                             <th colspan="2"></th>
@@ -23,7 +31,7 @@
                         </tr>
                     </thead>
                     <tbody class="">
-                    {% for reservation in reservations %}
+                    {% for reservation in reservation_items %}
                         <tr class="w-25 sc-row">
                             <td class="">
                             {% if reservation.product.image %}
@@ -39,12 +47,11 @@
                                 <p><strong>{{reservation.product.name}}</strong></p>
                             </td>
                             <td class="">
-                                <p>Between {{ reservation.travel_info.check_in }} and {{ reservation.travel_info.check_out }}</p>
-                                <p>{{reservation.travel_info.nights}} nights</p>
+                                <p>Between {{ reservation.check_in }} and {{ reservation.check_out }}</p>
+                                <p>{{reservation.nights}} nights</p>
                             </td>
                             <td class="text-end"><p>€ {{reservation.product.price}}</p></td>
                             <td class="text-end"><p><strong>€ {{reservation.total}}</strong></p></td>
-                            <td class="text-end"><p><a href="{% url 'remove_reservation' forloop.counter0 %}"><i class="far fa-times-circle"></i></a></p></td>
                         </tr>
                     {% endfor %}
                     <tr>
@@ -53,77 +60,71 @@
                     </tr>
                     </tbody>
                 </table>
-            </div>
-    </div>
-    <div class="row justify-content-md-center mx-1">
-        <div class="col my-4">
-            <div class="row">
-                <div class="col-12">
-                    <p class="text-muted">Contact information</p>
-                </div>
-            </div>
-            <form action="{% url 'checkout' %}" method="POST" id="payment-form">
-                {% csrf_token %}
-                <div class="row mb-3 d-flex">
-                    {{ order_form.full_name | as_crispy_field }}
-                    {{ order_form.email | as_crispy_field }}
-                    {{ order_form.phone_number | as_crispy_field }}
-                </div>
-                <div class="row mb-3">
-                    <div class="col">
-                    {% if user.is_authenticated %}
-                        <label class="form-check-label" for="id-save-info">Save this information to my profile</label>
-                        <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
-                    {% else %}
-                        <label class="form-check-label" for="id-save-info">
-                            <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
-                            <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
-                        </label>
-                    {% endif %}
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-muted">Contact information</p>
                     </div>
                 </div>
-                <div class="row mb-3">
-                    <div class="col-12">
-                        <p class="text-muted">Payment</p>
+                <form action="{% url 'checkout' %}" method="POST" id="payment-form">
+                    {% csrf_token %}
+                    <div class="row mb-3 d-flex">
+                        {{ order_form.full_name | as_crispy_field }}
+                        {{ order_form.email | as_crispy_field }}
+                        {{ order_form.phone_number | as_crispy_field }}
                     </div>
-                    <div class="col-12">
-                        <!-- A Stripe card element will go here -->
-                        <div class="mb-3" id="card-element"></div>
-                        <!-- Used to display form errors -->
-                        <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
-                        <!-- Pass the client secret to the view so we can get the payment intent id -->
-                        <input type="hidden" value="{{ client_secret }}" name="client_secret">
+                    <div class="row mb-3">
+                        <div class="col">
+                        {% if user.is_authenticated %}
+                            <label class="form-check-label" for="id-save-info">Save this information to my profile</label>
+                            <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
+                        {% else %}
+                            <label class="form-check-label" for="id-save-info">
+                                <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
+                                <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
+                            </label>
+                        {% endif %}
+                        </div>
                     </div>
-                    <div class="col-12">
-                        <p class="small text-danger my-0">
+                    <div class="row mb-3">
+                        <div class="col-12">
+                            <p class="text-muted">Payment</p>
+                        </div>
+                        <div class="col-12">
+                            <!-- A Stripe card element will go here -->
+                            <div class="mb-3" id="card-element"></div>
+                            <!-- Used to display form errors -->
+                            <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                            <!-- Pass the client secret to the view so we can get the payment intent id -->
+                            <input type="hidden" value="{{ client_secret }}" name="client_secret">
+                        </div>
+                        <div class="col-12">
+                            <p class="small text-danger my-0">
+                                <span class="icon">
+                                    <i class="fas fa-exclamation-circle"></i>
+                                </span>
+                                <span>Your card will be charged <strong>€{{ reservations_grand_total|floatformat:2 }}</strong></span>
+                            </p>
+                        </div>
+    
+                    </div>
+                    <div class="submit-button text-right mt-5 mb-2">                    
+                        <a href="{% url 'reservation' %}" class="btn btn-primary sc">
                             <span class="icon">
-                                <i class="fas fa-exclamation-circle"></i>
+                                <i class="fas fa-chevron-left"></i>
                             </span>
-                            <span>Your card will be charged <strong>€{{ reservations_grand_total|floatformat:2 }}</strong></span>
-                        </p>
+                            <span class="font-weight-bold">Modify Reservation</span>
+                        </a>
+                        <button id="submit-button" class="btn btn-primary sc">
+                            <span class="font-weight-bold">Complete Order</span>
+                            <span class="icon">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                        </button>
+                        
                     </div>
-
-                </div>
-                <div class="submit-button text-right mt-5 mb-2">                    
-                    <a href="{% url 'reservation' %}" class="btn btn-primary sc">
-                        <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
-                        </span>
-                        <span class="font-weight-bold">Modify Reservation</span>
-                    </a>
-                    <button id="submit-button" class="btn btn-primary sc">
-                        <span class="font-weight-bold">Complete Order</span>
-                        <span class="icon">
-                            <i class="fas fa-lock"></i>
-                        </span>
-                    </button>
-                    
-                </div>
-            </form>
-        </div>
+                </form>
+            </div>
     </div>
-</div>
-
 {% endblock %}
 
 {% block extra_body_js %}

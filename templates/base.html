@@ -70,45 +70,58 @@
 
     {% block core_body_js %}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script>
+      // availability daterangepicker Handler
+      $(document).ready(function () {
+        const minDate = new Date()
+        const maxDate = `${(minDate.getFullYear()+1)}-${(minDate.getMonth() + 1 )}-${minDate.getDate()}`
+        $('#availability').daterangepicker({
+          opens: 'left',
+          buttonClasses: 'cs btn',
+          applyButtonClasses: 'btn-light',
+          cancelButtonClasses: 'btn-light',
+          minDate: minDate,
+          maxDate: maxDate, 
+          maxYear: minDate.getFullYear()+1,
+        });
+
+        function positionDatePicker(){
+          const topValue = parseInt($('.daterangepicker').eq(0).css('top'), 10) 
+          $('.daterangepicker').eq(0).css('top', `${topValue + 10}px`);
+        }
+        
+        function setDates(ev, {startDate, endDate}){ 
+          const csrfToken = "{{ csrf_token }}";
+          const data = {'csrfmiddlewaretoken': csrfToken, 'check_in': startDate.format('YYYY-MM-DD'), 'check_out': endDate.format('YYYY-MM-DD')};
+          const url = `{% url 'set_travel_info' %}`;
+          $.post(url, data)
+          .done(function() {
+              location.reload();
+       });
+        }
+
+        $('#availability').on('show.daterangepicker', positionDatePicker);  // Apply posiition when picker opens up
+        $('#availability').on('showCalendar.daterangepicker', positionDatePicker);  // Apply posiition when a selection is done in picker
+        $('#availability').on('apply.daterangepicker', setDates);
+      });
+
+      function attachDaterangepicker(){
+        return daterangepicker({
+          opens: 'left',
+          buttonClasses: 'cs btn',
+          applyButtonClasses: 'btn-light',
+          cancelButtonClasses: 'btn-light',
+          minDate: minDate,
+          maxDate: maxDate, 
+          maxYear: minDate.getFullYear()+1,
+        })
+      }
+    </script>
+    
+    
     {% endblock %}
 
     {% block extra_body_js %}
-      <script>
-        // availability daterangepicker Handler
-        $(document).ready(function () {
-          const minDate = new Date()
-          const maxDate = `${(minDate.getFullYear()+1)}-${(minDate.getMonth() + 1 )}-${minDate.getDate()}`
-          $('#availability').daterangepicker({
-            opens: 'left',
-            buttonClasses: 'cs btn',
-            applyButtonClasses: 'btn-light',
-            cancelButtonClasses: 'btn-light',
-            minDate: minDate,
-            maxDate: maxDate, 
-            maxYear: minDate.getFullYear()+1,
-          });
-
-          function positionDatePicker(){
-            const topValue = parseInt($('.daterangepicker').eq(0).css('top'), 10) 
-            $('.daterangepicker').eq(0).css('top', `${topValue + 10}px`);
-          }
-          
-          function setDates(ev, {startDate, endDate}){ 
-            const csrfToken = "{{ csrf_token }}";
-            const data = {'csrfmiddlewaretoken': csrfToken, 'check_in': startDate.format('YYYY-MM-DD'), 'check_out': endDate.format('YYYY-MM-DD')};
-            const url = `{% url 'set_travel_info' %}`;
-            $.post(url, data)
-            .done(function() {
-                location.reload();
-         });
-          }
-
-          $('#availability').on('show.daterangepicker', positionDatePicker);  // Apply posiition when picker opens up
-          $('#availability').on('showCalendar.daterangepicker', positionDatePicker);  // Apply posiition when a selection is done in picker
-          $('#availability').on('apply.daterangepicker', setDates);
-        });
-      </script>
-      
     {% endblock %}
   </body>
 </html>

@@ -11,11 +11,11 @@
 
 {% block content %}
     <div class="row justify-content-md-center mx-1">
-        <div class="col my-4 box p-4">
-            {% if not reservations %}
+        <div class="col-12 col-lg-10 my-4 box p-4 box">
+            {% if not reservation_items %}
             No reservations yet.
             {% else %}
-            <table class="table table-sm table-borderless box sc-table">
+            <table class="table table-sm table-borderless sc-table">
                 <thead>
                     <tr class="w-25 sc-row">
                         <th colspan="2"></th>
@@ -25,7 +25,7 @@
                     </tr>
                 </thead>
                 <tbody class="">
-                {% for reservation in reservations %}
+                {% for reservation in reservation_items %}
                     <tr class="w-25 sc-row">
                         <td class="">
                         {% if reservation.product.image %}
@@ -41,8 +41,8 @@
                             <p><strong>{{reservation.product.name}}</strong></p>
                         </td>
                         <td class="">
-                            <p>Between {{ reservation.travel_info.check_in }} and {{ reservation.travel_info.check_out }}</p>
-                            <p>{{reservation.travel_info.nights}} nights</p>
+                            <p>Between {{ reservation.check_in }} and {{ reservation.check_out }}</p>
+                            <p>{{reservation.nights}} nights <i class="fas fa-edit date" id="date-{{forloop.counter0}}"></i></p>
                         </td>
                         <td class="text-end"><p>€ {{reservation.product.price}}</p></td>
                         <td class="text-end"><p><strong>€ {{reservation.total}}</strong></p></td>
@@ -58,7 +58,7 @@
             {% endif %}
         </div>
   </div>
-    {% if reservations %}
+    {% if reservation_items %}
     <div class="row justify-content-md-center mx-1">
         <div class="col my-4">
             <a class="btn btn-primary sc rounded{% if reservations_grand_total == 0 %} disabled{% endif%}" href="/checkout">Continue to Secure Checkout</a>
@@ -66,4 +66,37 @@
     </div>
     {% endif %}
  
+{% endblock %}
+
+{% block extra_body_js %}
+    {{ block.super }}
+    <script>
+        $(document).ready(function () {
+            const minDate = new Date()
+            const maxDate = `${(minDate.getFullYear()+1)}-${(minDate.getMonth() + 1 )}-${minDate.getDate()}`
+            $('.date').daterangepicker({
+              opens: 'left',
+              buttonClasses: 'cs btn',
+              applyButtonClasses: 'btn-light',
+              cancelButtonClasses: 'btn-light',
+              minDate: minDate,
+              maxDate: maxDate, 
+              maxYear: minDate.getFullYear()+1,
+            });
+    
+            function setDates(ev, {startDate, endDate}){ 
+                const reservation_index = ev.currentTarget.id.split("-")[1]
+                const csrfToken = "{{ csrf_token }}";
+                const data = {'csrfmiddlewaretoken': csrfToken, 'reservation_index': reservation_index,'check_in': startDate.format('YYYY-MM-DD'), 'check_out': endDate.format('YYYY-MM-DD')};
+                const url = `{% url 'reservation' %}`;
+                console.log('post')
+                $.post(url, data)
+                .done(function() {
+                    location.reload();
+                });
+            }
+    
+            $('.date').on('apply.daterangepicker', setDates);
+          });
+    </script>
 {% endblock %}

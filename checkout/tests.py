@@ -19,6 +19,7 @@ class TestViews(TestCase):
         session["reservations"] = [{'product_id': item.id,
                                     'check_in': '2021-10-01',
                                    'check_out': '2021-10-03', }]
+        session['reservations_grand_total'] = item.price
         session.save()
 
         response = self.client.get('/checkout/')
@@ -29,11 +30,8 @@ class TestViews(TestCase):
         self.client.login(username='fred', password='secret')
         item = Product.objects.create(
             name='Test product item', price=22.5, description="Item description")
-        session = self.client.session
-        session["reservations"] = [{'product_id': item.id,
-                                    'check_in': '2021-10-01',
-                                   'check_out': '2021-10-03', }]
-        session.save()
+        self.client.get(
+            f'/reservations/add/{item.id}', follow=True)
         response = self.client.get('/checkout/')
         self.assertEqual(response.status_code, 200)
 
