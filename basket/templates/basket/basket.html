@@ -4,7 +4,7 @@
 {% block page_header %}
     <div class="row justify-content-md-center mx-1">
         <div class="col my-4 text-center">
-            <h1>Reservations</h1>
+            <h1>Basket</h1>
         </div>
     </div>
 {% endblock %}
@@ -12,24 +12,25 @@
 {% block content %}
     <div class="row justify-content-md-center mx-1">
         <div class="col-12 col-lg-10 my-4 box p-4 box">
-            {% if not reservation_items %}
-            No reservations yet.
+            {% if not basket_items %}
+            No Items yet yet.
             {% else %}
             <table class="table table-sm table-borderless sc-table">
                 <thead>
                     <tr class="w-25 sc-row">
                         <th colspan="2"></th>
                         <th>Period</th>
+                        <th class="text-end">Amount</th>
                         <th class="text-end">Rate</th>
                         <th class="text-end">Total</th>
                     </tr>
                 </thead>
                 <tbody class="">
-                {% for reservation in reservation_items %}
+                {% for item in basket_items %}
                     <tr class="w-25 sc-row">
                         <td class="">
-                        {% if reservation.product.image %}
-                                    <img src="{{ MEDIA_URL }}{{reservation.product.image}}" alt="{{ reservation.product.name }} image" class="image-thumbnail">
+                        {% if item.product.image %}
+                                    <img src="{{ MEDIA_URL }}{{item.product.image}}" alt="{{ item.product.name }} image" class="image-thumbnail">
                                 {% else %}
                                     <svg class="bd-placeholder-img image-thumbnail" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice" focusable="false">
                                         <rect width="100%" height="100%" fill="#868e96"></rect>
@@ -38,30 +39,31 @@
                                 {% endif %}
                         </td>
                         <td class="">
-                            <p><strong>{{reservation.product.name}}</strong></p>
+                            <p><strong>{{item.product.name}}</strong></p>
                         </td>
                         <td class="">
-                            <p>Between {{ reservation.check_in }} and {{ reservation.check_out }}</p>
-                            <p>{{reservation.nights}} nights <i class="fas fa-edit date" id="date-{{forloop.counter0}}"></i></p>
+                            <p>Between {{ item.check_in }} and {{ item.check_out }}</p>
+                            <p>{{item.days}} nights <i class="fas fa-edit date" id="date-{{forloop.counter0}}"></i></p>
                         </td>
-                        <td class="text-end"><p>€ {{reservation.product.price}}</p></td>
-                        <td class="text-end"><p><strong>€ {{reservation.total}}</strong></p></td>
-                        <td class="text-end"><p><a href="{% url 'remove_reservation' forloop.counter0 %}"><i class="far fa-times-circle"></i></a></p></td>
+                        <td class="text-end"><p>{{item.amount}}</p></td>
+                        <td class="text-end"><p>€ {{item.product.price}}</p></td>
+                        <td class="text-end"><p><strong>€ {{item.total}}</strong></p></td>
+                        <td class="text-end"><p><a href="{% url 'remove_product' forloop.counter0 %}"><i class="far fa-times-circle"></i></a></p></td>
                     </tr>
                 {% endfor %}
                 <tr>
                     <td colspan="3"></td>
-                    <td class="text-end" colspan="2">Grand total: <strong>€ {{reservations_grand_total}}</strong></td>
+                    <td class="text-end" colspan="2">Grand total: <strong>€ {{basket_grand_total}}</strong></td>
                 </tr>
                 </tbody>
             </table>
             {% endif %}
         </div>
   </div>
-    {% if reservation_items %}
+    {% if basket_items %}
     <div class="row justify-content-md-center mx-1">
         <div class="col my-4">
-            <a class="btn btn-primary sc rounded{% if reservations_grand_total == 0 %} disabled{% endif%}" href="/checkout">Continue to Secure Checkout</a>
+            <a class="btn btn-primary sc rounded{% if basket_grand_total == 0 %} disabled{% endif%}" href="/checkout">Continue to Secure Checkout</a>
         </div>
     </div>
     {% endif %}
@@ -85,11 +87,10 @@
             });
     
             function setDates(ev, {startDate, endDate}){ 
-                const reservation_index = ev.currentTarget.id.split("-")[1]
+                const basket_index = ev.currentTarget.id.split("-")[1]
                 const csrfToken = "{{ csrf_token }}";
-                const data = {'csrfmiddlewaretoken': csrfToken, 'reservation_index': reservation_index,'check_in': startDate.format('YYYY-MM-DD'), 'check_out': endDate.format('YYYY-MM-DD')};
-                const url = `{% url 'reservation' %}`;
-                console.log('post')
+                const data = {'csrfmiddlewaretoken': csrfToken, 'basket_index': basket_index,'check_in': startDate.format('YYYY-MM-DD'), 'check_out': endDate.format('YYYY-MM-DD')};
+                const url = `{% url 'set_travel_info' %}`;
                 $.post(url, data)
                 .done(function() {
                     location.reload();

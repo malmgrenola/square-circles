@@ -65,7 +65,7 @@
                                 <h5 class="card-text">€ {{product.price}}</h5>
                                 <p>{{ reservations_availability|length }}</p>
                                 <a class="btn sc btn-primary btn-rounded" href="/products/{{product.id}}">READ MORE</a>
-                                <a class="btn sc btn-primary btn-rounded {% if product.available == 0 %}disabled{% endif %} " href="{% url 'add_reservation' product.id %}">Add to reservation</a>                                                         
+                                <a class="btn sc btn-primary btn-rounded {% if product.available == 0 %}disabled{% endif %} " href="{% url 'add_product' product.id %}">Add to basket</a>                                                         
                             </div>
                         </div>
                     </div>
@@ -85,7 +85,6 @@
             $('.query-format').each(function() {
                 const text = $(this).text().replace(new RegExp(`${q}`, 'ig'), '<strong>\$&</strong>');
                 $(this).html(text);
-                console.log(q)
             });
             // Set sort dropdown value
             const sort = String(new URL(window.location).searchParams.get('sort'))

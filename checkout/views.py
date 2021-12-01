@@ -7,8 +7,7 @@ from .models import Order, OrderLineItem
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
 from products.models import Product
-from reservations.models import Reservation
-from reservations.contexts import reservations_contents
+from basket.contexts import basket_contents
 from datetime import datetime
 import stripe
 import json
@@ -35,7 +34,7 @@ def cache_checkout_data(request):
 def checkout(request):
     """ A view that renders the checkout page """
 
-    reservations = request.session.get('reservations', [])
+    basket = request.session.get('basket', [])
     date_format = "%Y-%m-%d"
 
     if request.method == 'POST':
@@ -49,44 +48,40 @@ def checkout(request):
             order = order_form.save(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
-            order.original_basket = json.dumps(reservations)
+            order.original_basket = json.dumps(basket)
             order.save()
-            for reservation in reservations:
-                product = Product.objects.get(id=reservation['product_id'])
+            for item in basket:
+                product = Product.objects.get(id=item['product_id'])
 
                 order_line_item = OrderLineItem(
                     order=order,
-                    product=product
+                    product=product,
+                    quantity=item['amount'],
+                    check_in=datetime.strptime(
+                        item['check_in'], date_format),
+                    check_out=datetime.strptime(
+                        item['check_out'], date_format),
+                    days=item['days']
                 )
                 order_line_item.save()
-
-                reservation = Reservation(
-                    order=order,
-                    product=product,
-                    check_in=datetime.strptime(
-                        reservation['check_in'], date_format),
-                    check_out=datetime.strptime(
-                        reservation['check_out'], date_format)
-                )
-                reservation.save()
 
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
     else:
 
-        if not reservations:
+        if not basket:
             messages.error(
                 request, "There's nothing in your basket at the moment")
             return redirect(reverse('home'))
 
-        current_basket = reservations_contents(request)
-        grand_total = current_basket['reservations_grand_total']
+        current_basket = basket_contents(request)
+        grand_total = current_basket['basket_grand_total']
         stripe_total = round(grand_total * 100)
 
         if stripe_total == 0:
             messages.error(
                 request, "There is nothing to charge the card")
-            return redirect(reverse('reservation'))
+            return redirect(reverse('basket'))
 
         stripe.api_key = settings.STRIPE_API_KEY
         intent = stripe.PaymentIntent.create(
@@ -125,13 +120,6 @@ def checkout_success(request, order_number):
         order.user_profile = profile
         order.save()
 
-        # Attach the user's profile to the reservation
-        reservations = Reservation.objects.filter(order=order)
-
-        for reservation in reservations:
-            reservation.user_profile = profile
-            reservation.save()
-
         # Save the user's info
         if save_info:
             profile_data = {
@@ -145,8 +133,8 @@ def checkout_success(request, order_number):
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
 
-    if 'reservations' in request.session:
-        del request.session['reservations']
+    if 'basket' in request.session:
+        del request.session['basket']
 
     template = 'checkout/checkout_success.html'
     context = {

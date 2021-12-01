@@ -3,7 +3,7 @@ from django.views.decorators.http import require_http_methods
 from django.contrib import messages
 from django.db.models import Q
 from .models import Product, Category, Pitch_assign
-from reservations.models import Reservation
+from checkout.models import OrderLineItem
 from datetime import datetime, timedelta
 
 
@@ -74,7 +74,7 @@ def all_products(request):
             queries = Q(product=product.id) & (Q(check_in__range=(q_check_in, q_check_out + timedelta(days=-1))) | Q(
                 check_out__range=(q_check_in + timedelta(days=1), q_check_out)))
 
-            reserved = Reservation.objects.filter(queries).count()
+            reserved = OrderLineItem.objects.filter(queries).count()
 
             product.available = total - reserved
         else:

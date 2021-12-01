@@ -70,7 +70,7 @@ INSTALLED_APPS = [
     'home',
     'products',
     'pitches',
-    'reservations',
+    'basket',
     'profiles',
     'checkout',
     'crispy_forms',
@@ -118,7 +118,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
-                'reservations.contexts.reservations_contents',
+                'basket.contexts.basket_contents',
             ],
             'builtins': [
                 'crispy_forms.templatetags.crispy_forms_tags',
