@@ -2,7 +2,8 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.views.decorators.http import require_http_methods
 from django.contrib import messages
 from django.db.models import Q
-from .models import Product, Category, Pitch_assign
+from .models import Product, Category
+from pitches.models import Pitch
 from checkout.models import OrderLineItem
 from datetime import datetime, timedelta
 
@@ -68,7 +69,7 @@ def all_products(request):
     for product in products:
 
         if not travel_info == {}:
-            total = Pitch_assign.objects.filter(
+            total = Pitch.objects.filter(
                 product=product.id).count()
 
             queries = Q(product=product.id) & (Q(check_in__range=(q_check_in, q_check_out + timedelta(days=-1))) | Q(

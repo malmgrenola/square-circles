@@ -3,6 +3,7 @@ from . models import Pitch
 from django.db.models import IntegerField
 from django.db.models.functions import Cast
 
+
 @admin.register(Pitch)
 class PitchAdmin(admin.ModelAdmin):
     list_display = (
@@ -16,16 +17,16 @@ class PitchAdmin(admin.ModelAdmin):
 
     fieldsets = (
         (None, {
-            'fields': ('name','description','seasonal','tent')
+            'fields': ('name', 'description', 'seasonal', 'tent', 'product')
         }),
         ('Services', {
             'classes': ('wide', 'extrapretty'),
-            'fields': ('electric', 'plug', 'graywaste','fullwaste', 'water'),
+            'fields': ('electric', 'plug', 'graywaste', 'fullwaste', 'water'),
         }),
     )
     search_fields = ('name', 'description')
 
     def get_queryset(self, request):
-        queryset = super().get_queryset(request).annotate(  
-            _name_as_number = Cast('name', IntegerField())).order_by('_name_as_number','name',)
+        queryset = super().get_queryset(request).annotate(
+            _name_as_number=Cast('name', IntegerField())).order_by('_name_as_number', 'name',)
         return queryset

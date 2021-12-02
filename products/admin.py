@@ -1,16 +1,10 @@
 from django.contrib import admin
-from . models import Product,Category,Pitch_assign
+from . models import Product, Category
+from pitches.models import Pitch
 
 
 class PitchesInline(admin.TabularInline):
-    model = Pitch_assign
-    # def get_queryset(self, request):
-    #     field = super(PitchesInline, self).formfield_for_foreignkey(db_field, request, **kwargs)
-    #     qs = super(PitchesInline, self).get_queryset(request)
-    #     if request.user.is_superuser:
-    #         print('DUPERUSER')
-    #     print('OLA WAS HERE', qs)
-    #     return qs.filter(pitch=34)
+    model = Pitch
 
 
 @admin.register(Product)
@@ -24,13 +18,8 @@ class ProductAdmin(admin.ModelAdmin):
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
     search_fields = ('friendly_name',
-        'name',)
+                     'name',)
 
     list_display = (
         'name',
     )
-
-@admin.register(Pitch_assign)
-class PitchesAdmin(admin.ModelAdmin):
-    pass
-

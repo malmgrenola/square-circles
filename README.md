@@ -219,7 +219,6 @@ https://github.com/dangrossman/daterangepicker
 
 [( Back to Top )](#table-of-contents)
 
-Products can have assigned camping pitches the relation between them is handled in the table `Pitch_assign`
 ![data model](/wireframes/square-circles.png)
 
 ## Testing
