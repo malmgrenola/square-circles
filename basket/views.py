@@ -55,6 +55,36 @@ def add_product(request, product_id):
     return redirect(reverse('basket'))
 
 
+@require_http_methods(["POST"])
+def update_item(request, basket_index):
+    """Update basket item based on basket index """
+
+    basket = request.session.get('basket', [])
+
+    cmd_add = request.POST.get('add', None)
+    cmd_remove = request.POST.get('remove', None)
+
+    if basket and basket_index <= len(basket):
+        product_id = basket[basket_index]['product_id']
+        product = get_object_or_404(Product, pk=product_id)
+        amount = basket[basket_index]['amount']
+
+        if cmd_add == '+':
+            # todo: limit max bookings
+            amount += 1
+
+        if cmd_remove == '-' and amount > 1:
+            amount -= 1
+
+        basket[basket_index]['amount'] = amount
+        request.session['basket'] = basket
+        messages.success(request, f'Successfully updated {product.name}')
+    else:
+        messages.error(request, f'Not possible to update basket')
+
+    return redirect(reverse('basket'))
+
+
 @require_http_methods(["GET"])
 def remove_product(request, basket_index):
     """Removes basket item based on basket index """

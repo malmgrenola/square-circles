@@ -26,6 +26,7 @@
                         <tr class="w-25 sc-row">
                             <th colspan="2"></th>
                             <th>Period</th>
+                            <th class="text-end">Amount</th>
                             <th class="text-end">Rate</th>
                             <th class="text-end">Total</th>
                         </tr>
@@ -50,13 +51,14 @@
                                 <p>Between {{ item.check_in }} and {{ item.check_out }}</p>
                                 <p>{{item.days}} nights</p>
                             </td>
+                            <td class="text-end"><p>{{item.amount}}</p></td>
                             <td class="text-end"><p>€ {{item.product.price}}</p></td>
                             <td class="text-end"><p><strong>€ {{item.total}}</strong></p></td>
                         </tr>
                     {% endfor %}
                     <tr>
                         <td colspan="3"></td>
-                        <td class="text-end" colspan="2">Grand total: <strong>€ {{basket_grand_total}}</strong></td>
+                        <td class="text-end" colspan="3">Grand total: <strong>€ {{basket_grand_total}}</strong></td>
                     </tr>
                     </tbody>
                 </table>

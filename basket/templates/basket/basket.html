@@ -27,6 +27,9 @@
                 </thead>
                 <tbody class="">
                 {% for item in basket_items %}
+                <form class="form" method="POST" action="{% url 'update_item' forloop.counter0 %}">
+                    {% csrf_token %}
+
                     <tr class="w-25 sc-row">
                         <td class="">
                         {% if item.product.image %}
@@ -45,15 +48,24 @@
                             <p>Between {{ item.check_in }} and {{ item.check_out }}</p>
                             <p>{{item.days}} nights <i class="fas fa-edit date" id="date-{{forloop.counter0}}"></i></p>
                         </td>
-                        <td class="text-end"><p>{{item.amount}}</p></td>
+                        <td class="text-end">
+                            <button class="btn btn-sm" name="remove" value="-" {% if item.amount == 1 %}disabled{% endif %}>
+                                    <i class="fas fa-minus fa-sm"></i>
+                            </button>
+                            {{ item.amount }}
+                            <button class="btn btn-sm" name="add" value="+">
+                                    <i class="fas fa-plus fa-sm"></i>
+                            </button>
+                        </td>
                         <td class="text-end"><p>€ {{item.product.price}}</p></td>
                         <td class="text-end"><p><strong>€ {{item.total}}</strong></p></td>
                         <td class="text-end"><p><a href="{% url 'remove_product' forloop.counter0 %}"><i class="far fa-times-circle"></i></a></p></td>
                     </tr>
+                </form>
                 {% endfor %}
                 <tr>
                     <td colspan="3"></td>
-                    <td class="text-end" colspan="2">Grand total: <strong>€ {{basket_grand_total}}</strong></td>
+                    <td class="text-end" colspan="3">Grand total: <strong>€ {{basket_grand_total}}</strong></td>
                 </tr>
                 </tbody>
             </table>
