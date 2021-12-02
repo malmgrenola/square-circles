@@ -400,7 +400,19 @@ These guidelines includes help in add this project as a virtual environment in y
 1. in a terminal run `python3 manage.py runserver` to start the server.
 1. ...
 
+Site is available on `http://localhost:8000`
+
 Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
+
+### Stripe Webhooks
+
+It is possible to setup your dev environment to handle the stripe webhooks. Full setup documentation can be found on [Stripe Docs - webhook-test-cli](https://stripe.com/docs/webhooks/test#webhook-test-cli)
+
+1. install the Stripe CLI
+1. in a terminal run `stripe login` to Link your Stripe account.
+1. in a terminal run `stripe listen --forward-to localhost:8000/checkout/wh`
+1. copy the webhook signing secret printed in your terminal starting with `whsec_` to the `STRIPE_WH_SECRET` in your local `.env` file.
+1. restart site (quit + `python3 manage.py runserver`)
 
 ### Development Cheat Sheet
 
