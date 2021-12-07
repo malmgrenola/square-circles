@@ -61,7 +61,6 @@ def checkout(request):
                         item['check_in'], date_format),
                     check_out=datetime.strptime(
                         item['check_out'], date_format),
-                    days=item['days']
                 )
                 order_line_item.save()
 
@@ -113,6 +112,7 @@ def checkout(request):
 def checkout_success(request, order_number):
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
+    order_line_items = OrderLineItem.objects.filter(order=order)
 
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
@@ -139,6 +139,7 @@ def checkout_success(request, order_number):
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
+        'order_line_items': order_line_items,
     }
 
     return render(request, template, context)

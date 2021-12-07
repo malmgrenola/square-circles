@@ -1,26 +1,121 @@
 {% extends "base.html" %}
 {% load static%}
+{% load filters %}
+
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
 
 {% block page_header %}
-    <h1>Checkout Success</h1>
+
 {% endblock %}
+
+
 {% block content %}
-<p>{{order}}</p>
-<p>{{order.full_name}}</p>
-<p>{{order.email}}</p>
-<p>{{order.phone_number}}</p>
-<p>{{order.date}}</p>
-<p>{{order.grand_total}}</p>
-<p>{{order.original_basket}}</p>
-<p>{{order.stripe_pid}}</p>
-{% for item in order.lineitems.all %}
-    <p>{{item.product.name}}</p>
-    <p>{{item.product.quantity}}</p>
-    <p>{{item.product.lineitem_total}}</p>
-{% endfor %}
+<div class="row justify-content-md-center">
+    <div class="col col-md-8 m-md-4 box">
+        <div class="row py-2 bg-primary text-white text-center">
+            <div class="col">
+                <h2>Square Circles Holiday Park</h2>
+            </div> 
+        </div> 
+        <div class="row py-2 text-center justify-content-md-center fs-5">
+            <div class="col">Thank you {{order.full_name}}, your booking is confirmed</div> 
+        </div> 
+        <div class="row text-center justify-content-md-center fs-5">
+            <div class="col"><strong>Booking reference code : {{order}}</strong></div> 
+        </div>
+        <div class="row my-2 bg-secondary justify-content-md-center text-white">
+            <div class="col col-md-7"><h3 class="m-0 py-2">Booking details</h3></div> 
+        </div>
+        <div class="row justify-content-md-center">
+            <div class="col-5 col-md-3"><strong>Personal details:</strong></div>
+            <div class="col-7 col-md-4">{{order.full_name}}</div>
+        </div>
+        <div class="row justify-content-md-center">
+            <div class="col-5 col-md-3"><strong>Holiday park booked:</strong></div>
+            <div class="col-7 col-md-4">Square park Holiday park<br />
+                Road 4, Camping city<br />
+                Anywhere<br />
+                Tel: 123456789 - Telex: 987654321</div>
+        </div>
+        <hr class="text-secondary">
+        {% for item in order.lineitems.all %}
+            <div class="row justify-content-md-center">
+                <div class="col-5 col-md-3"><strong>Arrival date:</strong></div>
+                <div class="col-7 col-md-4">{{item.check_in}}, Check-in after 14:00</div>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-5 col-md-3"><strong>Departure date:</strong></div>
+                <div class="col-7 col-md-4">{{item.check_out}}, Check-out until 12:00</div>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-5 col-md-3"><strong>Length of stay:</strong></div>
+                <div class="col-7 col-md-4">{{item.days}}</div>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-5 col-md-3"><strong>Number of items:</strong></div>
+                <div class="col-7 col-md-4">{{item.quantity}}</div>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-5 col-md-3"><strong>Type of items:</strong></div>
+                <div class="col-7 col-md-4">{{item.product.name}}</div>
+            </div>
+
+            {% if not forloop.last %}<hr class="text-secondary">{% endif %}
+        {% endfor %}
+
+        <div class="row my-2  justify-content-md-center bg-secondary text-white">
+            <div class="col col-md-7"><h3 class="m-0 py-2">Price details</h3></div> 
+        </div>
+        {% for item in order.lineitems.all %}
+            <div class="row justify-content-md-center">
+                <div class="col-5 col-md-3"><strong>Cost of stay<br />
+                    ({{item.days}} nights)</strong></div>
+                <div class="col-7 col-md-4">
+                    {% for i in item.quantity|times %}
+                    <div class="row">
+                        <div class="col">Pitch {{i}}<br />
+                            {{item.product.name}}
+                        </div>
+                        <div class="col text-secondary text-end">{{ item.product.price | multiply:item.days }} EUR
+                        </div>
+                    </div>
+                    {% if forloop.last %}<hr class="text-secondary">
+                    <div class="row justify-content-md-center">
+                        <div class="col text-secondary text-end">{{ item.lineitem_total }} EUR
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            {% if not forloop.last %}<hr class="text-secondary">{% endif %}
+        {% endfor %}
+        <hr class="text-secondary">
+        <div class="row justify-content-md-center">
+            <div class="col-5 col-md-3"><strong>Taxes:</strong></div>
+            <div class="col-7 col-md-4">
+                <div class="row">
+                    <div class="col">National taxes<br />
+                        (12.00%)
+                    </div>
+                    <div class="col text-secondary text-end">included</div>
+                </div>
+             </div>  
+        </div> 
+        <div class="row my-4 justify-content-md-center">
+            <div class="col col-md-7 highlight-border">
+                <div class="row align-items-center">
+                    <div class="col"><strong>Total cost including taxes:</strong></div>
+                    <div class="col text-secondary text-end"><h3 class="m-0">{{ order.grand_total }}</h3></div>
+                </div>
+            </div>
+        </div> 
+    </div>  
+</div>
+
+
 
 {% endblock %}

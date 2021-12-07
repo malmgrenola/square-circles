@@ -109,7 +109,6 @@ class StripeWH_Handler:
                             item['check_in'], date_format),
                         check_out=datetime.strptime(
                             item['check_out'], date_format),
-                        days=item['days']
                     )
                     order_line_item.save()
 

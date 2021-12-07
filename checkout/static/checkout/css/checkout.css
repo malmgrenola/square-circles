@@ -46,6 +46,10 @@ select option[value=""] {
   color: #aab7c4 !important;
 }
 
+.highlight-border {
+  border: 3px solid #0079b2;
+}
+
 #loading-overlay {
   display: none;
   position: fixed;

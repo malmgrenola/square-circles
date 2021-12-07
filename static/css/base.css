@@ -31,8 +31,10 @@ body {
 .box {
   background-color: white;
   border: 1px solid #d82b68;
-  border-radius: 1em;
   min-width: 50%;
+}
+.box-rounded {
+  border-radius: 1em;
 }
 
 img.image-thumbnail,
@@ -287,18 +289,25 @@ footer i {
 }
 
 /* ---------------------------- Messages */
+.message-container {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
 .message-container .alert {
   display: inline-block;
-  padding: 2px;
+  padding: 10px;
   margin: 10px;
 }
 
 .message-container .btn-alert {
-  position: relative;
-  top: 0;
-  right: 0;
+  position: absolute;
+  right: 0px;
+  top: 0px;
   z-index: 2;
-  padding: 0.3em;
+  padding: 0;
   font-size: 0.75em;
   color: inherit;
 }

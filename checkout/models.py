@@ -13,7 +13,7 @@ from datetime import datetime
 
 class Order(models.Model):
     order_number = models.CharField(
-        max_length=32, default=uuid.uuid4().hex.upper(), null=False, editable=False)
+        max_length=32, null=False, editable=False)
     user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
                                      null=True, blank=True, related_name='orders')
     full_name = models.CharField(max_length=50, null=False, blank=False)
@@ -30,6 +30,12 @@ class Order(models.Model):
     def __str__(self):
         return self.order_number
 
+    def _generate_order_number(self):
+        """
+        Generate a random, unique order number using UUID
+        """
+        return uuid.uuid4().hex.upper()
+
     def update_total(self):
         """
         Update grand total each time a line item is added,
@@ -39,6 +45,15 @@ class Order(models.Model):
         self.grand_total = self.lineitems.aggregate(Sum('lineitem_total'))[
             'lineitem_total__sum'] or 0
         self.save()
+
+    def save(self, *args, **kwargs):
+        """
+        Override the original save method to set the order number
+        if it hasn't been set already.
+        """
+        if not self.order_number:
+            self.order_number = self._generate_order_number()
+        super().save(*args, **kwargs)
 
 
 class OrderLineItem(models.Model):
@@ -56,8 +71,10 @@ class OrderLineItem(models.Model):
     def save(self, *args, **kwargs):
         """
         Override the original save method to set the lineitem total
-        and update the order total.
+        and update the number of days booked.
         """
+
+        self.days = (self.check_out - self.check_in).days
         self.lineitem_total = self.product.price * self.quantity * self.days
         super().save(*args, **kwargs)
 

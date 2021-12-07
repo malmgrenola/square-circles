@@ -523,3 +523,4 @@ https://realfavicongenerator.net/
 
 - https://stackoverflow.com/questions/2969348/django-ordering-numerical-value-with-order-by
 - https://medium.com/python-pandemonium/how-to-test-your-imports-1461c1113be1
+- https://stackoverflow.com/questions/1107737/numeric-for-loop-in-django-templates
