@@ -56,7 +56,7 @@ def checkout(request):
                 order_line_item = OrderLineItem(
                     order=order,
                     product=product,
-                    quantity=item['amount'],
+                    quantity=item['quantity'],
                     check_in=datetime.strptime(
                         item['check_in'], date_format),
                     check_out=datetime.strptime(

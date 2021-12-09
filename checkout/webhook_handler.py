@@ -20,13 +20,16 @@ class StripeWH_Handler:
 
     def _send_confirmation_email(self, order):
         """Send the user a confirmation email"""
+
+        order_line_items = OrderLineItem.objects.filter(order=order)
+
         cust_email = order.email
         subject = render_to_string(
             'checkout/confirmation_emails/confirmation_email_subject.txt',
             {'order': order})
         body = render_to_string(
             'checkout/confirmation_emails/confirmation_email_body.txt',
-            {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
+            {'order': order, 'order_line_items': order_line_items, 'contact_email': settings.DEFAULT_FROM_EMAIL})
 
         send_mail(
             subject,
@@ -49,7 +52,6 @@ class StripeWH_Handler:
         """
         intent = event.data.object
 
-        print("INTENT WEBHOOK", intent)
         pid = intent.id
         basket = intent.metadata.basket
         save_info = intent.metadata.save_info
@@ -104,7 +106,7 @@ class StripeWH_Handler:
                     order_line_item = OrderLineItem(
                         order=order,
                         product=product,
-                        quantity=item['amount'],
+                        quantity=item['quantity'],
                         check_in=datetime.strptime(
                             item['check_in'], date_format),
                         check_out=datetime.strptime(

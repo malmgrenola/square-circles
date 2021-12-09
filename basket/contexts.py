@@ -23,12 +23,12 @@ def basket_contents(request):
         product = get_object_or_404(Product, pk=item['product_id'])
         check_in = item['check_in']
         check_out = item['check_out']
-        amount = item['amount']
+        quantity = item['quantity']
         days = item['days']
-        total = float(amount * days * product.price)
+        total = float(quantity * days * product.price)
         basket_items.append({
             'product': product,
-            'amount': amount,
+            'quantity': quantity,
             'total': total,
             'check_in': check_in,
             'check_out': check_out,

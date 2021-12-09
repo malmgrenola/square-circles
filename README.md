@@ -410,7 +410,7 @@ It is possible to setup your dev environment to handle the stripe webhooks. Full
 
 1. install the Stripe CLI
 1. in a terminal run `stripe login` to Link your Stripe account.
-1. in a terminal run `stripe listen --forward-to localhost:8000/checkout/wh`
+1. in a terminal run `stripe listen --forward-to localhost:8000/checkout/wh/`
 1. copy the webhook signing secret printed in your terminal starting with `whsec_` to the `STRIPE_WH_SECRET` in your local `.env` file.
 1. restart site (quit + `python3 manage.py runserver`)
 

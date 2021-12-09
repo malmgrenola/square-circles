@@ -36,7 +36,7 @@ def add_product(request, product_id):
         i += 1
 
     if item:
-        basket[i]['amount'] += 1
+        basket[i]['quantity'] += 1
     else:
         date_format = "%Y-%m-%d"
         basket.append({
@@ -45,7 +45,7 @@ def add_product(request, product_id):
             'check_out': check_out,
             'days': (datetime.strptime(
                 check_out, date_format) - datetime.strptime(check_in, date_format)).days,
-            'amount': 1
+            'quantity': 1
         })
 
     request.session['basket'] = basket
@@ -67,16 +67,16 @@ def update_item(request, basket_index):
     if basket and basket_index <= len(basket):
         product_id = basket[basket_index]['product_id']
         product = get_object_or_404(Product, pk=product_id)
-        amount = basket[basket_index]['amount']
+        quantity = basket[basket_index]['quantity']
 
         if cmd_add == '+':
             # todo: limit max bookings
-            amount += 1
+            quantity += 1
 
-        if cmd_remove == '-' and amount > 1:
-            amount -= 1
+        if cmd_remove == '-' and quantity > 1:
+            quantity -= 1
 
-        basket[basket_index]['amount'] = amount
+        basket[basket_index]['quantity'] = quantity
         request.session['basket'] = basket
         messages.success(request, f'Successfully updated {product.name}')
     else:
