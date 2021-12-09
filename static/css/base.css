@@ -27,6 +27,15 @@ body {
   margin-top: 116px;
 }
 
+.link-delete {
+  color: #aa184b;
+  text-decoration: none;
+}
+.link-delete {
+  color: #aa184b;
+  text-decoration: underline;
+}
+
 /* ---------------------------- General styling */
 .box {
   background-color: white;
@@ -35,6 +44,10 @@ body {
 }
 .box-rounded {
   border-radius: 1em;
+}
+
+.highlight-border {
+  border: 3px solid #0079b2;
 }
 
 img.image-thumbnail,
@@ -139,6 +152,11 @@ h6 {
 .daterangepicker.opensleft:after {
   right: 63px;
 }
+
+#availability:hover {
+  cursor: pointer;
+}
+
 /* ---------------------------- Override bootstrap colours */
 /* ---------------------------- Buttons */
 .sc.btn-primary {
