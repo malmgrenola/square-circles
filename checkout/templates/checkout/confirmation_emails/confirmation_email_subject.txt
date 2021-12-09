@@ -1,1 +1,1 @@
-Square Circles Holiday Park Confirmation for Order Number {{ order.order_number }}
+Square Circles Holiday Park - Booking reference {{ order.order_number }}
