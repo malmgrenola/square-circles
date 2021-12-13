@@ -73,8 +73,10 @@ class OrderLineItem(models.Model):
         Override the original save method to set the lineitem total
         and update the number of days booked.
         """
-
-        self.days = (self.check_out - self.check_in).days
+        if (self.check_out is not None or self.check_in is not None):
+            self.days = (self.check_out - self.check_in).days
+        else:
+            self.days = 0
         self.lineitem_total = self.product.price * self.quantity * self.days
         super().save(*args, **kwargs)
 

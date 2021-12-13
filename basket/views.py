@@ -26,6 +26,11 @@ def add_product(request, product_id):
         check_in = travel_info['check_in']
         check_out = travel_info['check_out']
 
+    if not check_in or not check_out:
+        messages.error(
+            request, f'You must add availability information on when you would like to book')
+        return redirect(reverse('basket'))
+
     item = None
     i = 0
     for x in basket:
@@ -64,7 +69,7 @@ def update_item(request, basket_index):
     cmd_add = request.POST.get('add', None)
     cmd_remove = request.POST.get('remove', None)
 
-    if basket and basket_index <= len(basket):
+    if basket and basket_index <= (len(basket)-1):
         product_id = basket[basket_index]['product_id']
         product = get_object_or_404(Product, pk=product_id)
         quantity = basket[basket_index]['quantity']

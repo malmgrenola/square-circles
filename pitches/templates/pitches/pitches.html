@@ -68,7 +68,8 @@
             // Create interactive map
             const pitches = [{% for x in pitches %}{
                 id: `p-{{ x }}`,
-                name: '{{ x }}', 
+                name: '{{ x }}',
+                product: '{{ x.product.name }}', 
                 electric: {{ x.electric |yesno:"true,false" }}, 
                 plug: {{ x.plug |yesno:"true,false" }}, 
                 graywaste: {{ x.graywaste |yesno:"true,false" }},
@@ -84,11 +85,13 @@
                 if (item.seasonal) color = "pitch-seasonal"
                 if (item.tent) color = "pitch-camping-tent"
 
-
+                const shape = `product-${encodeURIComponent(item.product).toLowerCase().replace(/\.|%[0-9a-z]{2}/gi, '')}`;
 
                 $(`#${item.id} text`).text(`${item.name}`);
-                $(`#${item.id} text`).attr('x', `${[4,2,0][item.name.length-1]}`); // Center text hack
+                //$(`#${item.id} text`).attr('x', `${[0,0,0][item.name.length-1]}`); // Center text hack
                 $(`#${item.id} .st4`).addClass(`${color}`)
+                
+                //$(`#${item.id} .st4`).css("display", 'none');
                 $(`#${item.id}`).addClass('popover')
             });
 
@@ -97,18 +100,18 @@
                 const params = [pitch.electric]
                 $("#pop").html(`
                 <p>Pitch name: <strong>${pitch.name}</strong></p>
-                ${pitch.seasonal ? "<p>is a seasonal pitch</p>" : ""}
+                <p>${pitch.product}</p>
                 ${pitch.tent ? "<p>is a tent pitch</p>" : ""}
                 ${pitch.electric ? "<p>has power</p>" : ""}
                 ${pitch.greywater ? "<p>has greywater</p>" : ""}
                 `);
                 $("#pop").css("top", y);
                 $("#pop").css("left", x);
-                $('#pop').fadeIn('fast');
+                $('#pop').fadeIn(0);
             });
 
             $('.popover').mouseleave(function(e) {
-                $('#pop').fadeOut('fast');
+                $('#pop').fadeOut(0);
             });
         });
     </script>

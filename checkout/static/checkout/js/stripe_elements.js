@@ -30,7 +30,6 @@ card.mount("#card-element");
 // Handle realtime validation errors on the card element
 card.addEventListener("change", function (event) {
   var errorDiv = document.getElementById("card-errors");
-  console.log(2, event);
   if (event.error) {
     var html = `
             <span class="icon" role="alert">
@@ -62,7 +61,6 @@ form.addEventListener("submit", function (ev) {
     client_secret: clientSecret,
     save_info: saveInfo,
   };
-  console.log("SUBMIT FUNCTION", postData);
   var url = "/checkout/cache_checkout_data/";
 
   $.post(url, postData)
@@ -93,7 +91,6 @@ form.addEventListener("submit", function (ev) {
             $("#submit-button").attr("disabled", false);
           } else {
             if (result.paymentIntent.status === "succeeded") {
-              console.log(1, "FORM SUBMIT");
               form.submit();
             }
           }

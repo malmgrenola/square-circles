@@ -26,14 +26,16 @@ class TestViews(TestCase):
         self.assertEqual(response.status_code, 200)
 
     def test_get_checkout_authenticated_index(self):
-        user = User.objects.create_user('fred', 'fred@test.test', 'secret')
+        User.objects.create_user('fred', 'fred@test.test', 'secret')
         self.client.login(username='fred', password='secret')
         item = Product.objects.create(
             name='Test product item', price=22.5, description="Item description")
         self.client.get(
             f'/reservations/add/{item.id}', follow=True)
+
         response = self.client.get('/checkout/')
         self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'checkout/checkout.html')
 
     def test_get_checkout_authenticated_without_profile_index(self):
         user = User.objects.create_user('fred', 'fred@test.test', 'secret')
