@@ -14,10 +14,8 @@ def basket_contents(request):
     basket_items = []
 
     if 'check_in' in travel_info and 'check_out' in travel_info:
-        _delta = datetime.strptime(
-            travel_info['check_out'], date_format) - datetime.strptime(travel_info['check_in'], date_format)
-        days = _delta.days
-        travel_info['days'] = days
+        travel_info['days'] = (datetime.strptime(
+            travel_info['check_out'], date_format) - datetime.strptime(travel_info['check_in'], date_format)).days
 
     for item in basket:
         product = get_object_or_404(Product, pk=item['product_id'])
