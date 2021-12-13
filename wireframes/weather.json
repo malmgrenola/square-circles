@@ -1,0 +1,32 @@
+{
+  "coord": { "lon": -95.2414, "lat": 38.7311 },
+  "weather": [
+    { "id": 801, "main": "Clouds", "description": "few clouds", "icon": "02n" }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 1.58,
+    "feels_like": -2.32,
+    "temp_min": -0.09,
+    "temp_max": 3.27,
+    "pressure": 1020,
+    "humidity": 59,
+    "sea_level": 1020,
+    "grnd_level": 983
+  },
+  "visibility": 10000,
+  "wind": { "speed": 3.97, "deg": 189, "gust": 10.91 },
+  "clouds": { "all": 24 },
+  "dt": 1639396129,
+  "sys": {
+    "type": 1,
+    "id": 5249,
+    "country": "US",
+    "sunrise": 1639402250,
+    "sunset": 1639436400
+  },
+  "timezone": -21600,
+  "id": 4270450,
+  "name": "Nowhere",
+  "cod": 200
+}

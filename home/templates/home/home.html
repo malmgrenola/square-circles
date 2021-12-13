@@ -1,21 +1,22 @@
 {% extends "base.html" %}
 {% load static%}
 
-{% block page_header %}
-<div class="row">
-    <div class="col">
-        <h1>Header</h1>
-        <h2 class="header-caption">Here's a header caption</h2>
-    </div>
-</div>
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'home/css/open-weather-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/home.css' %}">
 {% endblock %}
 
 {% block content %}
-<div class="row">
-    <div class="col">
-        <p class="text-primary">fisk</p>
-        <img src="/media/logo.png" alt="squre circles Holiday park logo" />
-        <p>Paragraph with <a href="#">link</a> and embedded icon <i class="fas fa-space-shuttle"></i>.</p>
+<div class="row justify-content-center">
+    <div class="card w-25 m-2 bg-dark text-white">
+        <img src="{{ MEDIA_URL }}/night.png" class="card-img" alt="night image background">
+        <div class="card-img-overlay text-center">
+            <p class="card-text m-0">{{ weather.weather.0.main }}</p>
+            <p class="card-text text-muted m-0">{{ weather.weather.0.description }}</p>
+            <h2 class="card-title"><i class="owi owi-{{weather.weather.0.icon}}"></i></h2>
+                <p class="card-text">{{weather.name}}</p>
+                <p class="card-text">{{weather.main.temp|floatformat:0}} Cº</p>
+        </div>
     </div>
 </div>
 {% endblock %}

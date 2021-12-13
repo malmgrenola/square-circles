@@ -209,11 +209,15 @@ All wireframes can be found in the [wireframes folder](wireframes). They are all
    - Used to draw Entity-Relationship Diagrams
 1. [Stripe](https://stripe.com/)
    - Used to make card payments
-1. mock <-- Remove depending on manage.py test
+1. [OpenWeather](https://openweathermap.org/)
+   - API used to fetch weather
+1. [open-weather-icons](https://github.com/isneezy/open-weather-icons)
 
-<!--
-https://github.com/dangrossman/daterangepicker
--->
+   - font used to render weather icons
+
+   <!--
+   https://github.com/dangrossman/daterangepicker
+   -->
 
 ## Data models
 
