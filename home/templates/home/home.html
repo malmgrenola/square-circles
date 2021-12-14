@@ -5,7 +5,13 @@
     <link rel="stylesheet" href="{% static 'home/css/open-weather-icons.css' %}">
     <link rel="stylesheet" href="{% static 'home/css/home.css' %}">
 {% endblock %}
-
+{% block page_header %}
+    <div class="row justify-content-center mx-1 py-4" id='products'>
+        <div class="col text-center">
+            <h1>Welcome to Square Circles Holiday Park</h1>
+        </div>
+    </div>
+{% endblock %}
 {% block content %}
 <div class="row justify-content-center">
     <div class="card w-25 m-2 bg-dark text-white">

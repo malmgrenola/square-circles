@@ -24,7 +24,7 @@ html {
 
 body {
   font-family: "Assistant", sans-serif;
-  margin-top: 116px;
+  margin-top: 172px;
 }
 
 .link-delete {
@@ -80,7 +80,7 @@ tbody .sc-row:last-child {
 
 section {
   /* screen height - footer height - navbar height */
-  min-height: calc(100vh - 312px - 116px);
+  min-height: calc(100vh - 312px - 172px);
 }
 
 @media (max-width: 991px) {
@@ -88,18 +88,18 @@ section {
     width: 250px;
   }
   body {
-    margin-top: 95px;
+    margin-top: 151px;
   }
   section {
     /* screen height - footer height - navbar height */
-    min-height: calc(100vh - 168px - 95px);
+    min-height: calc(100vh - 168px - 151px);
   }
 }
 
 @media (max-width: 776px) {
   section {
     /* screen height - footer height - navbar height */
-    min-height: calc(100vh - 72px - 95px);
+    min-height: calc(100vh - 72px - 151px);
   }
 }
 

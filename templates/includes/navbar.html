@@ -56,17 +56,10 @@
                     {% endif %}
                     
                 </ul>
-                {% if travel_info.check_in != None and travel_info.check_out != None %}
-                <div id="availability" class="d-flex flex-row align-items-center availability-box rounded">
-                    <div class="mx-2 text-end">
-                        <p><strong>{{travel_info.check_in}}</strong> to <strong>{{travel_info.check_out}}</strong></p>
-                        <p><strong>{{travel_info.days}} nights</strong></p>    
-                    </div>
-                    <div class="mx-2"><i class="fas fa-edit"></i></div>
-                </div>
-                {% else %}
-                <button id="availability" class="btn sc btn-primary btn-rounded" type="submit">Check availability</button>
-                {% endif %}
+                <ul class="navbar-nav flex-md-row align-items-center justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link py-1 pb-3" href="{% url 'basket' %}"><i class="fas fa-shopping-basket"></i> <u>Basket</u></a>
+                    </li>
             </div>
         </div>
 </nav>
