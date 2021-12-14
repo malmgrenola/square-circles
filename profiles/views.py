@@ -5,6 +5,7 @@ from django.views.decorators.http import require_http_methods
 from .models import UserProfile
 from .forms import UserProfileForm, UserForm
 from django.contrib.auth.models import User
+from checkout.models import Order
 
 
 @require_http_methods(["GET", "POST"])
@@ -14,6 +15,7 @@ def profile(request):
 
     profile = get_object_or_404(UserProfile, user=request.user)
     user = get_object_or_404(User, username=request.user)
+    orders = profile.orders.all()
 
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
@@ -31,7 +33,19 @@ def profile(request):
     template = 'profiles/profile.html'
     context = {
         'form': form,
-        'user_form':  user_form
+        'user_form':  user_form,
+        'orders': orders
+    }
+
+    return render(request, template, context)
+
+
+def order_history(request, order_number):
+    order = get_object_or_404(Order, order_number=order_number)
+    template = 'checkout/checkout_success.html'
+    context = {
+        'order': order,
+        'from_profile': True,
     }
 
     return render(request, template, context)

@@ -21,7 +21,11 @@
             </div> 
         </div> 
         <div class="row py-2 text-center justify-content-md-center fs-5">
-            <div class="col">Thank you {{order.full_name}}, your booking is confirmed</div> 
+            {% if from_profile %}
+            <div class="col">This is a copy of your reservation</div> 
+            {% else %}
+            <div class="col">Thank you {{order.full_name}}, your booking is confirmed</div>
+            {% endif %}
         </div> 
         <div class="row text-center justify-content-md-center fs-5">
             <div class="col"><strong>Booking reference code : {{order}}</strong></div> 
