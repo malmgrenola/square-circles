@@ -27,7 +27,6 @@ def fetchWeather(request):
     today = date.today()
 
     if 'dt' in weather:
-        print(today, date.fromtimestamp(weather['dt']))
         if date.fromtimestamp(weather['dt']) == today:
             return weather
 

@@ -47,9 +47,9 @@
                             <i class="fas fa-minus fa-sm"></i>
                         </button>
                         {{ item.quantity }}
-                        <button class="btn btn-sm" name="add" value="+">
+                        <button class="btn btn-sm" name="add" value="+" {% if item.quantity >= item.available %}disabled{% endif %}>
                             <i class="fas fa-plus fa-sm"></i>
-                        </button></div>
+                        </button>{% if item.quantity >= item.available %} <span class="text-muted">Max available</span>{% endif %}</div>
                 </div>
                 {% if not forloop.last %}<hr class="text-secondary">{% endif %}
             </form>

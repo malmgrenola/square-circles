@@ -1,6 +1,7 @@
 from products.models import Product
 from django.shortcuts import get_object_or_404
 from datetime import datetime
+from products.views import product_available
 
 
 def basket_contents(request):
@@ -19,8 +20,10 @@ def basket_contents(request):
 
     for item in basket:
         product = get_object_or_404(Product, pk=item['product_id'])
-        check_in = item['check_in']
-        check_out = item['check_out']
+        check_in = datetime.strptime(
+            item['check_in'], '%Y-%m-%d')
+        check_out = datetime.strptime(
+            item['check_out'], '%Y-%m-%d')
         quantity = item['quantity']
         days = item['days']
         total = float(quantity * days * product.price)
@@ -30,7 +33,8 @@ def basket_contents(request):
             'total': total,
             'check_in': check_in,
             'check_out': check_out,
-            'days': days
+            'days': days,
+            'available': product_available(product, check_in, check_out)
         })
         basket_grand_total = float(basket_grand_total + total)
 

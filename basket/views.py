@@ -4,6 +4,7 @@ from django.shortcuts import get_object_or_404
 from django.contrib import messages
 from products.models import Product
 from datetime import datetime
+from products.views import product_available
 
 
 @require_http_methods(["GET", "POST"])
@@ -31,11 +32,18 @@ def add_product(request, product_id):
             request, f'You must add availability information on when you would like to book')
         return redirect(reverse('basket'))
 
+    available = product_available(product, datetime.strptime(
+        check_in, '%Y-%m-%d'), datetime.strptime(
+        check_out, '%Y-%m-%d'))
+
     item = None
     i = 0
     for x in basket:
-
         if x['product_id'] == product_id and x['check_in'] == check_in and x['check_out'] == check_out:
+            if available - x['quantity'] <= 0:
+                messages.error(
+                    request, f'{product} is not available in the selected period.')
+                return redirect(reverse('basket'))
             item = x
             break
         i += 1
@@ -73,10 +81,20 @@ def update_item(request, basket_index):
         product_id = basket[basket_index]['product_id']
         product = get_object_or_404(Product, pk=product_id)
         quantity = basket[basket_index]['quantity']
+        check_in = datetime.strptime(
+            basket[basket_index]['check_in'], '%Y-%m-%d')
+        check_out = datetime.strptime(
+            basket[basket_index]['check_out'], '%Y-%m-%d')
+        available = product_available(product, check_in, check_out)
 
         if cmd_add == '+':
-            # todo: limit max bookings
-            quantity += 1
+            # limit max bookings
+            if quantity < available:
+                quantity += 1
+            else:
+                messages.error(
+                    request, f'It is not possible to reserve {product.name}')
+                return redirect(reverse('basket'))
 
         if cmd_remove == '-' and quantity > 1:
             quantity -= 1

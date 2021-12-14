@@ -69,15 +69,8 @@ def all_products(request):
     for product in products:
 
         if not travel_info == {}:
-            total = Pitch.objects.filter(
-                product=product.id).count()
-
-            queries = Q(product=product.id) & (Q(check_in__range=(q_check_in, q_check_out + timedelta(days=-1))) | Q(
-                check_out__range=(q_check_in + timedelta(days=1), q_check_out)))
-
-            reserved = OrderLineItem.objects.filter(queries).count()
-
-            product.available = total - reserved
+            product.available = product_available(
+                product, q_check_in, q_check_out)
         else:
             product.available = 0
 
@@ -103,3 +96,17 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
+
+
+def product_available(product, check_in, check_out):
+    """ Returns the amount of available pitches for a product based on what is ordered """
+
+    reserved = 0
+    total = Pitch.objects.filter(
+        product=product.id).count()
+    queries = Q(product=product.id) & (Q(check_in__range=(check_in, check_out + timedelta(days=-1))) | Q(
+        check_out__range=(check_in + timedelta(days=1), check_out)))
+    for e in OrderLineItem.objects.filter(queries):
+        reserved += e.quantity
+
+    return total - reserved

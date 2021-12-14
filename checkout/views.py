@@ -11,6 +11,7 @@ from basket.contexts import basket_contents
 from datetime import datetime
 import stripe
 import json
+from products.views import product_available
 
 
 @require_http_methods(["POST"])
@@ -44,7 +45,8 @@ def checkout(request):
             'phone_number': request.POST['phone_number'],
         }
         order_form = OrderForm(form_data)
-        if order_form.is_valid():
+        basket_items_available = is_basket_available(basket)
+        if order_form.is_valid() and basket_items_available:
             order = order_form.save(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
@@ -66,8 +68,11 @@ def checkout(request):
 
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
+        else:
+            messages.error(
+                request, "It is not possible to process your request")
+            return redirect(reverse('basket'))
     else:
-
         if not basket:
             messages.error(
                 request, "There's nothing in your basket at the moment")
@@ -143,3 +148,21 @@ def checkout_success(request, order_number):
     }
 
     return render(request, template, context)
+
+
+def is_basket_available(basket):
+    """ Returns false if product is not available """
+
+    available = True
+    for item in basket:
+        product = Product.objects.get(id=item['product_id'])
+        check_in = datetime.strptime(
+            item['check_in'], '%Y-%m-%d')
+        check_out = datetime.strptime(
+            item['check_out'], '%Y-%m-%d')
+
+        if product_available(product, check_in, check_out) - item['quantity'] < 0:
+            available = False
+            break
+
+    return available
