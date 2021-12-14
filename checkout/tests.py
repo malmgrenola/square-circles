@@ -16,10 +16,12 @@ class TestViews(TestCase):
             name='Test product item', price=22.5, description="Item description")
 
         session = self.client.session
-        session["reservations"] = [{'product_id': item.id,
-                                    'check_in': '2021-10-01',
-                                   'check_out': '2021-10-03', }]
-        session['reservations_grand_total'] = item.price
+        session["basket"] = [{'product_id': item.id,
+                              'check_in': '2021-10-01',
+                              'check_out': '2021-10-03',
+                              'days': 2,
+                              'quantity': 1}]
+        session['basket_grand_total'] = item.price
         session.save()
 
         response = self.client.get('/checkout/')
@@ -30,23 +32,28 @@ class TestViews(TestCase):
         self.client.login(username='fred', password='secret')
         item = Product.objects.create(
             name='Test product item', price=22.5, description="Item description")
-        self.client.get(
-            f'/reservations/add/{item.id}', follow=True)
+        session = self.client.session
+        session["basket"] = [{'product_id': item.id,
+                              'check_in': '2021-10-01',
+                              'check_out': '2021-10-03',
+                              'days': 2,
+                              'quantity': 1}]
+        session['basket_grand_total'] = item.price
+        session.save()
 
         response = self.client.get('/checkout/')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'checkout/checkout.html')
 
     def test_get_checkout_authenticated_without_profile_index(self):
-        user = User.objects.create_user('fred', 'fred@test.test', 'secret')
-        self.client.login(username='fred', password='secret')
-        UserProfile.objects.filter(user=user).delete()
         item = Product.objects.create(
             name='Test product item', price=22.5, description="Item description")
         session = self.client.session
-        session["reservations"] = [{'product_id': item.id,
-                                    'check_in': '2021-10-01',
-                                   'check_out': '2021-10-03', }]
+        session["basket"] = [{'product_id': item.id,
+                              'check_in': '2021-10-01',
+                              'check_out': '2021-10-03',
+                              'days': 2,
+                              'quantity': 1}]
         session.save()
         response = self.client.get('/checkout/')
         self.assertEqual(response.status_code, 200)
@@ -55,9 +62,11 @@ class TestViews(TestCase):
         item = Product.objects.create(
             name='Test product item', price=22.5, description="Item description")
         session = self.client.session
-        session["reservations"] = [{'product_id': item.id,
-                                    'check_in': '2021-10-01',
-                                   'check_out': '2021-10-03', }]
+        session["basket"] = [{'product_id': item.id,
+                              'check_in': '2021-10-01',
+                              'check_out': '2021-10-03',
+                              'days': 2,
+                              'quantity': 1}]
         session.save()
         response = self.client.get('/checkout/')
         self.assertEqual(response.status_code, 200)
@@ -74,7 +83,8 @@ class TestModels(TestCase):
         product = Product.objects.create(
             name='Test product item', price=22.5, description="Item description")
         order = Order.objects.create()
-        item = OrderLineItem.objects.create(order=order, product=product)
+        item = OrderLineItem.objects.create(
+            order=order, product=product, quantity=1)
 
         self.assertEqual(
             str(item), f'{item.product.name} on order {item.order.order_number}')
