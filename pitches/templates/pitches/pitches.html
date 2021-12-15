@@ -2,11 +2,8 @@
 {% load static%}
 
 {% block extra_css %}
+{{ block.super }}
 <style type="text/css">
-
-  
-</style>
-<style>
     #pop{
         display              : none;
         position             : absolute;
@@ -48,7 +45,6 @@
         cursor: pointer; 
     }
 </style>
-
 {% endblock %}
 
 {% block content %}
