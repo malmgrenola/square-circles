@@ -33,23 +33,47 @@
     .pitch-camping{fill: purple;}
     .pitch-camping-tent{fill: blue;}
     
+    .selected {
+        stroke: white;
+        stroke-width: 1px;
+        stroke-linejoin: round;
+      }
+
+    /* Fix pointer-events in buttons */
+    /* https://css-tricks.com/slightly-careful-sub-elements-clickable-things/ */
+    button > * {
+        pointer-events: none;
+      }
+    .popover{
+        cursor: pointer; 
+    }
 </style>
 
 {% endblock %}
 
-{% block page_header %}
-    <div class="row justify-content-md-center mx-1">
-        <div class="col my-4 text-center">
-            <h1>Map</h1>
-        </div>
-    </div>
-{% endblock %}
-
 {% block content %}
-    <div class="row justify-content-md-center mx-1">
-            <div class="col-12 col-lg-10 my-4 box">
-               {% include 'includes/interactive-map.svg' %}
+    <div class="row justify-content-md-center"> 
+        <div class="col col-md-8 m-md-4 box">
+            <div class="row py-2 bg-primary text-white text-center">
+                <div class="col">
+                    <h2>Square Circles Holiday Park Map</h2>
+                </div> 
+            </div> 
+            <div class="row mb-2 bg-secondary justify-content-md-center text-white text-center">
+                <div class="col"><h3 class="m-0 py-2">Interactive</h3></div> 
             </div>
+            <div class="row mb-2 bg-white justify-content-md-center text-center">
+                <div class="col">
+                    <button class="btn cb-electric" id='cb-electric' name="electric"><i class="far fa-square"></i> Electric</button>
+                    <button class="btn cb-water" id='cb-water' name="water"><i class="far fa-square"></i> Water</button>
+                    <button class="btn cb-seasonal" id='cb-seasonal' name="seasonal"><i class="far fa-square"></i> Seasonal</button>
+                    <button class="btn cb-tent" id='cb-tent' name="tent"><i class="far fa-square"></i> Tent</button>
+                </div> 
+            </div>
+            <div class="row mb-2 bg-white justify-content-md-center text-white">
+                <div class="col">{% include 'includes/interactive-map.svg' %}</div> 
+            </div>
+        </div>
     </div>
     <div id="pop">
         <p>I am a popup!</p>
@@ -88,10 +112,7 @@
                 const shape = `product-${encodeURIComponent(item.product).toLowerCase().replace(/\.|%[0-9a-z]{2}/gi, '')}`;
 
                 $(`#${item.id} text`).text(`${item.name}`);
-                //$(`#${item.id} text`).attr('x', `${[0,0,0][item.name.length-1]}`); // Center text hack
                 $(`#${item.id} .st4`).addClass(`${color}`)
-                
-                //$(`#${item.id} .st4`).css("display", 'none');
                 $(`#${item.id}`).addClass('popover')
             });
 
@@ -113,6 +134,51 @@
             $('.popover').mouseleave(function(e) {
                 $('#pop').fadeOut(0);
             });
+
+
+            // Checkboxes
+            state = {
+                'electric': false,
+                'water': false,
+                'seasonal': false,
+                'tent': false
+            }
+            const renderMap = () => {
+                let intersection = !state.electric && !state.tent && !state.water && !state.seasonal ? [] : [...pitches];
+                if (state.electric) {
+                    const electric = [...pitches].filter(x => x.electric)
+                    intersection = intersection.filter(x => electric.includes(x))
+                };
+                if (state.tent) {
+                    const tent = [...pitches].filter(x => x.tent)
+                    intersection = intersection.filter(x => tent.includes(x))
+                };
+                if (state.water) {
+                    const water = [...pitches].filter(x => x.water)
+                    intersection = intersection.filter(x => water.includes(x))
+                };
+                if (state.seasonal) {
+                    const seasonal = [...pitches].filter(x => x.seasonal)
+                    intersection = intersection.filter(x => seasonal.includes(x))
+                };
+                if ($('.st4').hasClass('selected')) $('.st4').removeClass('selected');
+                intersection.forEach(pitch => $(`#${pitch.id} .st4`).addClass('selected'))
+            }
+            const stateHandler = (e => {
+                    const param = e.target.name;
+                    const target = e.target;
+                    const elem = $(target).find('i');
+                    state = { ...state, [param]: !state[param] };
+                    if (elem.hasClass('fa-square')) elem.removeClass('fa-square');
+                    if (elem.hasClass('fa-check-square')) elem.removeClass('fa-check-square');
+                    elem.addClass(state[param] ? 'fa-check-square' : 'fa-square')
+                    renderMap();
+            })
+
+           $('button.cb-electric').click(stateHandler)
+           $('button.cb-water').click(stateHandler)
+           $('button.cb-seasonal').click(stateHandler)
+           $('button.cb-tent').click(stateHandler)
         });
     </script>
 {% endblock %}
