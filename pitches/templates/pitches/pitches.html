@@ -58,13 +58,16 @@
             <div class="row mb-2 bg-secondary justify-content-md-center text-white text-center">
                 <div class="col"><h3 class="m-0 py-2">Interactive Map</h3></div> 
             </div>
-            <div class="row mb-2 bg-white justify-content-md-center text-center">
+            <div class="row mb-0 bg-white justify-content-md-center text-center">
                 <div class="col">
                     <button class="btn cb-electric" id='cb-electric' name="electric"><i class="far fa-square"></i> Electric</button>
                     <button class="btn cb-water" id='cb-water' name="water"><i class="far fa-square"></i> Water</button>
                     <button class="btn cb-seasonal" id='cb-seasonal' name="seasonal"><i class="far fa-square"></i> Seasonal</button>
                     <button class="btn cb-tent" id='cb-tent' name="tent"><i class="far fa-square"></i> Tent</button>
                 </div> 
+            </div>
+            <div class="row mb-0 bg-white text-dark">
+                <div class="col text-center"><strong><span id="hits"></span></strong></div> 
             </div>
             <div class="row mb-2 bg-white justify-content-md-center text-white">
                 <div class="col">{% include 'includes/interactive-map.svg' %}</div> 
@@ -139,6 +142,8 @@
                 'seasonal': false,
                 'tent': false
             }
+            $("#hits").text(`None selected`)
+
             const renderMap = () => {
                 let intersection = !state.electric && !state.tent && !state.water && !state.seasonal ? [] : [...pitches];
                 if (state.electric) {
@@ -158,6 +163,7 @@
                     intersection = intersection.filter(x => seasonal.includes(x))
                 };
                 if ($('.st4').hasClass('selected')) $('.st4').removeClass('selected');
+                $("#hits").text(`${intersection.length > 0 ? intersection.length : "None" } selected`)
                 intersection.forEach(pitch => $(`#${pitch.id} .st4`).addClass('selected'))
             }
             const stateHandler = (e => {
