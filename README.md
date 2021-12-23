@@ -520,6 +520,8 @@ https://www.pexels.com/sv-se/foto/landskap-natur-sommar-trad-2819554/
 https://www.pexels.com/sv-se/foto/kall-sno-landskap-natur-950058/
 https://www.pexels.com/sv-se/foto/dagsljus-farg-fargrik-hdr-206648/
 https://www.pexels.com/sv-se/foto/natur-kvinna-trad-sitter-6861137/
+https://www.pexels.com/sv-se/foto/ljus-semester-manniskor-kreativ-7510675/
+https://www.pexels.com/sv-se/foto/ljus-semester-natt-mork-7510487/
 
 https://realfavicongenerator.net/
 

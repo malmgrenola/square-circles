@@ -8,21 +8,107 @@
 {% block page_header %}
     <div class="row justify-content-center mx-1 py-4" id='products'>
         <div class="col text-center">
-            <h1>Welcome to Square Circles Holiday Park</h1>
+            <h1>Welcome!</h1>
         </div>
     </div>
 {% endblock %}
 {% block content %}
 <div class="row justify-content-center">
-    <div class="card w-25 m-2 bg-dark text-white">
-        <img src="{{ MEDIA_URL }}/night.png" class="card-img" alt="night image background">
-        <div class="card-img-overlay text-center">
-            <p class="card-text m-0">{{ weather.weather.0.main }}</p>
-            <p class="card-text text-muted m-0">{{ weather.weather.0.description }}</p>
-            <h2 class="card-title"><i class="owi owi-{{weather.weather.0.icon}}"></i></h2>
-                <p class="card-text">{{weather.name}}</p>
-                <p class="card-text">{{weather.main.temp|floatformat:0}} Cº</p>
+    <div class="col">
+        <div class="card mb-3">
+            <div class="row g-0">
+              <div class="col-md-8">
+                <img src="{{ MEDIA_URL }}/pexels-matheus-bertelli-7510487.png" class="img-fluid rounded-start" alt="night picture of camping">
+              </div>
+              <div class="col-md-4">
+                <div class="card-body">
+                  <h5 class="card-title">Welcome to Square Circles Holiday Park </h5>
+                  <p class="card-text">Situated in the heart of Nowhere, this Park is ideal base for visiting Nowheres’s tourist attractions – Mountain Huge, Great Lake Nothing,  Plus footpaths and cycle routes.
+                    The small busy village centre of Nowhere, with a good variety of shops, is just a level five minute walk away. 
+                    Pub food and hand-pulled beers is 50 yards from the park entrance. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col">
+        <div class="card mb-3">
+            <div class="row g-0">              
+                <div class="col-12 col-md-4">
+                    <div class="weather-container">
+                        <img src="{{ MEDIA_URL }}/night.png" alt="night image background">
+                        <div class="weather-centered-top text-white">
+                            <p class="m-0"><strong>Todays Weather!</strong></p>
+                            <p class="m-0">{{ weather.weather.0.main }}</p>
+                            <p class=" text-muted m-0">{{ weather.weather.0.description }}</p>
+                            <h2><i class="owi owi-{{weather.weather.0.icon}}"></i></h2>
+                            <p>{{weather.name}}</p>
+                        </div> 
+                        <div class="weather-bottom-left text-white">
+                            <p class="">{{weather.main.temp|floatformat:0}} Cº</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Book your stay today!</h5>
+                        <p class="card-text">Please set your preferred days for staying with us to see our availability in that same period.</p>
+                        <p class="card-text">
+                            {% if travel_info.check_in != None and travel_info.check_out != None %}
+                            <div class="date d-inline-flex flex-row align-items-center availability-box rounded">
+                                <div class="mx-2 text-end">
+                                    <p><strong>{{travel_info.check_in}}</strong> to <strong>{{travel_info.check_out}}</strong></p>
+                                    <p><strong>{{travel_info.days}} nights</strong></p>    
+                                </div>
+                                <div class="mx-2"><i class="fas fa-edit"></i></div>
+                            </div>
+                          {% else %}
+                            <button class="btn sc btn-primary btn-rounded date" type="submit">Check availability</button>
+                          {% endif %}
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <img src="{{ MEDIA_URL }}/pexels-matheus-bertelli-7510675.jpg" class="img-fluid rounded-start" alt="night picture of camping">
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
+{% endblock %}
+
+{% block extra_body_js %}
+    {{ block.super }}
+    <script>
+        $(document).ready(function () {
+            const minDate = new Date()
+            const maxDate = `${(minDate.getFullYear()+1)}-${(minDate.getMonth() + 1 )}-${minDate.getDate()}`
+            $('.date').daterangepicker({
+              opens: 'left',
+              buttonClasses: 'cs btn',
+              applyButtonClasses: 'btn-light',
+              cancelButtonClasses: 'btn-light',
+              minDate: minDate,
+              maxDate: maxDate, 
+              maxYear: minDate.getFullYear()+1,
+            });
+    
+            function setDates(ev, {startDate, endDate}){ 
+                const basket_index = ev.currentTarget.id.split("-")[1]
+                const csrfToken = "{{ csrf_token }}";
+                const data = {'csrfmiddlewaretoken': csrfToken, 'basket_index': basket_index,'check_in': startDate.format('YYYY-MM-DD'), 'check_out': endDate.format('YYYY-MM-DD')};
+                const url = `{% url 'set_travel_info' %}`;
+                $.post(url, data)
+                .done(function() {
+                    location.reload();
+                });
+            }
+    
+            $('.date').on('apply.daterangepicker', setDates);
+          });
+    </script>
 {% endblock %}
