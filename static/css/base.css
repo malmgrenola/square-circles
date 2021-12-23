@@ -24,7 +24,7 @@ html {
 
 body {
   font-family: "Assistant", sans-serif;
-  margin-top: 172px;
+  margin-top: 180px;
 }
 
 .link-delete {
@@ -80,7 +80,7 @@ tbody .sc-row:last-child {
 
 section {
   /* screen height - footer height - navbar height */
-  min-height: calc(100vh - 312px - 172px);
+  min-height: calc(100vh - 312px - 180px);
 }
 
 @media (max-width: 991px) {

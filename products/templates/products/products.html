@@ -73,7 +73,6 @@
                                 </div>
                                 <p class="card-text query-format">{{product.description}}</p>
                                 <h5 class="card-text">€ {{product.price}}</h5>
-                                <p>{{ reservations_availability|length }}</p>
                                 <a class="btn sc btn-primary btn-rounded" href="/products/{{product.id}}">READ MORE</a>
                                 <a class="btn sc btn-primary btn-rounded {% if product.available == 0 %}disabled{% endif %} " href="{% url 'add_product' product.id %}">Add to basket</a>                                                         
                             </div>

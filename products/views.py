@@ -91,6 +91,20 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
 
+    travel_info = request.session.get('travel_info', {})
+
+    if not travel_info == {}:
+        q_check_in = datetime.strptime(travel_info['check_in'], '%Y-%m-%d')
+        q_check_out = datetime.strptime(travel_info['check_out'], '%Y-%m-%d')
+
+    if not travel_info == {}:
+        product.available = product_available(
+            product, q_check_in, q_check_out)
+    else:
+        product.available = 0
+
+    product.save()
+
     context = {
         'product': product,
     }
