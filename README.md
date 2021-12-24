@@ -185,6 +185,10 @@ All wireframes can be found in the [wireframes folder](wireframes). They are all
    - USed as storage backend serving static files with aws S3.
 1. [boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html#)
    - Used to create, configure, and manage AWS services.
+1. [dj_database_url](https://pypi.org/project/dj-database-url/)
+   - Used to connect to database
+1. [psycopg2-binary](https://pypi.org/project/psycopg2-binary/)
+   - Used as PostgreSQL database adapter
 1. [Git](https://git-scm.com/)
    - Git was used for version control by utilizing the GitPod terminal to commit to Git and Push to GitHub.
 1. [GitHub:](https://github.com/)
@@ -214,9 +218,9 @@ All wireframes can be found in the [wireframes folder](wireframes). They are all
 1. [OpenWeather](https://openweathermap.org/)
    - API used to fetch weather
 1. [open-weather-icons](https://github.com/isneezy/open-weather-icons)
-
    - font used to render weather icons
-
+1. [unicorn](https://pypi.org/project/unicorn/)
+   - Used as multi-platform, multi-architecture CPU emulator framework.
    <!--
    https://github.com/dangrossman/daterangepicker
    -->
@@ -416,7 +420,17 @@ After aws new user registration the following steps is needed at a glance.
 5. Set list objects allow for anyone.
 6. Add group and user for the access from the project
 7. add S3 full access to group and add bucket arn resource. (remember to add a list of resources where one resource list item is the bucket and the other item is all objects within the bucket)
-8. download .csv file with user details.
+8. download .csv file with user details and apply them to your .env file
+
+### Database
+
+This project uses Heroku postgressSQL.
+
+1. in the heroku app add Heroku postgressSQL.
+2. use the DATABASE_URL found in enviroment settings in Heruko in your .env file.
+3. run `python3 manage.py migrate` to migrate the new database.
+4. run `python manage.py loaddata initial_data` to load all fixtures
+5. run `python3 manage.py createsuperuser` to create a superuser
 
 ## Development
 
