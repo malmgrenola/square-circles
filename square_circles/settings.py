@@ -39,7 +39,7 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'https://square-circles.herokuapp.com/']
+ALLOWED_HOSTS = ['localhost', 'square-circles.herokuapp.com']
 
 SITE_ID = 1
 
