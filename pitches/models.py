@@ -3,6 +3,10 @@ from products.models import Product
 
 
 class Pitch(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Pitches'
+
     name = models.CharField(max_length=254)
     description = models.TextField(null=True, blank=True)
     electric = models.BooleanField(default=False, null=True, blank=False)
