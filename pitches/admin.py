@@ -1,6 +1,6 @@
 from django.contrib import admin
 from . models import Pitch
-from django.db.models import IntegerField
+from django.db.models import CharField
 from django.db.models.functions import Cast
 
 
@@ -28,5 +28,5 @@ class PitchAdmin(admin.ModelAdmin):
 
     def get_queryset(self, request):
         queryset = super().get_queryset(request).annotate(
-            _name_as_number=Cast('name', IntegerField())).order_by('_name_as_number', 'name',)
+            _name_as_number=Cast('name', CharField())).order_by('_name_as_number', 'name',)
         return queryset
