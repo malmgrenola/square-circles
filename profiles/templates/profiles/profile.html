@@ -5,13 +5,14 @@
     <div class="row justify-content-md-center mx-1">
         <div class="col my-4 text-center">
             <h1>My Profile</h1>
+            <p class="text-muted">signed in as <strong>{{ user }}</strong> ({{ user.email }})</p>
         </div>
     </div>
 {% endblock %}
 
 {% block content %}
     <div class="row justify-content-md-center mx-1">
-        <div class="col-12 col-lg-6 box mb-3">
+        <div class="col-12 {% if orders %}col-lg-6{% endif %} box mb-3">
             <p class="text-muted ">Default Delivery Information</p>
             <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
                 {% csrf_token %}
@@ -20,6 +21,7 @@
                 <button class="btn btn-primary sc btn-rounded my-3">Update</button>
             </form>
         </div>
+        {% if orders %}
         <div class="col-12 col-lg-6 box mb-3">
             <p class="text-muted ">My Reservations</p>
             <ul>
@@ -28,6 +30,7 @@
             {% endfor %}
             </ul>
         </div>
+        {% endif %}
      </div>
 {% endblock %}
 

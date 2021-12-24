@@ -33,8 +33,10 @@ def profile(request):
     template = 'profiles/profile.html'
     context = {
         'form': form,
+        'user': user,
         'user_form':  user_form,
-        'orders': orders
+        'orders': orders,
+
     }
 
     return render(request, template, context)
