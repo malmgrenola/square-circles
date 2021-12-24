@@ -51,6 +51,7 @@ The website is designed to be responsible and accessible on a range of devices, 
 3. As a site user, I want to come in direct contact so I can ask any questions.
 4. As a site user, I want to see how the facilities looks, so I can decide if it is what Im looking to purchase.
 5. As a site user, I want to get in contact with site owners, so I can get help if needed.
+6. As a site user, I want to get an error message if the url is wrong, so I know that the page does not exists.
 
 #### Registration and user accounts goals
 
