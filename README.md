@@ -173,14 +173,16 @@ All wireframes can be found in the [wireframes folder](wireframes). They are all
 
 1. [Django](https://www.djangoproject.com/)
    - Django framework is used for this web app
-1. [Bootstrap 5.1:](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
+1. [Bootstrap 5.1](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
    - Bootstrap was used to assist with the responsiveness and styling of the website.
-1. [Google Fonts:](https://fonts.google.com/)
+1. [Google Fonts](https://fonts.google.com/)
    - Google fonts were used to import fonts into the style.css file which is used on all pages throughout the project.
-1. [Font Awesome:](https://fontawesome.com/)
+1. [Font Awesome](https://fontawesome.com/)
    - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
 1. [jQuery:](https://jquery.com/)
    - jQuery came with Bootstrap to make the navbar responsive but was also used for the smooth scroll function in JavaScript.
+1. [django-storages](https://django-storages.readthedocs.io/en/latest/index.html)
+   - USed as storage backend serving static files with aws S3.
 1. [boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html#)
    - Used to create, configure, and manage AWS services.
 1. [Git](https://git-scm.com/)
@@ -380,6 +382,41 @@ The project was deployed to Heroku using the following steps...
 
 1. ...
 2. ...
+
+### Static files
+
+The project uses [AWS S3](https://aws.amazon.com/s3/) bucket as cdn for static files served on [endpoint](http://cdn.square-circles.s3-website-eu-west-1.amazonaws.com/).
+
+Full S3 documentation is available on [aws documentation website](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html)
+
+After aws new user registration the following steps is needed at a glance.
+
+1. create a new bucket and allow public access
+2. activate static hosting on bucket
+3. add a cors configuration that allows GET from any origin
+
+```
+[
+  {
+      "AllowedHeaders": [
+          "Authorization"
+      ],
+      "AllowedMethods": [
+          "GET"
+      ],
+      "AllowedOrigins": [
+          "*"
+      ],
+      "ExposeHeaders": []
+  }
+]
+```
+
+4. Add a bucket policy that allows getObject on service S3 (remeber to add `/*` to the resource key for access to all objects within the bucket)
+5. Set list objects allow for anyone.
+6. Add group and user for the access from the project
+7. add S3 full access to group and add bucket arn resource. (remember to add a list of resources where one resource list item is the bucket and the other item is all objects within the bucket)
+8. download .csv file with user details.
 
 ## Development
 
