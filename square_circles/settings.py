@@ -23,8 +23,7 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 env = environ.Env(
     # set casting, default value
-    DEBUG=(bool, False),
-    USE_AWS=(bool, False)
+    DEBUG=(bool, False)
 )
 
 # False if not in os.environ
@@ -44,6 +43,18 @@ ALLOWED_HOSTS = ['localhost', 'square-circles.herokuapp.com']
 SITE_ID = 1
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+if 'DEVELOPMENT' in os.environ:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    DEFAULT_FROM_EMAIL = 'no-reply@square-circles-holiday-park.com'
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_USE_TLS = True
+    EMAIL_PORT = 587
+    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+    EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASS')
+    DEFAULT_FROM_EMAIL = env('EMAIL_HOST_USER')
 
 # django-allauth
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
@@ -200,9 +211,7 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-USE_AWS = env('USE_AWS')
-
-if USE_AWS:
+if 'USE_AWS' in os.environ:
     # Cache control
     AWS_S3_OBJECT_PARAMETERS = {
         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
