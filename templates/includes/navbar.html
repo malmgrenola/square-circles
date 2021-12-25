@@ -60,7 +60,9 @@
                 </ul>
                 <ul class="navbar-nav flex-md-row align-items-center justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-link py-1 pb-3" href="{% url 'basket' %}"><i class="fas fa-shopping-basket"></i> <u>Basket</u></a>
+                        <a class="nav-link py-1 pb-3" href="{% url 'basket' %}"><i class="fas fa-shopping-basket position-relative mx-2">{% if basket_items %}<span class="position-absolute top-0 start-100 translate-middle p-1 bg-primary border border-light rounded-circle">
+                            <span class="visually-hidden">New alerts</span>
+                          </span>{% endif %}</i> <u>Basket</u></a>
                     </li>
             </div>
         </div>
