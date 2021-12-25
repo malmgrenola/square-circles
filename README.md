@@ -203,6 +203,8 @@ All wireframes can be found in the [wireframes folder](wireframes). They are all
    - Adobe XD was used to create the [wireframes](wireframes/) during the design process.
 1. [Visual Studio Code:](https://code.visualstudio.com/)
    - Visual Studio Code was used as Integrated development environment (IDE).
+1. [dbdiagram.io](https://dbdiagram.io/home)
+   - Used to generate database overview image.
 1. [small.chat](https://small.chat/)
    - small.chat is used tp create a on site chat button for site visitors to use
 1. [Fontello](https://fontello.com/)
@@ -232,7 +234,94 @@ All wireframes can be found in the [wireframes folder](wireframes). They are all
 
 [( Back to Top )](#table-of-contents)
 
+[PostgreSQL](https://docs.djangoproject.com/en/4.0/ref/databases/#postgresql-notes) is used to store all data in the production environment. It is also possible to disable production live database and use a local [SQLite](https://docs.djangoproject.com/en/4.0/ref/databases/#sqlite-notes) database instead by removing the .env variable `DATABASE_URL`.
+
+### Data model overview
+
 ![data model](/wireframes/square-circles.png)
+
+#### User Profile
+
+User Profile holds user information.
+Default data models from django-auth and django-allauth is also used to hold auth specific data.
+
+| field                | type      | description        |
+| -------------------- | --------- | ------------------ |
+| \_id                 | pk        | unique record id   |
+| user                 | fk        | category record id |
+| default phone number | CharField | Holds product name |
+
+#### Products
+
+Products holds product name, price and image information.
+
+| field       | type         | description               |
+| ----------- | ------------ | ------------------------- |
+| \_id        | pk           | unique record id          |
+| category    | fk           | category record id        |
+| name        | CharField    | Holds product name        |
+| description | CharField    | Holds product description |
+| price       | DecimalField | Holds product price       |
+| image_url   | CharField    | Holds product image url   |
+| image       | ImageField   | Holds product image       |
+
+#### Categories
+
+Categories holds Categories name information.
+
+| field | type      | description         |
+| ----- | --------- | ------------------- |
+| \_id  | pk        | unique record id    |
+| name  | CharField | Holds category name |
+
+#### Pitch
+
+Pitch holds Pitch information.
+
+| field       | type      | description                    |
+| ----------- | --------- | ------------------------------ |
+| \_id        | pk        | unique record id               |
+| product     | fk        | Holds product id               |
+| name        | CharField | Holds pitch name               |
+| description | CharField | Holds pitch description        |
+| electric    | boolean   | Holds pitch electric state     |
+| plug        | varchar   | Holds pitch electric plug type |
+| graywaste   | boolean   | Holds pitch graywaste state    |
+| fullwaste   | boolean   | Holds pitch fullwaste state    |
+| water       | boolean   | Holds pitch water state        |
+| tent        | boolean   | Holds pitch tent state         |
+| seasonal    | boolean   | Holds pitch seasonal state     |
+
+#### Order
+
+Order holds every order made.
+
+| field           | type          | description                  |
+| --------------- | ------------- | ---------------------------- |
+| \_id            | pk            | unique record id             |
+| order_number    | CharField     | Holds order number           |
+| user_profile    | fk            | User profile id              |
+| full_name       | CharField     | User name                    |
+| email           | EmailField    | User email                   |
+| phone_number    | CharField     | User phone number            |
+| date            | DateTimeField | Holds order date             |
+| grand_total     | DecimalField  | Holds order grand total      |
+| original_basket | TextField     | Holds the original basket    |
+| stripe_pid      | CharField     | Holds the stripe purchase id |
+
+#### Order Line Item
+
+Order Line Item holds every line in each order made.
+
+| field          | type          | description             |
+| -------------- | ------------- | ----------------------- |
+| \_id           | pk            | unique record id        |
+| order          | fk            | Order id                |
+| product        | fk            | Product id              |
+| check_in       | DateTimeField | Check in date           |
+| check_out      | DateTimeField | Check out date          |
+| quantity       | integerField  | amount of pitches       |
+| lineitem_total | DecimalField  | total value of lineitem |
 
 ## Testing
 
