@@ -222,9 +222,8 @@ All wireframes can be found in the [wireframes folder](wireframes). They are all
    - font used to render weather icons
 1. [unicorn](https://pypi.org/project/unicorn/)
    - Used as multi-platform, multi-architecture CPU emulator framework.
-   <!--
-   https://github.com/dangrossman/daterangepicker
-   -->
+1. [daterangepicker](https://github.com/dangrossman/daterangepicker)
+   - Used to pick dates.
 
 ## Data models
 
