@@ -16,6 +16,10 @@ from products.views import product_available
 
 @require_http_methods(["POST"])
 def cache_checkout_data(request):
+    """
+    Try to modify the payment intent
+    """
+
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_API_KEY
@@ -33,7 +37,9 @@ def cache_checkout_data(request):
 
 @require_http_methods(["GET", "POST"])
 def checkout(request):
-    """ A view that renders the checkout page """
+    """
+    A view that renders the checkout page
+    """
 
     basket = request.session.get('basket', [])
     date_format = "%Y-%m-%d"
@@ -115,6 +121,10 @@ def checkout(request):
 
 
 def checkout_success(request, order_number):
+    """
+    Render order success page and save user info
+    """
+
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
     order_line_items = OrderLineItem.objects.filter(order=order)
@@ -151,7 +161,9 @@ def checkout_success(request, order_number):
 
 
 def is_basket_available(basket):
-    """ Returns false if product is not available """
+    """ 
+    Returns false if product is not available
+    """
 
     available = True
     for item in basket:

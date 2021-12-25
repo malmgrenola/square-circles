@@ -8,10 +8,11 @@ import json
 
 
 def index(request):
-    """A view that renders index page"""
+    """
+    A view that renders index page
+    """
 
     weather = fetchWeather(request)
-
     context = {
         "weather": weather,
     }
@@ -20,8 +21,10 @@ def index(request):
 
 
 def fetchWeather(request):
-    """ Fetches weather and stores it in current session. To keep api calls to an minimum
-        Only one call per day and session. """
+    """ 
+    Fetches weather and stores it in current session. To keep api calls to an minimum
+    Only one call per day and session. 
+    """
 
     weather = request.session.get('weather', {})
     today = date.today()

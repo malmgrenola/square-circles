@@ -5,6 +5,9 @@ from products.views import product_available
 
 
 def basket_contents(request):
+    """
+    Get session basket and travel information provided to all templates
+    """
 
     basket = request.session.get('basket', [])
     travel_info = request.session.get('travel_info', {})

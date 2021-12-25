@@ -10,7 +10,9 @@ from datetime import datetime, timedelta
 
 @require_http_methods(["GET"])
 def all_products(request):
-    """A view that renders products page & handles queries"""
+    """
+    A view that renders products page & handles queries
+    """
 
     products = Product.objects.all()
 
@@ -87,7 +89,9 @@ def all_products(request):
 
 
 def product_detail(request, product_id):
-    """ A view to show individual product details """
+    """
+    A view to show individual product details
+    """
 
     product = get_object_or_404(Product, pk=product_id)
 
@@ -113,7 +117,9 @@ def product_detail(request, product_id):
 
 
 def product_available(product, check_in, check_out):
-    """ Returns the amount of available pitches for a product based on what is ordered """
+    """
+    Returns the amount of available pitches for a product based on what is ordered
+    """
 
     reserved = 0
     total = Pitch.objects.filter(

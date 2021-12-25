@@ -52,6 +52,8 @@ The website is designed to be responsible and accessible on a range of devices, 
 4. As a site user, I want to see how the facilities looks, so I can decide if it is what Im looking to purchase.
 5. As a site user, I want to get in contact with site owners, so I can get help if needed.
 6. As a site user, I want to get an error message if the url is wrong, so I know that the page does not exists.
+7. As a site user, I want to see the current weather so I know if I need to wear full jacket or not when visiting.
+8. As a site user, I want to use a interactive map, so I can get an overview of the different pitches type.
 
 #### Registration and user accounts goals
 
@@ -157,7 +159,8 @@ All wireframes can be found in the [wireframes folder](wireframes). They are all
 - Sorting and searching
 - Purchasing and checkout
 - Check in
-- Review and Rate
+- Review
+- Interactive map
 
 ## Technologies Used
 

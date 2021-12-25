@@ -9,13 +9,18 @@ from products.views import product_available
 
 @require_http_methods(["GET", "POST"])
 def basket(request):
-    """ render basket view and handle create reservations"""
+    """
+    Render basket view and handle create reservations
+    """
 
     return render(request, 'basket/basket.html')
 
 
 @require_http_methods(["GET"])
 def add_product(request, product_id):
+    """ 
+    Add product to basket and redirect to basket again
+    """
 
     product = get_object_or_404(Product, pk=product_id)
     basket = request.session.get('basket', [])
@@ -70,7 +75,9 @@ def add_product(request, product_id):
 
 @require_http_methods(["POST"])
 def update_item(request, basket_index):
-    """Update basket item based on basket index """
+    """
+    Update basket item based on basket index
+    """
 
     basket = request.session.get('basket', [])
 
@@ -110,7 +117,9 @@ def update_item(request, basket_index):
 
 @require_http_methods(["GET"])
 def remove_product(request, basket_index):
-    """Removes basket item based on basket index """
+    """
+    Removes basket item based on basket index 
+    """
 
     basket = request.session.get('basket', [])
 
@@ -127,7 +136,9 @@ def remove_product(request, basket_index):
 
 @ require_http_methods(["POST"])
 def set_travel_info(request):
-    """ set user travel information to current session """
+    """
+    set user travel information to current session
+    """
 
     basket = request.session.get('basket', [])
     basket_index = request.POST.get('basket_index', None)

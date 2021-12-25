@@ -3,7 +3,9 @@ from .models import Pitch
 
 
 def pitches(request):
-    """A view that renders map page"""
+    """
+    A view that renders map page and provides all pitches to map
+    """
 
     pitches = Pitch.objects.all()
     template = 'pitches/pitches.html'

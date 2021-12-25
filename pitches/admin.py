@@ -27,6 +27,8 @@ class PitchAdmin(admin.ModelAdmin):
     search_fields = ('name', 'description')
 
     def get_queryset(self, request):
+        """ Order pitches by name """
+
         queryset = super().get_queryset(request).annotate(
             _name_as_number=Cast('name', CharField())).order_by('_name_as_number', 'name',)
         return queryset

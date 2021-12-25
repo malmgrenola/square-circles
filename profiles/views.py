@@ -11,7 +11,9 @@ from checkout.models import Order
 @require_http_methods(["GET", "POST"])
 @login_required
 def profile(request):
-    """ Display the user's profile. """
+    """
+    Display the user's profile with forms needed for update and order history.
+    """
 
     profile = get_object_or_404(UserProfile, user=request.user)
     user = get_object_or_404(User, username=request.user)
@@ -43,6 +45,9 @@ def profile(request):
 
 
 def order_history(request, order_number):
+    """
+    Fetch and render a single order done in the past.
+    """
     order = get_object_or_404(Order, order_number=order_number)
     template = 'checkout/checkout_success.html'
     context = {

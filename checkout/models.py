@@ -82,6 +82,3 @@ class OrderLineItem(models.Model):
 
     def __str__(self):
         return f'{self.product.name} on order {self.order.order_number}'
-
-    def about(self):
-        return f'{self.product.name} on order {self.order.order_number} with {self.quantity} pcs and the value {self.lineitem_total}'

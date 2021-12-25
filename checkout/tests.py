@@ -6,8 +6,9 @@ from profiles.models import UserProfile
 
 
 class TestViews(TestCase):
-
     def test_get_checkout_redirect_index(self):
+        """ Test to checkout view redirects """
+
         response = self.client.get('/checkout/')
         self.assertRedirects(response, f'/', status_code=302,
                              target_status_code=200, fetch_redirect_response=True)
@@ -28,6 +29,8 @@ class TestViews(TestCase):
         self.assertEqual(response.status_code, 200)
 
     def test_get_checkout_authenticated_index(self):
+        """ Test to checkout view when authenticated  """
+
         User.objects.create_user('fred', 'fred@test.test', 'secret')
         self.client.login(username='fred', password='secret')
         item = Product.objects.create(
@@ -46,6 +49,8 @@ class TestViews(TestCase):
         self.assertTemplateUsed(response, 'checkout/checkout.html')
 
     def test_get_checkout_authenticated_without_profile_index(self):
+        """ Test to checkout view when authenticated without profile  """
+
         item = Product.objects.create(
             name='Test product item', price=22.5, description="Item description")
         session = self.client.session
@@ -59,6 +64,8 @@ class TestViews(TestCase):
         self.assertEqual(response.status_code, 200)
 
     def test_get_checkout_index(self):
+        """ Test to checkout view when authenticated without profile  """
+
         item = Product.objects.create(
             name='Test product item', price=22.5, description="Item description")
         session = self.client.session
@@ -76,10 +83,14 @@ class TestViews(TestCase):
 class TestModels(TestCase):
 
     def test_checkout_order_string_method_returns_name(self):
+        """ Test order model """
+
         item = Order.objects.create()
         self.assertEqual(str(item), item.order_number)
 
     def test_checkout_lineItem_string_method_returns_name(self):
+        """ Test order line model """
+
         product = Product.objects.create(
             name='Test product item', price=22.5, description="Item description")
         order = Order.objects.create()
