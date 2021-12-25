@@ -42,6 +42,7 @@ ALLOWED_HOSTS = ['localhost', 'square-circles.herokuapp.com']
 
 SITE_ID = 1
 
+# email configuration
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 if 'DEVELOPMENT' in os.environ:
@@ -202,8 +203,7 @@ USE_L10N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.2/howto/static-files/
+# Static and media files configuration
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
@@ -241,11 +241,11 @@ if 'USE_AWS' in os.environ:
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Stripe
+# Stripe configuration
 STRIPE_CURRENCY = env('STRIPE_CURRENCY')
 STRIPE_API_KEY = env('STRIPE_API_KEY')
 STRIPE_PUBLIC_KEY = env('STRIPE_PUBLIC_KEY')
 STRIPE_WH_SECRET = env('STRIPE_WH_SECRET')
 
-# Open weather
+# Open weather configuration
 WEATHER_API_KEY = env('WEATHER_API_KEY')
