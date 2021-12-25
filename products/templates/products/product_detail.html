@@ -1,14 +1,6 @@
 {% extends "base.html" %}
 {% load static%}
-{% block extra_css %}
-{{ block.super }}
-<style type="text/css">
-    .product-header {
-        display: inline-block;
-    }
 
-</style>
-{% endblock %}
 {% block content %}
     <div class="row justify-content-md-center mx-0 py-3" id='products'>
         <div class="card mb-3 px-0">
@@ -25,25 +17,25 @@
                     </div>
                     <div class="col-md-8 product-content">
                         <div class="card-body">
-                            <div class="product-header position-relative"><h4 class="card-title query-format">{{product.name}}</h4>
-                                <span class="position-absolute top-0 start-100 translate-start badge rounded-pill bg-primary ms-2">
-                                    {% if product.available == 0 %}
-                                        Not available
-                                    {% else %}
-                                        {{product.available}} available
-                                    {% endif %}
-                                </span>
-                            </div>
+                            <h4 class="card-title query-format">{{product.name}}</h4>
+                            <p><span class="badge rounded-pill bg-primary">
+                                {% if product.available == 0 %}
+                                    Not available
+                                {% else %}
+                                    {{product.available}} available
+                                {% endif %}
+                            </span></p>
+                          
                             <p class="card-text query-format">{{product.description}}</p>
                             <h5 class="card-text">€ {{product.price}}</h5>
-                            <a class="btn sc btn-primary btn-rounded {% if product.available == 0 %}disabled{% endif %}" href="{% url 'add_product' product.id %}">Add to basket</a>                                                         
+                            {% if product.available == 0 %}
+                                <button class="btn sc btn-primary btn-rounded btn-availability">Add to basket</button>
+                                {% else%}
+                                <a class="btn sc btn-primary btn-rounded" href="{% url 'add_product' product.id %}">Add to basket</a>
+                                {% endif %}                                                          
                         </div>
                     </div>
                 </div>
         </div>    
      </div>
-{% endblock %}
-
-{% block extra_body_js %}
-    {{ block.super }}
 {% endblock %}

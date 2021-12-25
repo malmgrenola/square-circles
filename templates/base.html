@@ -47,7 +47,7 @@
     <div class="row justify-content-md-center bg-dark">
       <div class="col text-center my-2">
         {% if travel_info.check_in != None and travel_info.check_out != None %}
-          <div id="availability" class="d-inline-flex flex-row align-items-center availability-box rounded">
+          <div class="d-inline-flex flex-row align-items-center availability-box rounded btn-availability">
               <div class="mx-2 text-end">
                   <p><strong>{{travel_info.check_in}}</strong> to <strong>{{travel_info.check_out}}</strong></p>
                   <p><strong>{{travel_info.days}} nights</strong></p>    
@@ -55,7 +55,7 @@
               <div class="mx-2"><i class="fas fa-edit"></i></div>
           </div>
         {% else %}
-          <button id="availability" class="btn sc btn-primary btn-rounded" type="submit">Check availability</button>
+          <button class="btn sc btn-primary btn-rounded btn-availability" type="submit">Check availability</button>
         {% endif %}
       </div>
     </div>
@@ -89,7 +89,7 @@
       $(document).ready(function () {
         const minDate = new Date()
         const maxDate = `${(minDate.getFullYear()+1)}-${(minDate.getMonth() + 1 )}-${minDate.getDate()}`
-        $('#availability').daterangepicker({
+        $('.btn-availability').daterangepicker({
           opens: 'left',
           buttonClasses: 'cs btn',
           applyButtonClasses: 'btn-light',
@@ -117,9 +117,9 @@
        });
         }
 
-        $('#availability').on('show.daterangepicker', positionDatePicker);  // Apply posiition when picker opens up
-        $('#availability').on('showCalendar.daterangepicker', positionDatePicker);  // Apply posiition when a selection is done in picker
-        $('#availability').on('apply.daterangepicker', setDates);
+        $('.btn-availability').on('show.daterangepicker', positionDatePicker);  // Apply posiition when picker opens up
+        $('.btn-availability').on('showCalendar.daterangepicker', positionDatePicker);  // Apply posiition when a selection is done in picker
+        $('.btn-availability').on('apply.daterangepicker', setDates);
       });
 
       function attachDaterangepicker(){
