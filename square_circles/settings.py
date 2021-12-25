@@ -113,6 +113,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ROOT_URLCONF = 'square_circles.urls'
 
