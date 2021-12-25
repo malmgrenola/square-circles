@@ -262,7 +262,6 @@ Products holds product name, price and image information.
 | name        | CharField    | Holds product name        |
 | description | CharField    | Holds product description |
 | price       | DecimalField | Holds product price       |
-| image_url   | CharField    | Holds product image url   |
 | image       | ImageField   | Holds product image       |
 
 #### Categories
