@@ -78,6 +78,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',  # required by django-allauth
     'django.contrib.staticfiles',
     'django.contrib.sites',  # required by django-allauth
+    'django.contrib.humanize',  # required by reviews app
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -87,6 +88,7 @@ INSTALLED_APPS = [
     'basket',
     'profiles',
     'checkout',
+    'reviews',
     'crispy_forms',
     'storages',
 ]

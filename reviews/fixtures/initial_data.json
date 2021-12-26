@@ -1,0 +1,62 @@
+[
+  {
+    "pk": 1,
+    "model": "reviews.review",
+    "fields": {
+      "date": "2021-12-01T13:20:30+00:00",
+      "name": "James",
+      "review": "nice hotel, got good deal stay anniversary arrived late evening room room clean nice size bed comfortable no stiff neck",
+      "rating": 4
+    }
+  },
+  {
+    "pk": 2,
+    "model": "reviews.review",
+    "fields": {
+      "date": "2021-12-03T13:20:30+00:00",
+      "name": "Oliver",
+      "review": "ok place had a great stay!",
+      "rating": 5
+    }
+  },
+  {
+    "pk": 3,
+    "model": "reviews.review",
+    "fields": {
+      "date": "2021-12-04T13:20:30+00:00",
+      "name": "Sofia",
+      "review": "Easy access, great staff but out of toilet paper",
+      "rating": 3
+    }
+  },
+  {
+    "pk": 4,
+    "model": "reviews.review",
+    "fields": {
+      "date": "2021-12-06T13:20:30+00:00",
+      "name": "Doug",
+      "review": "unique great stay wonderful time, location excellent, short stroll main downtown shopping area, pet friendly",
+      "rating": 5
+    }
+  },
+  {
+    "pk": 5,
+    "model": "reviews.review",
+    "fields": {
+      "date": "2021-12-08T13:20:30+00:00",
+      "name": "Anders",
+      "review": "great stay great stay went seahawk game, staff helpful",
+      "rating": 5
+    }
+  },
+  {
+    "pk": 6,
+    "model": "reviews.review",
+    "fields": {
+      "date": "2021-12-09T13:20:30+00:00",
+      "name": "Anna",
+      "review": "cozy stay rainy, no street noise",
+      "rating": 5
+    }
+  }
+]

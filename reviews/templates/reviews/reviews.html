@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static%}
+{% load humanize %}
+
+{% block content %}
+<div class="row justify-content-md-center">
+    <div class="col col-md-8 m-md-4 box">
+        <div class="row py-2 bg-primary text-white text-center">
+            <div class="col">
+                <h2>Reviews</h2>
+            </div> 
+        </div>
+        <div class="row py-2 row-cols-1 row-cols-md-3 g-3">
+        {% for review in reviews %}
+            <div class="col">
+                <div class="card bg-white text-dark">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ review.name }}</h5>
+                        <p class="card-text">{{ review.review }}</p>
+                        <p class="card-text text-center text-secondary"><span class="stars" data-rating="{{ review.rating }}"></span></p>
+                        <p class="card-text text-center"><span class="text-muted">{{ review.date|naturaltime }}</span></p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        </div> 
+    </div> 
+</div> 
+{% endblock %}
+
+{% block extra_body_js %}
+    {{ block.super }}
+    <script>
+        $(document).ready(function () {
+            
+           
+
+            $('.stars').each(function( index ) {
+                const star = (solid=false) => `<i class="fa${solid ? 's' : 'r'} fa-star"></i>`
+
+                const rating = value => {
+                    console.log("run rating")
+                    const stars = new Array(5).fill(false,0,5)
+                    console.log(stars.length);
+                  
+                    return stars.map((x,i) => {
+                        if (i <= value-1) return star(true)
+                        return star()
+                        }
+                    ).join("")
+                }
+
+                const value = $( this ).attr('data-rating')
+                $( this ).html(rating(value));
+               
+            });
+        });
+    </script>
+{% endblock %}
