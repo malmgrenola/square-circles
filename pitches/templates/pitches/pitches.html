@@ -2,49 +2,7 @@
 {% load static%}
 
 {% block extra_css %}
-{{ block.super }}
-<style type="text/css">
-    #pop{
-        display              : none;
-        position             : absolute;
-        z-index              : 99999;
-        padding              : 10px;
-        background           : white;
-        border               : 1px solid black;
-        border-radius        : 20px;
-        margin               : 0px;
-        -webkit-box-shadow   : 0px 0px 5px 0px rgba(164, 164, 164, 1);
-        box-shadow           : 0px 0px 5px 0px rgba(164, 164, 164, 1);
-    }
-    .st0{display:none;}
-	.st1{fill:#72BC7C;}
-	.st2{fill:none;stroke:#000000;stroke-width:9;stroke-miterlimit:10;}
-	.st3{fill:none;stroke:#FFFFFF;stroke-width:6;stroke-miterlimit:10;}
-	.st4{fill:#535352;}
-	.st5{fill:#FFFFFF;}
-	.st6{font-family:'Impact';}
-	.st7{font-size:6.9231px;}
-	.st8{font-size:6.877px;}
-	.st9{font-size:7.2946px;}
-    .pitch-seasonal{fill: red;}
-    .pitch-camping{fill: purple;}
-    .pitch-camping-tent{fill: blue;}
-    
-    .selected {
-        stroke: white;
-        stroke-width: 1px;
-        stroke-linejoin: round;
-      }
-
-    /* Fix pointer-events in buttons */
-    /* https://css-tricks.com/slightly-careful-sub-elements-clickable-things/ */
-    button > * {
-        pointer-events: none;
-      }
-    .popover{
-        cursor: pointer; 
-    }
-</style>
+    <link rel="stylesheet" href="{% static 'pitches/css/pitches.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -74,9 +32,7 @@
             </div>
         </div>
     </div>
-    <div id="pop">
-        <p>I am a popup!</p>
-      </div>
+    <div id="pop"></div>
 {% endblock %}
 
 {% block extra_body_js %}

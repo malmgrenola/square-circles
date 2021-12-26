@@ -306,7 +306,7 @@ Order Line Item holds every line in each order made.
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
-- [W3C Markup Validator](https://validator.w3.org/) - Results ([Index Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsquare-circles.herokuapp.com%2F)) ([Products Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsquare-circles.herokuapp.com%2Fproducts%2F%3Fc%3Dcaravan%2520pitches%2Ctent%2520pitches%2Cmotorhome%2520parking)) ([Basket Page](https://square-circles.herokuapp.com/basket/)) ([Map Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsquare-circles.herokuapp.com%2Fmap%2F))
+- [W3C Markup Validator](https://validator.w3.org/) - Results ([Index Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsquare-circles.herokuapp.com%2F)) ([Products Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsquare-circles.herokuapp.com%2Fproducts%2F%3Fc%3Dcaravan%2520pitches%2Ctent%2520pitches%2Cmotorhome%2520parking)) ([Singe Product Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsquare-circles.herokuapp.com%2Fproducts%2F1%2F)) ([Basket Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsquare-circles.herokuapp.com%2Fbasket%2F)) ([Map Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsquare-circles.herokuapp.com%2Fmap%2F))
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - Results ([base.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsquare-circles.s3.amazonaws.com%2Fstatic%2Fcss%2Fbase.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)) ([home.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsquare-circles.s3.amazonaws.com%2Fstatic%2Fhome%2Fcss%2Fhome.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)) ([checkout.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsquare-circles.s3.amazonaws.com%2Fstatic%2Fcheckout%2Fcss%2Fcheckout.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en))
 
 [Coverage](https://coverage.readthedocs.io/en/6.1.2/) is used for testing and coverage report.
@@ -509,17 +509,18 @@ In order to create a screenshot of this site:
 
 1. run this site in localhost
 2. Add `@xframe_options_exempt` decorator above the view you would like to do a screenshot of.
+3. in a browser navigate to [ami.responsivedesign.is](http://ami.responsivedesign.is/?url=http://localhost:8000)
+4. Create screendump
 
-```
+#### View Example
+
+```python
 from django.views.decorators.clickjacking import xframe_options_exempt
 
 @xframe_options_exempt
 def index(request):
    # More code here...
 ```
-
-3. in a browser navigate to [ami.responsivedesign.is](http://ami.responsivedesign.is/?url=http://localhost:8000)
-4. Create screendump
 
 ## Development
 
