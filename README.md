@@ -307,7 +307,7 @@ Order Line Item holds every line in each order made.
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
 - [W3C Markup Validator](https://validator.w3.org/) - Results ([Index Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsquare-circles.herokuapp.com%2F)) ([Products Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsquare-circles.herokuapp.com%2Fproducts%2F%3Fc%3Dcaravan%2520pitches%2Ctent%2520pitches%2Cmotorhome%2520parking)) ([Singe Product Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsquare-circles.herokuapp.com%2Fproducts%2F1%2F)) ([Basket Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsquare-circles.herokuapp.com%2Fbasket%2F)) ([Map Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsquare-circles.herokuapp.com%2Fmap%2F))
-- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - Results ([base.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsquare-circles.s3.amazonaws.com%2Fstatic%2Fcss%2Fbase.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)) ([home.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsquare-circles.s3.amazonaws.com%2Fstatic%2Fhome%2Fcss%2Fhome.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)) ([checkout.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsquare-circles.s3.amazonaws.com%2Fstatic%2Fcheckout%2Fcss%2Fcheckout.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)) ([pitches.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsquare-circles.s3.amazonaws.com%2Fstatic%pitches%2Fcss%2Fpitches.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en))
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - Results ([base.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsquare-circles.s3.amazonaws.com%2Fstatic%2Fcss%2Fbase.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)) ([home.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsquare-circles.s3.amazonaws.com%2Fstatic%2Fhome%2Fcss%2Fhome.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)) ([checkout.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsquare-circles.s3.amazonaws.com%2Fstatic%2Fcheckout%2Fcss%2Fcheckout.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)) ([pitches.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsquare-circles.s3.amazonaws.com%2Fstatic%2Fpitches%2Fcss%2Fpitches.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv))
 
 [Coverage](https://coverage.readthedocs.io/en/6.1.2/) is used for testing and coverage report.
 
@@ -453,8 +453,13 @@ It's possible to run test test using coverage with this command `coverage run ma
 
 The project was deployed to Heroku using the following steps...
 
-1. ...
-2. ...
+1. [Sign up](https://signup.heroku.com/) or [sign in](https://id.heroku.com/login) at Heroku.
+2. From your page, create new App with framework python.
+3. Add on Heroku PostgrSQL Resource with the steps in [Database](#database) section.
+4. Add static hosting with the steps in the [Static files](#static-files) section.
+5. On Settings tab add all config vars from [.env.example](/.env.example), do not add variables in the `Development` section.
+6. Connect Heroku to your github repo and do a manual deploy.
+7. When deployment is done, navigate to the site url to test.
 
 ### Static files
 
@@ -467,29 +472,24 @@ After aws new user registration the following steps is needed at a glance.
 1. create a new bucket and allow public access
 2. activate static hosting on bucket
 3. add a cors configuration that allows GET from any origin
-
-```
-[
-  {
-      "AllowedHeaders": [
-          "Authorization"
-      ],
-      "AllowedMethods": [
-          "GET"
-      ],
-      "AllowedOrigins": [
-          "*"
-      ],
-      "ExposeHeaders": []
-  }
-]
-```
-
 4. Add a bucket policy that allows getObject on service S3 (remeber to add `/*` to the resource key for access to all objects within the bucket)
 5. Set list objects allow for anyone.
 6. Add group and user for the access from the project
 7. add S3 full access to group and add bucket arn resource. (remember to add a list of resources where one resource list item is the bucket and the other item is all objects within the bucket)
 8. download .csv file with user details and apply them to your .env file
+
+#### cors configuration Example
+
+```json
+[
+  {
+    "AllowedHeaders": ["Authorization"],
+    "AllowedMethods": ["GET"],
+    "AllowedOrigins": ["*"],
+    "ExposeHeaders": []
+  }
+]
+```
 
 ### Database
 
@@ -532,7 +532,6 @@ These guidelines includes help in add this project as a virtual environment in y
 ### Perquisites
 
 1. Confirm that python3 is installed by running `python3 --version` and confirm it's `Python 3.x.x` or higher.
-
 1. Log in to GitHub and fork the [GitHub Square Circles Repository](https://github.com/malmgrenola/square-circles)
 1. Click "Code" and the copy url button on your fork.
 1. in a terminal run `git clone https://github.com/YOUR-GITHUB-NAME/square-circles.git` - to clone the repository to your local drive.
@@ -565,56 +564,6 @@ It is possible to setup your dev environment to handle the stripe webhooks. Full
 - erase and clean app data: `python3 manage.py migrate <App> zero`
 - Erase and clean database: `python3 manage.py flush`
 - apply all app fixtures: `python manage.py loaddata initial_data`
-
-<!--
-
-### GitHub Pages
-
-The project was deployed to GitHub Pages using the following steps...
-
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
-   - Alternatively Click [Here](https://raw.githubusercontent.com/) for a GIF demonstrating the process starting from Step 2.
-3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
-4. Under "Source", click the dropdown called "None" and select "Master Branch".
-5. The page will automatically refresh.
-6. Scroll back down through the page to locate the now published site [link](https://github.com) in the "GitHub Pages" section.
-
-### Forking the GitHub Repository
-
-By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
-
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
-3. You should now have a copy of the original repository in your GitHub account.
-
-### Making a Local Clone
-
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. Under the repository name, click "Clone or download".
-3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
-4. Open Git Bash
-5. Change the current working directory to the location where you want the cloned directory to be made.
-6. Type `git clone`, and then paste the URL you copied in Step 3.
-
-```
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-```
-
-7. Press Enter. Your local clone will be created.
-
-```
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-> Cloning into `CI-Clone`...
-> remote: Counting objects: 10, done.
-> remote: Compressing objects: 100% (8/8), done.
-> remove: Total 10 (delta 1), reused 10 (delta 1)
-> Unpacking objects: 100% (10/10), done.
-```
-
-Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
-
--->
 
 ## Credits
 
