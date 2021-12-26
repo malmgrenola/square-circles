@@ -219,12 +219,12 @@ input[type="search" i]:focus-visible {
 
 /* ---------------------------- Product */
 
-#products .card {
+.card {
   background-color: var(--bs-secondary);
   color: white;
 }
 
-#products .sc.btn-primary {
+.sc.btn-primary {
   border: 1px white solid;
 }
 
