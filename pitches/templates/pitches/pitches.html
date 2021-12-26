@@ -39,6 +39,7 @@
     {{ block.super }}
     <script>
         $(document).mousemove(function(e) {
+            // Track mouse position
             window.x = e.pageX;
             window.y = e.pageY;
         });
@@ -48,9 +49,10 @@
             const pitches = [{% for x in pitches %}{
                 id: `p-{{ x }}`,
                 name: '{{ x }}',
-                product: '{{ x.product.name }}', 
+                product: '{{ x.product.name }}',
+                productDetailUrl: '{% url "product_detail" x.product.id %}',
                 electric: {{ x.electric |yesno:"true,false" }}, 
-                plug: {{ x.plug |yesno:"true,false" }}, 
+                plug: '{{ x.product.plug }}', 
                 graywaste: {{ x.graywaste |yesno:"true,false" }},
                 fullwaste: {{ x.fullwaste |yesno:"true,false" }},
                 water: {{ x.water |yesno:"true,false" }},
@@ -73,19 +75,22 @@
 
             $('.popover').mouseenter(function(e) {
                 const pitch = pitches.find(i => i.id === e.currentTarget.id);
-                const params = [pitch.electric]
                 $("#pop").html(`
-                <p>Pitch name: <strong>${pitch.name}</strong></p>
-                <p>${pitch.product}</p>
-                ${pitch.tent ? "<p>is a tent pitch</p>" : ""}
-                ${pitch.electric ? "<p>has power</p>" : ""}
-                ${pitch.greywater ? "<p>has greywater</p>" : ""}
-                `);
+                <p><strong>${pitch.name}</strong> - ${pitch.product}</p>
+                <p>
+                ${pitch.seasonal ? "Is a seasonal pitch<br />" : ""}
+                ${pitch.tent ? "Is a tent pitch<br />" : ""}
+                ${pitch.electric ? `Is electric with ${pitch.plug} plug<br />` : ""}
+                ${pitch.water ? "Has water connection<br />" : ""}
+                </p>`);
                 $("#pop").css("top", y);
                 $("#pop").css("left", x);
                 $('#pop').fadeIn(0);
             });
-
+            $('.popover').click(function(e) {
+                const pitch = pitches.find(i => i.id === e.currentTarget.id);
+                window.location = pitch.productDetailUrl
+            });
             $('.popover').mouseleave(function(e) {
                 $('#pop').fadeOut(0);
             });

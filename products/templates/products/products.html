@@ -62,7 +62,7 @@
                                 </span></p>
                             <p class="card-text query-format">{{product.description}}</p>
                             <h5 class="card-text">€ {{product.price}}</h5>
-                            <a class="btn sc btn-primary btn-rounded" href="/products/{{product.id}}">READ MORE</a>
+                            <a class="btn sc btn-primary btn-rounded" href="{% url 'product_detail' product.id %}">READ MORE</a>
                             {% if product.available == 0 %}
                             <button class="btn sc btn-primary btn-rounded btn-availability">Add to basket</button>
                             {% else%}
