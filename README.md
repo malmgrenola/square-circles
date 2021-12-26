@@ -47,13 +47,11 @@ The website is designed to be responsible and accessible on a range of devices, 
 #### Viewing and Navigation goals
 
 1. As a customer, I want to be able to view and list all products so that I can decide what to purchase.
-2. As an customer, I want to be able to view the totals of my purchases at anytime so that I can spend a little more without over budget.
+2. As an customer, I want to be able to view the totals of my purchases so that I can spend a little more without over budget.
 3. As a site user, I want to come in direct contact so I can ask any questions.
-4. As a site user, I want to see how the facilities looks, so I can decide if it is what Im looking to purchase.
-5. As a site user, I want to get in contact with site owners, so I can get help if needed.
-6. As a site user, I want to get an error message if the url is wrong, so I know that the page does not exists.
-7. As a site user, I want to see the current weather so I know if I need to wear full jacket or shorts when visiting.
-8. As a site user, I want to use a interactive map, so I can get an overview of the different pitches type.
+4. As a site user, I want to get an error message if the url is wrong, so I know that the page does not exists.
+5. As a site user, I want to see the current weather so I know if I need to wear full jacket or shorts when visiting.
+6. As a site user, I want to use a interactive map, so I can get an overview of the different pitches type.
 
 #### Registration and user accounts goals
 
@@ -78,10 +76,6 @@ The website is designed to be responsible and accessible on a range of devices, 
 1. As a customer, I want to be able to schedule a reservation and put it into a basket.
 2. As a customer, I want to be able to make purchases based on my basket items.
 
-#### Check in goals
-
-1. As a visitor I want to be able to check in so I can get access to the facilities.
-
 #### Review and rate goals
 
 1. As a visitor, I want to review and rate the facilities so I can let others know what I think.
@@ -90,7 +84,6 @@ The website is designed to be responsible and accessible on a range of devices, 
 
 1. As a site owner, I want to be able to administrate the reservations.
 2. As a cite owner, I want to be able to administrate the products the facilities has to offer.
-3. as a site owner, I want to be able to add and remove images so I can let site users know how the facilities looks.
 
 ### Design
 
@@ -319,7 +312,7 @@ It's possible to read the report by opening the file `/coverage_html_report/inde
 
 ### Test Report
 
-It's possible to run test test using coverage with this command `coverage run manage.py test`
+Site is tested with this result.
 
 ![test report](/wireframes/testreport.png)
 
@@ -327,111 +320,74 @@ It's possible to run test test using coverage with this command `coverage run ma
 
 #### Test Viewing and Navigation goals
 
-1. ...
-   1. ...
-   2. ...
-2. ...
-   1. ...
-   2. ...
+1. As a customer, I want to be able to view and list all products so that I can decide what to purchase.
+   1. Upon entering the site, users are greeted with a clean and easily readable navigation bar to go to the page of their choice.
+2. As an customer, I want to be able to view the totals of my purchases so that I can spend a little more without over budget.
+   1. In the navigation bar the user can navigate to the current basket where the total cost is displayed.
+3. As a site user, I want to come in direct contact so I can ask any questions.
+   1. On every page located in the bottom right of the current browser window there is a chat icon that can be pressed. By pressing the button a small chat window appears where the user can communicate the park site staff.
+4. As a site user, I want to get an error message if the url is wrong, so I know that the page does not exists.
+   1. if user navigates to a [faulty page](https://square-circles.herokuapp.com/nopagehere) a page not found message will automatically be visible.
+5. As a site user, I want to see the current weather so I know if I need to wear full jacket or shorts when visiting.
+   1. When entering the site the user can rad the current weather in the `today's weather`section.
+6. As a site user, I want to use a interactive map, so I can get an overview of the different pitches type.
+   1. In the sites navigation bar the user can select `MAP`.
+   2. Above the interactive map the user can select parameters that will highlight the pitches with corresponding parameters.
+   3. The site user can see the total of how many pitches have the current selected parameters updated automatically.
+   4. It's possible for the site user to hover over each pitch to see details
 
 #### Test Registration and user accounts goals
 
-1. ...
-   1. ...
-   2. ...
-2. ...
-
-   1. ...
-   2. ...
+1. As an site user, I Want to be able to register for an account so that I can have a personal account and be able to view my details.
+   1. As a first time visiting site user it is possible to select the sign up button found in the navigation bar.
+   2. By filling out and submit the sign up form the user can be able to view future details.
+2. As an site user, I Want to be able to login and logout so that I can access my personal account information.
+   1. From the navigation bar it is possible to select sign in.
+   2. By filling out and submit the required parameters user will be logged into the site
+   3. The navigation bar now have a `My Page` option the user can select to access account information
+   4. The navigation bar now also have the `sign out` option that can be selected.
+   5. From the sign out page user can press the sign out button to fully logout.
+3. As an site user, I Want to be able to recover my password in case i forget it so that I can recover access to my account.
+   1. From the sign in page it is possible to select `forgot password`.
+   2. In the password reset form it is possible to provide a valid email address and press the `Reset My Password` button.
+   3. User will get an email containing a link to reset the password.
+   4. Clicking the email link takes the user to the Password Reset Page, where a new password can be provided.
+4. As an site user, I Want to be able to have a personalized user profile so I can view my personal order history and reservations.
+   1. On site users `My Page` order history is available in a list format.
+   2. by clicking a history order, user can view the order details.
 
 #### Test Sorting and searching goals
 
-1. ...
-   1. ...
-   2. ...
-2. ...
-
-   1. ...
-   2. ...
+1. As an site user, I Want to be able to list the products so that I can quickly identify the best priced product and identify the category.
+   1. The site navigation bar contains the main products for the site user.
+   2. Each navbar product item displays the categories found in the top of the products page.
+2. As an site user, I Want to be able to sort the list of products so that I can quickly find what Im looking for.
+   1. On products page there is a `Sort by` drop down button that can be used to sort the current list seen.
+3. As an site user, I Want to be able to search for a product by name or description so that I can find a specific product I'd like to purchase.
+   1. From the navbar it is possible to provide a search term and hit enter.
+   2. All found products will be displayed.
+   3. Title and description on each product will highlight the search term used.
+4. As an site user, I Want to be able to see what I've searched for and the number of results so I can quickly see whether the product I want is available.
+   1. in the top of the products page the number of found items is displayed.
 
 #### test Purchasing and checkout goals
 
-1. ...
-   1. ...
-   2. ...
-2. ...
-   1. ...
-   2. ...
-
-#### Test Check in goals
-
-1. ...
-   1. ...
-   2. ...
-2. ...
-
-   1. ...
-   2. ...
+1. As a customer, I want to be able to schedule a reservation and put it into a basket.
+   1. As a site user it is required to set the site users travel information by clicking the `Check availability` button in the navigation bar or any `Add to Basket` button.
+   2. In the popover date picker it is possible to first click the arrival date and then departure date. After clicking apply the new travel information is set.
+   3. Available products in the selected travel information period will print the amount available if any within the product details.
+2. As a customer, I want to be able to make purchases based on my basket items.
+   1. Site user can Add products into the basket.
+   2. site user can select many equal products, if available on the same travel information dates selected.
+   3. Site user can modify a product date range individually from the basket page.
+   4. Site user can `Continue to Secure Checkout` and provide required information including card information to make reservation purchase.
 
 #### Test Review and rate goals
 
-1. ...
+1. As a site owner, I want to be able to administrate the reservations.
    1. ...
-   2. ...
-2. ...
+2. As a cite owner, I want to be able to administrate the products the facilities has to offer.
    1. ...
-   2. ...
-
-<!-- Section kept as source for writing ideas
-5. As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about the organisation.
-
-   1. Upon entering the site, users are automatically greeted with a clean and easily readable navigation bar to go to the page of their choice. Underneath there is a Hero Image with Text and a "Learn More" Call to action button.
-   2. The main points are made immediately with the hero image
-   3. The user has two options, click the call to action buttons or scroll down, both of which will lead to the same place, to learn more about the organisation.
-
-6. As a First Time Visitor, I want to be able to easily be able to navigate throughout the site to find content.
-
-   1. The site has been designed to be fluid and never to entrap the user. At the top of each page there is a clean navigation bar, each link describes what the page they will end up at clearly.
-   2. At the bottom of the first 3 pages there is a redirection call to action to ensure the user always has somewhere to go and doesn't feel trapped as they get to the bottom of the page.
-   3. On the Contact Us Page, after a form response is submitted, the page refreshes and the user is brought to the top of the page where the navigation bar is.
-
-7. As a First Time Visitor, I want to look for testimonials to understand what their users think of them and see if they are trusted. I also want to locate their social media links to see their following on social media to determine how trusted and known they are.
-   1. Once the new visitor has read the About Us and What We Do text, they will notice the Why We are Loved So Much section.
-   2. The user can also scroll to the bottom of any page on the site to locate social media links in the footer.
-   3. At the bottom of the Contact Us page, the user is told underneath the form, that alternatively they can contact the organisation on social media which highlights the links to them.
-
-- #### Returning Visitor Goals
-
-  1. As a Returning Visitor, I want to find the new programming challenges or hackathons.
-
-     1. These are clearly shown in the banner message.
-     2. They will be directed to a page with another hero image and call to action.
-
-  2. As a Returning Visitor, I want to find the best way to get in contact with the organisation with any questions I may have.
-
-     1. The navigation bar clearly highlights the "Contact Us" Page.
-     2. Here they can fill out the form on the page or are told that alternatively they can message the organisation on social media.
-     3. The footer contains links to the organisations Facebook, Twitter and Instagram page as well as the organization's email.
-     4. Whichever link they click, it will be open up in a new tab to ensure the user can easily get back to the website.
-     5. The email button is set up to automatically open up your email app and autofill there email address in the "To" section.
-
-  3. As a Returning Visitor, I want to find the Facebook Group link so that I can join and interact with others in the community.
-     1. The Facebook Page can be found at the footer of every page and will open a new tab for the user and more information can be found on the Facebook page.
-     2. Alternatively, the user can scroll to the bottom of the Home page to find the Facebook Group redirect card and can easily join by clicking the "Join Now!" button which like any external link, will open in a new tab to ensure they can get back to the website easily.
-     3. If the user is on the "Our Favourites" page they will also be greeted with a call to action button to invite the user to the Facebook group. The user is incentivized as they are told there is a weekly favourite product posted in the group.
-
-- #### Frequent User Goals
-
-  1. As a Frequent User, I want to check to see if there are any newly added challenges or hackathons.
-
-     1. The user would already be comfortable with the website layout and can easily click the banner message.
-
-  2. As a Frequent User, I want to check to see if there are any new blog posts.
-
-     1. The user would already be comfortable with the website layout and can easily click the blog link
-
-  3. As a Frequent User, I want to sign up to the Newsletter so that I am emailed any major updates and/or changes to the website or organisation. 1. At the bottom of every page their is a footer which content is consistent throughout all pages. 2. To the right hand side of the footer the user can see "Subscribe to our Newsletter" and are prompted to Enter their email address. 3. There is a "Submit" button to the right hand side of the input field which is located close to the field and can easily be distinguished.
-     -->
 
 ### Further Testing
 
