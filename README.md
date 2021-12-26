@@ -2,7 +2,7 @@
 
 ![last commit](https://img.shields.io/github/last-commit/malmgrenola/square-circles)
 
-[View the live project here.](http://endoftheinternet.com/)
+[View the live project here.](https://square-circles.herokuapp.com/)
 
 ## Description
 
@@ -52,7 +52,7 @@ The website is designed to be responsible and accessible on a range of devices, 
 4. As a site user, I want to see how the facilities looks, so I can decide if it is what Im looking to purchase.
 5. As a site user, I want to get in contact with site owners, so I can get help if needed.
 6. As a site user, I want to get an error message if the url is wrong, so I know that the page does not exists.
-7. As a site user, I want to see the current weather so I know if I need to wear full jacket or not when visiting.
+7. As a site user, I want to see the current weather so I know if I need to wear full jacket or shorts when visiting.
 8. As a site user, I want to use a interactive map, so I can get an overview of the different pitches type.
 
 #### Registration and user accounts goals
@@ -92,26 +92,6 @@ The website is designed to be responsible and accessible on a range of devices, 
 2. As a cite owner, I want to be able to administrate the products the facilities has to offer.
 3. as a site owner, I want to be able to add and remove images so I can let site users know how the facilities looks.
 
-<!-- Section kept as source for writing ideas
-- #### First Time Visitor Goals
-
-      1. As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about the organisation.
-      2. As a First Time Visitor, I want to be able to easily navigate throughout the site to find content.
-      3. As a First Time Visitor, I want to look for testimonials to understand what their users think of them and see if they are trusted. I also want to locate their social media links to see their followings on social media to determine how trusted and known they are.
-
-  - #### Returning Visitor Goals
-
-  1. As a Returning Visitor, I want to find information about coding challenges.
-  2. As a Returning Visitor, I want to find the best way to get in contact with the organisation with any questions I may have.
-  3. As a Returning Visitor, I want to find community links.
-
-- #### Frequent User Goals
-
-  1. As a Frequent User, I want to check to see if there are any newly added challenges or hackathons.
-  2. As a Frequent User, I want to check to see if there are any new blog posts.
-  3. As a Frequent User, I want to sign up to the Newsletter so that I am emailed any major updates and/or changes to the website or organisation.
--->
-
 ### Design
 
 #### Colour Scheme
@@ -119,17 +99,6 @@ The website is designed to be responsible and accessible on a range of devices, 
 Colors are selected with the help of the machine learning color generator [Huemint](https://huemint.com/about/)
 
 ![colors image](wireframes/colors.png)
-
-<!--
-https://huemint.com/bootstrap-basic/#palette=fce0c8-ffffff-591535-984464-d55886-ecc8d8
-
-https://huemint.com/bootstrap-basic/#palette=fce0c8-ffffff-591535-984464-d55886-ecc8d8
-
-https://huemint.com/website-2/#palette=fffeec-2d2e30-0079b2-d82b68
-
-https://huemint.com/bootstrap-basic/#palette=fffeec-ffffff-2d2e30-d82b68-0079b2-25b76b
-
--->
 
 #### Typography
 
@@ -139,15 +108,16 @@ Typography on the website is selected and combined based on the [deep learning p
 - [Fira Sans](https://fonts.google.com/specimen/Fira+Sans) is used for headers.
 - [PT Sans Caption](https://fonts.google.com/specimen/PT+Sans+Caption) is used for captions.
 
-#### Imagery
-
-- Imagery is important. The large, background hero image is designed to be striking and catch the user's attention. It also has a modern, energetic aesthetic.
-
 ### Wireframes
 
 All wireframes can be found in the [wireframes folder](wireframes). They are all organised with bootstraps style prefix and descriptive name.
 
 - Home Page Wireframe - ([Large screen](wireframes/md_home.png)) ([small screen](wireframes/sm_home.png))
+- Products Pages Wireframes - ([List of products](wireframes/md_products.png)) ([Single product](wireframes/md_product.png))
+- Authentication Pages Wireframes - ([Profile](wireframes/md_my_profile.png)) ([Register](wireframes/md_register.png)) ([Sign in](wireframes/md_sign_in.png)) ([Password reset](wireframes/md_password_reset.png)) ([Change Password](wireframes/md_change_password.png))
+- Basket & Checkout Pages Wireframes - ([Basket](wireframes/md_basket.png)) ([Checkout](wireframes/md_checkout.png)) ([Checkout Success](wireframes/md_checkout_success.png)) ([Availability popover](wireframes/md_availability_popover.png))
+- Interactive Map Page Wireframe - ([Large screen](wireframes/md_map.png))
+- Reviews Page Wireframe - ([Large screen](wireframes/md_reviews.png))
 
 ## Features
 
@@ -161,6 +131,9 @@ All wireframes can be found in the [wireframes folder](wireframes). They are all
 - Check in
 - Review
 - Interactive map
+- Display weather
+- Site chat
+- Customer Reviews
 
 ## Technologies Used
 
@@ -173,7 +146,7 @@ All wireframes can be found in the [wireframes folder](wireframes). They are all
 - [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [Python](https://www.python.org/)
 
-### Frameworks, Libraries & Programs Used
+### Frameworks & Libraries
 
 1. [Django](https://www.djangoproject.com/)
    - Django framework is used for this web app
@@ -193,18 +166,6 @@ All wireframes can be found in the [wireframes folder](wireframes). They are all
    - Used to connect to database
 1. [psycopg2-binary](https://pypi.org/project/psycopg2-binary/)
    - Used as PostgreSQL database adapter
-1. [Git](https://git-scm.com/)
-   - Git was used for version control by utilizing the GitPod terminal to commit to Git and Push to GitHub.
-1. [GitHub:](https://github.com/)
-   - GitHub is used to store the projects code after being pushed from Git.
-1. [Photoshop:](https://www.adobe.com/ie/products/photoshop.html)
-   - Photoshop was used to create the logo, resizing images and editing photos for the website.
-1. [Adobe XD:](https://www.adobe.com/products/xd.html)
-   - Adobe XD was used to create the [wireframes](wireframes/) during the design process.
-1. [Visual Studio Code:](https://code.visualstudio.com/)
-   - Visual Studio Code was used as Integrated development environment (IDE).
-1. [dbdiagram.io](https://dbdiagram.io/home)
-   - Used to generate database overview image.
 1. [small.chat](https://small.chat/)
    - small.chat is used tp create a on site chat button for site visitors to use
 1. [Fontello](https://fontello.com/)
@@ -229,6 +190,23 @@ All wireframes can be found in the [wireframes folder](wireframes). They are all
    - Used as multi-platform, multi-architecture CPU emulator framework.
 1. [daterangepicker](https://github.com/dangrossman/daterangepicker)
    - Used to pick dates.
+
+### Programs & Tools Used
+
+1. [Git](https://git-scm.com/)
+   - Git was used for version control by utilizing the GitPod terminal to commit to Git and Push to GitHub.
+1. [GitHub:](https://github.com/)
+   - GitHub is used to store the projects code after being pushed from Git.
+1. [Photoshop:](https://www.adobe.com/ie/products/photoshop.html)
+   - Photoshop was used to create the logo, resizing images and editing photos for the website.
+1. [Adobe XD:](https://www.adobe.com/products/xd.html)
+   - Adobe XD was used to create the [wireframes](wireframes/) during the design process.
+1. [Visual Studio Code:](https://code.visualstudio.com/)
+   - Visual Studio Code was used as Integrated development environment (IDE).
+1. [dbdiagram.io](https://dbdiagram.io/home)
+   - Used to generate database overview image.
+1. [ami.responsivedesign.is](http://ami.responsivedesign.is/)
+   - Used to generate the site screenshot
 
 ## Data models
 
@@ -328,8 +306,8 @@ Order Line Item holds every line in each order made.
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
-- [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://github.com/)
-- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://github.com/)
+- [W3C Markup Validator](https://validator.w3.org/) - Results ([Index Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsquare-circles.herokuapp.com%2F)) ([Products Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsquare-circles.herokuapp.com%2Fproducts%2F%3Fc%3Dcaravan%2520pitches%2Ctent%2520pitches%2Cmotorhome%2520parking)) ([Basket Page](https://square-circles.herokuapp.com/basket/)) ([Map Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsquare-circles.herokuapp.com%2Fmap%2F))
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - Results ([base.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsquare-circles.s3.amazonaws.com%2Fstatic%2Fcss%2Fbase.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)) ([home.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsquare-circles.s3.amazonaws.com%2Fstatic%2Fhome%2Fcss%2Fhome.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)) ([checkout.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsquare-circles.s3.amazonaws.com%2Fstatic%2Fcheckout%2Fcss%2Fcheckout.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en))
 
 [Coverage](https://coverage.readthedocs.io/en/6.1.2/) is used for testing and coverage report.
 
@@ -337,7 +315,7 @@ to run a test use the terminal command `coverage run manage.py test` in the root
 
 it's possible to generate a test with the terminal command `coverage html`, a folder named `coverage_html_report` is generated.
 
-It's possible to read the report by opening the file `index.html` in a browser.
+It's possible to read the report by opening the file `/coverage_html_report/index.html` in a browser.
 
 ### Test Report
 
@@ -457,8 +435,8 @@ It's possible to run test test using coverage with this command `coverage run ma
 
 ### Further Testing
 
-- The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
-- The website was viewed on a variety of devices such as Desktop, Laptop, iPhone7, iPhone 8 & iPhoneX.
+- The Website was tested on Google Chrome, Microsoft Edge and Safari browsers.
+- The website was viewed on a variety of devices such as Desktop, Laptop, iPhoneX.
 - A large amount of testing was done to ensure that all pages were linking correctly.
 - Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
 
@@ -522,6 +500,26 @@ This project uses Heroku postgressSQL.
 3. run `python3 manage.py migrate` to migrate the new database.
 4. run `python manage.py loaddata initial_data` to load all fixtures
 5. run `python3 manage.py createsuperuser` to create a superuser
+
+### Add Screenshot to Readme
+
+This site prevents clickbait and this results in services like [ami.responsivedesign.is](http://ami.responsivedesign.is/) can not display this site's content.
+
+In order to create a screenshot of this site:
+
+1. run this site in localhost
+2. Add `@xframe_options_exempt` decorator above the view you would like to do a screenshot of.
+
+```
+from django.views.decorators.clickjacking import xframe_options_exempt
+
+@xframe_options_exempt
+def index(request):
+   # More code here...
+```
+
+3. in a browser navigate to [ami.responsivedesign.is](http://ami.responsivedesign.is/?url=http://localhost:8000)
+4. Create screendump
 
 ## Development
 
