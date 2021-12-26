@@ -533,46 +533,43 @@ It is possible to setup your dev environment to handle the stripe webhooks. Full
 
 - GitHub [gitignore Python](https://github.com/github/gitignore/blob/master/Python.gitignore) and [gitignore MacOS](https://github.com/github/gitignore/blob/master/Global/macOS.gitignore) : For basic gitignore patterns. gitignore is further modified to keep repo as clean as possible.
 
+- [Code institute](https://codeinstitute.net/) : course material has been used and modified.
+
 ### Content
 
-- All content was written by the developer.
-- Psychological properties of colours text in the README.md was found [here](http://www.colour-affects.co.uk/psychological-properties-of-colours)
 - reviews https://www.kaggle.com/andrewmvd/trip-advisor-hotel-reviews & https://www.kaggle.com/soumikrakshit/anime-faces & https://www.kaggle.com/nltkdata/names
-- https://crownpointcampingarea.com/sitemap.html
-
-https://crownpointcampingarea.com/PDF/CrownPointSiteMap_April2019_150_9.pdf
-https://polladrasholidaypark.co.uk/seasonal-touring-pitches/
+- [crownpoint camping area map](https://crownpointcampingarea.com/PDF/CrownPointSiteMap_April2019_150_9.pdf) is used as underlaying template creating this sites interactive map.
 
 ### Media
 
-https://pikwizard.com/photo/blue-and-white-camping-tent-during-night-time/a1d82feb940d8d6fc8462233c328f5b2
-https://www.pexels.com/sv-se/foto/man-bil-fordon-husvagn-753603/
-https://www.pexels.com/sv-se/foto/ljus-semester-kvinna-kreativ-7510676/
-https://www.pexels.com/sv-se/foto/kall-sno-tra-landskap-6367172/
-https://www.pexels.com/sv-se/foto/sommar-metall-bil-fordon-8607100/
-https://unsplash.com/photos/-Avc2AiE1_Q
-https://pixabay.com/sv/photos/husvagn-camping-campingplats-vild-3132180/
-https://www.pexels.com/sv-se/foto/tra-landskap-tradgard-trad-1144694/
-https://www.pexels.com/sv-se/foto/sno-landskap-natur-himmel-1290877/
-https://www.pexels.com/sv-se/foto/kall-sno-tra-ljus-3551230/
-https://www.pexels.com/sv-se/foto/kall-sno-tra-landskap-749231/
-https://www.pexels.com/sv-se/foto/natur-by-byggnad-konstruktion-4992384/
-https://www.pexels.com/sv-se/foto/vag-skog-trad-cykel-100582/
-https://www.pexels.com/sv-se/foto/arkitektur-bassangkant-hotell-simbassang-261327/
-https://www.pexels.com/sv-se/foto/stad-himmel-byggnad-flicka-7514005/
-https://www.pexels.com/sv-se/foto/kvinna-sitter-kraft-kondition-2475878/
-https://www.pexels.com/sv-se/foto/hav-strand-havsstrand-camping-2582818/
-https://www.pexels.com/sv-se/foto/landskap-natur-sommar-trad-2819554/
-https://www.pexels.com/sv-se/foto/kall-sno-landskap-natur-950058/
-https://www.pexels.com/sv-se/foto/dagsljus-farg-fargrik-hdr-206648/
-https://www.pexels.com/sv-se/foto/natur-kvinna-trad-sitter-6861137/
-https://www.pexels.com/sv-se/foto/ljus-semester-manniskor-kreativ-7510675/
-https://www.pexels.com/sv-se/foto/ljus-semester-natt-mork-7510487/
+The photos used in this site were obtained from:
 
-https://realfavicongenerator.net/
+- [blue-and-white-camping-tent-during-night-time](https://pikwizard.com/photo/blue-and-white-camping-tent-during-night-time/a1d82feb940d8d6fc8462233c328f5b2)
+- [man-bil-fordon-husvagn-753603](https://www.pexels.com/sv-se/foto/man-bil-fordon-husvagn-753603/)
+- [ljus-semester-kvinna-kreativ](https://www.pexels.com/sv-se/foto/ljus-semester-kvinna-kreativ-7510676/)
+- [kall-sno-tra-landskap](https://www.pexels.com/sv-se/foto/kall-sno-tra-landskap-6367172/)
+- [sommar-metall-bil-fordon](https://www.pexels.com/sv-se/foto/sommar-metall-bil-fordon-8607100/)
+- [Avc2AiE1_Q](https://unsplash.com/photos/-Avc2AiE1_Q)
+- [husvagn-camping-campingplats-vild](https://pixabay.com/sv/photos/husvagn-camping-campingplats-vild-3132180/)
+- [tra-landskap-tradgard-trad](https://www.pexels.com/sv-se/foto/tra-landskap-tradgard-trad-1144694/)
+- [sno-landskap-natur-himmel](https://www.pexels.com/sv-se/foto/sno-landskap-natur-himmel-1290877/)
+- [kall-sno-tra-ljus](https://www.pexels.com/sv-se/foto/kall-sno-tra-ljus-3551230/)
+- [kall-sno-tra-landskap](https://www.pexels.com/sv-se/foto/kall-sno-tra-landskap-749231/)
+- [natur-by-byggnad-konstruktion](https://www.pexels.com/sv-se/foto/natur-by-byggnad-konstruktion-4992384/)
+- [vag-skog-trad-cykel](https://www.pexels.com/sv-se/foto/vag-skog-trad-cykel-100582/)
+- [arkitektur-bassangkant-hotell-simbassang](https://www.pexels.com/sv-se/foto/arkitektur-bassangkant-hotell-simbassang-261327/)
+- [stad-himmel-byggnad-flicka](https://www.pexels.com/sv-se/foto/stad-himmel-byggnad-flicka-7514005/)
+- [kvinna-sitter-kraft-kondition](https://www.pexels.com/sv-se/foto/kvinna-sitter-kraft-kondition-2475878/)
+- [hav-strand-havsstrand-camping](https://www.pexels.com/sv-se/foto/hav-strand-havsstrand-camping-2582818/)
+- [landskap-natur-sommar-trad](https://www.pexels.com/sv-se/foto/landskap-natur-sommar-trad-2819554/)
+- [kall-sno-landskap-natur](https://www.pexels.com/sv-se/foto/kall-sno-landskap-natur-950058/)
+- [dagsljus-farg-fargrik-hdr](https://www.pexels.com/sv-se/foto/dagsljus-farg-fargrik-hdr-206648/)
+- [natur-kvinna-trad-sitter](https://www.pexels.com/sv-se/foto/natur-kvinna-trad-sitter-6861137/)
+- [ljus-semester-manniskor-kreativ](https://www.pexels.com/sv-se/foto/ljus-semester-manniskor-kreativ-7510675/)
+- [ljus-semester-natt-mork](https://www.pexels.com/sv-se/foto/ljus-semester-natt-mork-7510487/)
+- [favicon](https://realfavicongenerator.net/)
 
 ### Acknowledgements
 
-- https://stackoverflow.com/questions/2969348/django-ordering-numerical-value-with-order-by
-- https://medium.com/python-pandemonium/how-to-test-your-imports-1461c1113be1
-- https://stackoverflow.com/questions/1107737/numeric-for-loop-in-django-templates
+- I received inspiration from [django-ordering-numerical-value-with-order-by](https://stackoverflow.com/questions/2969348/django-ordering-numerical-value-with-order-by) to order datasets in django
+- I received inspiration from [numeric-for-loop-in-django-templates](https://stackoverflow.com/questions/1107737/numeric-for-loop-in-django-templates) to use for loop counters.
