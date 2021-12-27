@@ -13,7 +13,7 @@
         <div class="row py-2 row-cols-1 row-cols-md-3 g-3">
         {% for review in reviews %}
             <div class="col">
-                <div class="card bg-white text-dark">
+                <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">{{ review.name }}</h5>
                         <p class="card-text">{{ review.review }}</p>
@@ -32,24 +32,17 @@
     {{ block.super }}
     <script>
         $(document).ready(function () {
-            
-           
-
             $('.stars').each(function( index ) {
+                // Render stars from rating value
                 const star = (solid=false) => `<i class="fa${solid ? 's' : 'r'} fa-star"></i>`
-
                 const rating = value => {
-                    console.log("run rating")
                     const stars = new Array(5).fill(false,0,5)
-                    console.log(stars.length);
-                  
                     return stars.map((x,i) => {
                         if (i <= value-1) return star(true)
                         return star()
                         }
                     ).join("")
                 }
-
                 const value = $( this ).attr('data-rating')
                 $( this ).html(rating(value));
                

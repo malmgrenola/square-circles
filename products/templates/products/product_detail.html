@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 {% load static%}
 
+{% block extra_css %}
+    {{ block.super }}  
+    <link rel="stylesheet" href="{% static 'products/css/products.css' %}">
+{% endblock %}
+
 {% block content %}
     <div class="row justify-content-md-center mx-0 py-3" id='products'>
         <div class="card mb-3 px-0">
