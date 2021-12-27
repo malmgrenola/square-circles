@@ -52,6 +52,7 @@ The website is designed to be responsible and accessible on a range of devices, 
 4. As a site user, I want to get an error message if the url is wrong, so I know that the page does not exists.
 5. As a site user, I want to see the current weather so I know if I need to wear full jacket or shorts when visiting.
 6. As a site user, I want to use a interactive map, so I can get an overview of the different pitches type.
+7. As a site user, I want to find the park on social media, so I can follow the park and it's visitors.
 
 #### Registration and user accounts goals
 
@@ -335,6 +336,8 @@ Site is tested with this result.
    2. Above the interactive map the user can select parameters that will highlight the pitches with corresponding parameters.
    3. The site user can see the total of how many pitches have the current selected parameters updated automatically.
    4. It's possible for the site user to hover over each pitch to see details
+7. As a site user, I want to find the park on social media, so I can follow the park and it's visitors.
+   1. Within the footer located on every page there is links to the social media accounts, when used, links opens up in new browser window.
 
 #### Test Registration and user accounts goals
 
