@@ -184,6 +184,8 @@ All wireframes can be found in the [wireframes folder](wireframes). They are all
    - Used as multi-platform, multi-architecture CPU emulator framework.
 1. [daterangepicker](https://github.com/dangrossman/daterangepicker)
    - Used to pick dates.
+1. [django-starfield](https://pypi.org/project/django-starfield/#description)
+   - Used to render Stars instead of integers in forms and django admin.
 
 ### Programs & Tools Used
 

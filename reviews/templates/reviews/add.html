@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="row justify-content-md-center">
+    <div class="col col-md-8 m-md-4 box">
+        <div class="row my-0 bg-secondary justify-content-md-center text-white">
+            <div class="col text-center"><h3 class="m-0 py-2">Add Review</h3></div> 
+        </div>
+        <div class="row justify-content-md-center">
+            <div class="col">
+                <form action="{% url 'add' %}" method="POST">
+                {% csrf_token %}
+                {{ review_form|crispy }}
+                <button type="submit" class="btn btn-primary sc" value="save" name="_save">Add</button>
+            </form>
+        </div>
+        </div>
+        
+    </div>
+</div>
+{% endblock %}

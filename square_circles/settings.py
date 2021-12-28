@@ -90,6 +90,7 @@ INSTALLED_APPS = [
     'checkout',
     'reviews',
     'crispy_forms',
+    'django_starfield',
     'storages',
 ]
 

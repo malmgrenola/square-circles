@@ -4,8 +4,11 @@ from django.contrib import messages
 from django.views.decorators.http import require_http_methods
 from .models import UserProfile
 from .forms import UserProfileForm, UserForm
+from reviews.models import Review
+from reviews.forms import ReviewForm
 from django.contrib.auth.models import User
 from checkout.models import Order
+from django.core.exceptions import ObjectDoesNotExist
 
 
 @require_http_methods(["GET", "POST"])
@@ -18,6 +21,7 @@ def profile(request):
     profile = get_object_or_404(UserProfile, user=request.user)
     user = get_object_or_404(User, username=request.user)
     orders = profile.orders.all()
+    reviews = Review.objects.all().filter(profile=profile)
 
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
@@ -38,20 +42,47 @@ def profile(request):
         'user': user,
         'user_form':  user_form,
         'orders': orders,
+        'reviews': reviews,
 
     }
 
     return render(request, template, context)
 
 
+@require_http_methods(["GET", "POST"])
+@login_required
 def order_history(request, order_number):
     """
     Fetch and render a single order done in the past.
     """
     order = get_object_or_404(Order, order_number=order_number)
+
+    try:
+        review = Review.objects.get(order=order)
+    except ObjectDoesNotExist:
+        review = None
+
+    if request.method == 'POST':
+        review_form = ReviewForm(request.POST, instance=review)
+        if review_form.is_valid():
+            review = review_form.save(commit=False)
+            review.order = order
+            if request.user.is_authenticated:
+                review.user = UserProfile.objects.get(user=request.user)
+            review.save()
+            messages.success(
+                request, f'Review for order {order} successfully created')
+        else:
+            messages.error(
+                request, f'Unable to create review for order {order}')
+    else:
+        review_form = ReviewForm(instance=review)
+
     template = 'checkout/checkout_success.html'
+
     context = {
         'order': order,
+        'review_form': review_form,
         'from_profile': True,
     }
 
