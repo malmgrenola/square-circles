@@ -6,15 +6,15 @@
 <div class="row justify-content-md-center">
     <div class="col col-md-8 m-md-4 box">
         <div class="row my-0 bg-secondary justify-content-md-center text-white">
-            <div class="col text-center"><h3 class="m-0 py-2">Add Review</h3></div> 
+            <div class="col text-center"><h3 class="m-0 py-2">Confirm delete</h3></div> 
         </div>
         <div class="row justify-content-md-center">
             <div class="col">
                 Are you Sure you would like to delete {{ review }}
                 <form action="{% url 'delete' review.id %}" method="POST">
                 {% csrf_token %}
-                <button type="submit" class="btn btn-primary sc" value="do" name="_do">Yes I'sure</button>
-                <button type="submit" class="btn btn-primary sc" value="abort" name="_abort">No Go Back</button>
+                <button type="submit" class="btn btn-primary sc btn-rounded my-3" value="do" name="_do">Yes I'sure</button>
+                <button type="submit" class="btn btn-secondary sc btn-rounded my-3" value="abort" name="_abort">No Go Back</button>
             </form>
         </div>
         </div>

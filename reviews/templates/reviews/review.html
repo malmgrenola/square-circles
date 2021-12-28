@@ -13,8 +13,8 @@
                 <form action="{% url 'change' review_id %}" method="POST">
                 {% csrf_token %}
                 {{ review_form|crispy }}
-                <button type="submit" class="btn btn-primary sc" value="save" name="_save">Save</button>
-                <button type="submit" class="btn btn-primary sc" value="delete" name="_delete">Delete</button>
+                <button type="submit" class="btn btn-primary sc btn-rounded my-3" value="save" name="_save">Save</button>
+                <button type="submit" class="btn btn-secondary sc btn-rounded my-3" value="delete" name="_delete">Delete</button>
             </form>
         </div>
         </div>

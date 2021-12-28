@@ -76,6 +76,10 @@ tbody .sc-row:last-child {
   border-bottom: 0;
 }
 
+ul {
+  list-style-type: none;
+}
+
 /* ---------------------------- Navbar */
 
 section {
