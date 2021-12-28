@@ -57,32 +57,10 @@ def order_history(request, order_number):
     """
     order = get_object_or_404(Order, order_number=order_number)
 
-    try:
-        review = Review.objects.get(order=order)
-    except ObjectDoesNotExist:
-        review = None
-
-    if request.method == 'POST':
-        review_form = ReviewForm(request.POST, instance=review)
-        if review_form.is_valid():
-            review = review_form.save(commit=False)
-            review.order = order
-            if request.user.is_authenticated:
-                review.user = UserProfile.objects.get(user=request.user)
-            review.save()
-            messages.success(
-                request, f'Review for order {order} successfully created')
-        else:
-            messages.error(
-                request, f'Unable to create review for order {order}')
-    else:
-        review_form = ReviewForm(instance=review)
-
     template = 'checkout/checkout_success.html'
 
     context = {
         'order': order,
-        'review_form': review_form,
         'from_profile': True,
     }
 
