@@ -81,7 +81,7 @@ def add(request):
 
         return redirect(reverse('add'))
 
-    review_form = ReviewForm()
+    review_form = ReviewForm(initial={'rating': 5})
 
     context = {
         'review_form': review_form
