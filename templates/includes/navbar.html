@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark  align-items-end">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark align-items-end text-nowrap">
     <a class="navbar-brand ms-3" href="/">
         <img src="{{ MEDIA_URL }}logo.png" alt="square circles holiday park">
     </a>
@@ -7,12 +7,14 @@
     </button>
     <div class="collapse navbar-collapse align-items-end" id="navbarCollapse">
             <div class="flex-column flex-fill">
-                <form class="d-flex justify-content-center" method="GET" action="{% url 'products' %}">
-                    <div class="d-flex search">
-                    <i class="fas fa-search"></i>
-                    <input class="search_input" name="q" type="search" placeholder="Search" aria-label="Search" value="{{ query }}">
-                    </div>
-                </form>
+                <div class="d-none d-lg-block">
+                    <form class="d-flex justify-content-center" method="GET" action="{% url 'products' %}">
+                        <div class="d-flex search">
+                        <i class="fas fa-search"></i>
+                        <input class="search_input" name="q" type="search" placeholder="Search" aria-label="Search" value="{{ query }}">
+                        </div>
+                    </form>
+                </div>
                 <ul class="navbar-nav flex-lg-row justify-content-center align-items-center text-uppercase">
                     <li class="nav-item">
                         <a class="nav-link" href="/">The Park</a>

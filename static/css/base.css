@@ -24,7 +24,7 @@ html {
 
 body {
   font-family: "Assistant", sans-serif;
-  margin-top: 180px;
+  margin-top: 116px;
 }
 
 .link-delete {
@@ -84,7 +84,7 @@ ul {
 
 section {
   /* screen height - footer height - navbar height */
-  min-height: calc(100vh - 312px - 180px);
+  min-height: calc(100vh - 312px - 116px);
 }
 
 @media (max-width: 991px) {
@@ -159,6 +159,10 @@ h6 {
 
 #availability:hover {
   cursor: pointer;
+}
+
+.daterangepicker.show-calendar .drp-buttons {
+  white-space: nowrap;
 }
 
 /* ---------------------------- Override bootstrap colours */

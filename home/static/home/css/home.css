@@ -26,3 +26,15 @@ i.owi {
   max-height: 300px;
   object-fit: cover;
 }
+.travel-info-box {
+  width: 50%;
+  background-color: white;
+  border-radius: 0.25rem;
+  padding: 20px 0;
+  text-align: center;
+}
+@media (max-width: 991px) {
+  .travel-info-box {
+    width: 100%;
+  }
+}
