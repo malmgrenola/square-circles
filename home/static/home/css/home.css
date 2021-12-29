@@ -28,6 +28,12 @@ i.owi {
   object-fit: cover;
 }
 
+.hero-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .travel-info-box {
   width: 50%;
   background-color: white;
