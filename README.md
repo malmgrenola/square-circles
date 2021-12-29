@@ -449,10 +449,11 @@ Feature passed this test
 
 #### Test Review and rate goals
 
-1. As a site owner, I want to be able to administrate the reservations.
-   1. ...
-2. As a cite owner, I want to be able to administrate the products the facilities has to offer.
-   1. ...
+1. As a visitor, I want to review and rate the facilities so I can let others know what I think.
+   1. As a site user it's possible to navigate to `my page` and press the write review button.
+   2. after filling out the Add review form and Add the review the review is visible on the `reviews page` from the navigation bar.
+   3. site user can navigate to my profile and change any of the users reviews by clicking on the review and make changes to the review.
+   4. site user can also delete any review created by the site user.
 
 ### Further Testing
 
@@ -465,8 +466,6 @@ Feature passed this test
 
 - On some mobile devices something is not perfect.
   - Something is slightly. wit
-- ...
-  - ...
 
 ## Deployment
 
