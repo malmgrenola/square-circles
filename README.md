@@ -6,7 +6,7 @@
 
 ## Description
 
-This is the main website for Square Circles Holiday Park. A facility hosting guests who needs a place to stay with their caravan, mobile home or tent. Square holiday park also facilitate cabins and activities.
+This is the main website for Square Circles Holiday Park. A facility hosting guests who need a place to stay with their caravan, mobile home or tent. Square holiday park also facilitates cabins and activities.
 
 The website is designed to be responsible and accessible on a range of devices, making it easy to navigate for potential campers and team members.
 
@@ -48,26 +48,26 @@ The website is designed to be responsible and accessible on a range of devices, 
 #### Viewing and Navigation goals
 
 1. As a customer, I want to be able to view and list all products so that I can decide what to purchase.
-2. As an customer, I want to be able to view the totals of my purchases so that I can spend a little more without over budget.
+2. As a customer, I want to be able to view the totals of my purchases so that I can spend a little more without over budget.
 3. As a site user, I want to come in direct contact so I can ask any questions.
-4. As a site user, I want to get an error message if the url is wrong, so I know that the page does not exists.
-5. As a site user, I want to see the current weather so I know if I need to wear full jacket or shorts when visiting.
-6. As a site user, I want to use a interactive map, so I can get an overview of the different pitches type.
+4. As a site user, I want to get an error message if the url is wrong, so I know that the page does not exist.
+5. As a site user, I want to see the current weather so I know if I need to wear a full jacket or shorts when visiting.
+6. As a site user, I want to use an interactive map, so I can get an overview of the different pitch types.
 7. As a site user, I want to find the park on social media, so I can follow the park and it's visitors.
 
 #### Registration and user accounts goals
 
-1. As an site user, I Want to be able to register for an account so that I can have a personal account and be able to view my details.
-2. As an site user, I Want to be able to login and logout so that I can access my personal account information.
-3. As an site user, I Want to be able to recover my password in case i forget it so that I can recover access to my account.
-4. As an site user, I Want to be able to have a personalized user profile so I can view my personal order history and reservations.
+1. As a site user, I Want to be able to register for an account so that I can have a personal account and be able to view my details.
+2. As a site user, I Want to be able to login and logout so that I can access my personal account information.
+3. As a site user, I Want to be able to recover my password in case I forget it so that I can recover access to my account.
+4. As a site user, I Want to be able to have a personalized user profile so I can view my personal order history and reservations.
 
 #### Sorting and searching goals
 
-1. As an site user, I Want to be able to list the products so that I can quickly identify the best priced product and identify the category.
-2. As an site user, I Want to be able to sort the list of products so that I can quickly find what Im looking for.
-3. As an site user, I Want to be able to search for a product by name or description so that I can find a specific product I'd like to purchase.
-4. As an site user, I Want to be able to see what I've searched for and the number of results so I can quickly see whether the product I want is available.
+1. As a site user, I Want to be able to list the products so that I can quickly identify the best priced product and identify the category.
+2. As a site user, I Want to be able to sort the list of products so that I can quickly find what I'm looking for.
+3. As a site user, I Want to be able to search for a product by name or description so that I can find a specific product I'd like to purchase.
+4. As a site user, I Want to be able to see what I've searched for and the number of results so I can quickly see whether the product I want is available.
 
 #### Make Reservation goals
 
@@ -105,9 +105,9 @@ Typography on the website is selected and combined based on the [deep learning p
 
 ### Wireframes
 
-All wireframes can be found in the [wireframes folder](wireframes). They are all organised with bootstraps style prefix and descriptive name.
+All wireframes can be found in the [wireframes folder](wireframes). They are all organized with bootstraps style prefix and descriptive name.
 
-- Home Page Wireframe - ([Large screen](wireframes/md_home.png)) ([small screen](wireframes/sm_home.png))
+- Homepage Wireframe - ([Large screen](wireframes/md_home.png)) ([small screen](wireframes/sm_home.png))
 - Products Pages Wireframes - ([List of products](wireframes/md_products.png)) ([Single product](wireframes/md_product.png))
 - Authentication Pages Wireframes - ([Profile](wireframes/md_my_profile.png)) ([Register](wireframes/md_register.png)) ([Sign in](wireframes/md_sign_in.png)) ([Password reset](wireframes/md_password_reset.png)) ([Change Password](wireframes/md_change_password.png))
 - Basket & Checkout Pages Wireframes - ([Basket](wireframes/md_basket.png)) ([Checkout](wireframes/md_checkout.png)) ([Checkout Success](wireframes/md_checkout_success.png)) ([Availability popover](wireframes/md_availability_popover.png))
@@ -154,7 +154,7 @@ All wireframes can be found in the [wireframes folder](wireframes). They are all
 1. [jQuery:](https://jquery.com/)
    - jQuery came with Bootstrap to make the navbar responsive but was also used for the smooth scroll function in JavaScript.
 1. [django-storages](https://django-storages.readthedocs.io/en/latest/index.html)
-   - USed as storage backend serving static files with aws S3.
+   - Used as a storage backend serving static files with aws S3.
 1. [boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html#)
    - Used to create, configure, and manage AWS services.
 1. [dj_database_url](https://pypi.org/project/dj-database-url/)
@@ -162,13 +162,13 @@ All wireframes can be found in the [wireframes folder](wireframes). They are all
 1. [psycopg2-binary](https://pypi.org/project/psycopg2-binary/)
    - Used as PostgreSQL database adapter
 1. [small.chat](https://small.chat/)
-   - small.chat is used tp create a on site chat button for site visitors to use
+   - small.chat is used to create a on site chat button for site visitors to use
 1. [Fontello](https://fontello.com/)
    - Fontello is used to generate missing icons needed.
 1. [django-allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)
    - used for user account authentication.
 1. [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/install.html)
-   - Used to control the rendering behaviour of forms.
+   - Used to control the rendering behavior of forms.
 1. [Django-environ](https://pypi.org/project/python-environ/)
    - Used to handle environment variables.
 1. [coverage](https://coverage.readthedocs.io/en/6.1.2/)
@@ -180,7 +180,7 @@ All wireframes can be found in the [wireframes folder](wireframes). They are all
 1. [open-weather-icons](https://github.com/isneezy/open-weather-icons)
    - font used to render weather icons
 1. [unicorn](https://pypi.org/project/unicorn/)
-   - Used as multi-platform, multi-architecture CPU emulator framework.
+   - Used as a multi-platform, multi-architecture CPU emulator framework.
 1. [daterangepicker](https://github.com/dangrossman/daterangepicker)
    - Used to pick dates.
 1. [django-starfield](https://pypi.org/project/django-starfield/#description)
@@ -191,15 +191,15 @@ All wireframes can be found in the [wireframes folder](wireframes). They are all
 1. [Git](https://git-scm.com/)
    - Git was used for version control by utilizing the GitPod terminal to commit to Git and Push to GitHub.
 1. [GitHub:](https://github.com/)
-   - GitHub is used to store the projects code after being pushed from Git.
+   - GitHub is used to store the project's code after being pushed from Git.
 1. [Photoshop:](https://www.adobe.com/ie/products/photoshop.html)
    - Photoshop was used to create the logo, resizing images and editing photos for the website.
 1. [Adobe XD:](https://www.adobe.com/products/xd.html)
    - Adobe XD was used to create the [wireframes](wireframes/) during the design process.
 1. [Visual Studio Code:](https://code.visualstudio.com/)
-   - Visual Studio Code was used as Integrated development environment (IDE).
+   - Visual Studio Code was used as an Integrated development environment (IDE).
 1. [dbdiagram.io](https://dbdiagram.io/home)
-   - Used to generate database overview image.
+   - Used to generate database overview images.
 1. [ami.responsivedesign.is](http://ami.responsivedesign.is/)
    - Used to generate the site screenshot
 
@@ -216,7 +216,7 @@ All wireframes can be found in the [wireframes folder](wireframes). They are all
 #### User Profile
 
 User Profile holds user information.
-Default data models from django-auth and django-allauth is also used to hold auth specific data.
+Default data models from django-auth and django-allauth are also used to hold auth specific data.
 
 | field                | type      | description        |
 | -------------------- | --------- | ------------------ |
@@ -226,7 +226,7 @@ Default data models from django-auth and django-allauth is also used to hold aut
 
 #### Products
 
-Products holds product name, price and image information.
+Products hold product name, price and image information.
 
 | field       | type         | description               |
 | ----------- | ------------ | ------------------------- |
@@ -336,13 +336,13 @@ Site passed all tests OK with [test report](/wireframes/testreport.pdf) results.
 1. add assets to basket by clicking +
 2. confirm that it is not possible to add more than available items.
 3. remove assets from baskets
-4. confirm that it is not possible to remove last asset.
+4. confirm that it is not possible to remove the last asset.
 
 Feature passed this test
 
 ##### Checkout App tests
 
-Checkout app unit test don't test checkout with stripe and webhooks.
+Checkout app unit tests don't test checkout with stripe and webhooks.
 
 1. set travel info.
 2. add product to basket.
@@ -356,7 +356,7 @@ Feature passed this test
 
 ##### Home App tests
 
-Home app unit test don't test error is data from weather provider.
+Home app unit test doesn't test error is data from weather provider.
 
 1. change weather url to an invalid url.
 2. confirm error message after home reload.
@@ -384,54 +384,54 @@ Feature passed this test
 
 1. As a customer, I want to be able to view and list all products so that I can decide what to purchase.
    1. Upon entering the site, users are greeted with a clean and easily readable navigation bar to go to the page of their choice.
-2. As an customer, I want to be able to view the totals of my purchases so that I can spend a little more without over budget.
+2. As a customer, I want to be able to view the totals of my purchases so that I can spend a little more without over budget.
    1. In the navigation bar the user can navigate to the current basket where the total cost is displayed.
 3. As a site user, I want to come in direct contact so I can ask any questions.
-   1. On every page located in the bottom right of the current browser window there is a chat icon that can be pressed. By pressing the button a small chat window appears where the user can communicate the park site staff.
-4. As a site user, I want to get an error message if the url is wrong, so I know that the page does not exists.
-   1. if user navigates to a [faulty page](https://square-circles.herokuapp.com/nopagehere) a page not found message will automatically be visible.
-5. As a site user, I want to see the current weather so I know if I need to wear full jacket or shorts when visiting.
-   1. When entering the site the user can rad the current weather in the `today's weather`section.
-6. As a site user, I want to use a interactive map, so I can get an overview of the different pitches type.
-   1. In the sites navigation bar the user can select `MAP`.
+   1. On every page located in the bottom right of the current browser window there is a chat icon that can be pressed. By pressing the button a small chat window appears where the user can communicate with the park site staff.
+4. As a site user, I want to get an error message if the url is wrong, so I know that the page does not exist.
+   1. if the user navigates to a [faulty page](https://square-circles.herokuapp.com/nopagehere) a page not found message will automatically be visible.
+5. As a site user, I want to see the current weather so I know if I need to wear a full jacket or shorts when visiting.
+   1. When entering the site the user can read the current weather in the `today's weather`section.
+6. As a site user, I want to use an interactive map, so I can get an overview of the different pitch types.
+   1. In the site's navigation bar the user can select `MAP`.
    2. Above the interactive map the user can select parameters that will highlight the pitches with corresponding parameters.
    3. The site user can see the total of how many pitches have the current selected parameters updated automatically.
    4. It's possible for the site user to hover over each pitch to see details
 7. As a site user, I want to find the park on social media, so I can follow the park and it's visitors.
-   1. Within the footer located on every page there is links to the social media accounts, when used, links opens up in new browser window.
+   1. Within the footer located on every page there are links to the social media accounts, when used, links open up in a new browser window.
 
 #### Test Registration and user accounts goals
 
-1. As an site user, I Want to be able to register for an account so that I can have a personal account and be able to view my details.
+1. As a site user, I Want to be able to register for an account so that I can have a personal account and be able to view my details.
    1. As a first time visiting site user it is possible to select the sign up button found in the navigation bar.
-   2. By filling out and submit the sign up form the user can be able to view future details.
-2. As an site user, I Want to be able to login and logout so that I can access my personal account information.
+   2. By filling out and submitting the sign up form the user can be able to view future details.
+2. As a site user, I Want to be able to login and logout so that I can access my personal account information.
    1. From the navigation bar it is possible to select sign in.
    2. By filling out and submit the required parameters user will be logged into the site
    3. The navigation bar now have a `My Page` option the user can select to access account information
-   4. The navigation bar now also have the `sign out` option that can be selected.
+   4. The navigation bar now also has the `sign out` option that can be selected.
    5. From the sign out page user can press the sign out button to fully logout.
-3. As an site user, I Want to be able to recover my password in case i forget it so that I can recover access to my account.
+3. As a site user, I Want to be able to recover my password in case I forget it so that I can recover access to my account.
    1. From the sign in page it is possible to select `forgot password`.
    2. In the password reset form it is possible to provide a valid email address and press the `Reset My Password` button.
    3. User will get an email containing a link to reset the password.
    4. Clicking the email link takes the user to the Password Reset Page, where a new password can be provided.
-4. As an site user, I Want to be able to have a personalized user profile so I can view my personal order history and reservations.
-   1. On site users `My Page` order history is available in a list format.
-   2. by clicking a history order, user can view the order details.
+4. As a site user, I Want to be able to have a personalized user profile so I can view my personal order history and reservations.
+   1. On-site users `My Page` order history is available in a list format.
+   2. by clicking a history order, the user can view the order details.
 
 #### Test Sorting and searching goals
 
-1. As an site user, I Want to be able to list the products so that I can quickly identify the best priced product and identify the category.
+1. As a site user, I Want to be able to list the products so that I can quickly identify the best priced product and identify the category.
    1. The site navigation bar contains the main products for the site user.
    2. Each navbar product item displays the categories found in the top of the products page.
-2. As an site user, I Want to be able to sort the list of products so that I can quickly find what Im looking for.
-   1. On products page there is a `Sort by` drop down button that can be used to sort the current list seen.
-3. As an site user, I Want to be able to search for a product by name or description so that I can find a specific product I'd like to purchase.
+2. As a site user, I Want to be able to sort the list of products so that I can quickly find what I'm looking for.
+   1. On the products page there is a `Sort by` drop down button that can be used to sort the current list seen.
+3. As a site user, I Want to be able to search for a product by name or description so that I can find a specific product I'd like to purchase.
    1. From the navbar it is possible to provide a search term and hit enter.
    2. All found products will be displayed.
    3. Title and description on each product will highlight the search term used.
-4. As an site user, I Want to be able to see what I've searched for and the number of results so I can quickly see whether the product I want is available.
+4. As a site user, I Want to be able to see what I've searched for and the number of results so I can quickly see whether the product I want is available.
    1. in the top of the products page the number of found items is displayed.
 
 #### test Purchasing and checkout goals
@@ -441,18 +441,18 @@ Feature passed this test
    2. In the popover date picker it is possible to first click the arrival date and then departure date. After clicking apply the new travel information is set.
    3. Available products in the selected travel information period will print the amount available if any within the product details.
 2. As a customer, I want to be able to make purchases based on my basket items.
-   1. Site user can Add products into the basket.
-   2. site user can select many equal products, if available on the same travel information dates selected.
-   3. Site user can modify a product date range individually from the basket page.
-   4. Site user can `Continue to Secure Checkout` and provide required information including card information to make reservation purchase.
+   1. Site users can Add products into the basket.
+   2. site users can select many equal products, if available on the same travel information dates selected.
+   3. Site users can modify a product date range individually from the basket page.
+   4. Site users can `Continue to Secure Checkout` and provide required information including card information to make a reservation purchase.
 
 #### Test Review and rate goals
 
 1. As a visitor, I want to review and rate the facilities so I can let others know what I think.
    1. As a site user it's possible to navigate to `my page` and press the write review button.
-   2. after filling out the Add review form and Add the review the review is visible on the `reviews page` from the navigation bar.
-   3. site user can navigate to my profile and change any of the users reviews by clicking on the review and make changes to the review.
-   4. site user can also delete any review created by the site user.
+   2. After filling out the Add review form and Add the review the review is visible on the `reviews page` from the navigation bar.
+   3. site users can navigate to my profile and change any of the users reviews by clicking on the review and make changes to the review.
+   4. site users can also delete any review created by the site user.
 
 ### Further Testing
 
@@ -464,7 +464,7 @@ Feature passed this test
 ### Known Bugs
 
 - On some mobile devices something is not perfect.
-  - Something is slightly. wit
+  - Something is slightly different. wit
 
 ## Deployment
 
@@ -473,10 +473,10 @@ Feature passed this test
 The project was deployed to Heroku using the following steps...
 
 1. [Sign up](https://signup.heroku.com/) or [sign in](https://id.heroku.com/login) at Heroku.
-2. From your page, create new App with framework python.
-3. Add on Heroku PostgrSQL Resource with the steps in [Database](#database) section.
+2. From your page, create a new App with framework python.
+3. Add on Heroku PostgreSQL Resource with the steps in [Database](#database) section.
 4. Add static hosting with the steps in the [Static files](#static-files) section.
-5. On Settings tab add all config vars from [.env.example](/.env.example), do not add variables in the `Development` section.
+5. On the Settings tab add all config vars from [.env.example](/.env.example), do not add variables in the `Development` section.
 6. Connect Heroku to your github repo and do a manual deploy.
 7. When deployment is done, navigate to the site url to test.
 
@@ -486,15 +486,15 @@ The project uses [AWS S3](https://aws.amazon.com/s3/) bucket as cdn for static f
 
 Full S3 documentation is available on [aws documentation website](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html)
 
-After aws new user registration the following steps is needed at a glance.
+After AWS new user registration the following steps are needed at a glance.
 
 1. create a new bucket and allow public access
 2. activate static hosting on bucket
 3. add a cors configuration that allows GET from any origin
-4. Add a bucket policy that allows getObject on service S3 (remeber to add `/*` to the resource key for access to all objects within the bucket)
+4. Add a bucket policy that allows getObject on service S3 (remember to add `/*` to the resource key for access to all objects within the bucket)
 5. Set list objects allow for anyone.
 6. Add group and user for the access from the project
-7. add S3 full access to group and add bucket arn resource. (remember to add a list of resources where one resource list item is the bucket and the other item is all objects within the bucket)
+7. add S3 full access to the group and add bucket arn resource. (remember to add a list of resources where one resource list item is the bucket and the other item is all objects within the bucket)
 8. download .csv file with user details and apply them to your .env file
 
 #### cors configuration Example
@@ -512,10 +512,10 @@ After aws new user registration the following steps is needed at a glance.
 
 ### Database
 
-This project uses Heroku postgressSQL.
+This project uses Heroku postgresQL.
 
-1. in the heroku app add Heroku postgressSQL.
-2. use the DATABASE_URL found in enviroment settings in Heruko in your .env file.
+1. in the heroku app add Heroku postgresQL.
+2. use the DATABASE_URL found in environment settings in Heroku in your .env file.
 3. run `python3 manage.py migrate` to migrate the new database.
 4. run `python manage.py loaddata initial_data` to load all fixtures
 5. run `python3 manage.py createsuperuser` to create a superuser
@@ -545,17 +545,17 @@ def index(request):
 
 [( Back to Top )](#table-of-contents)
 
-It is advisable to use [virtual environments and packages](https://docs.python.org/3/tutorial/venv.html) with python application.
-These guidelines includes help in add this project as a virtual environment in your local development setup.
+It is advisable to use [virtual environments and packages](https://docs.python.org/3/tutorial/venv.html) with python applications.
+These guidelines include help in adding this project as a virtual environment in your local development setup.
 
-### Perquisites
+### Prerequisites
 
 1. Confirm that python3 is installed by running `python3 --version` and confirm it's `Python 3.x.x` or higher.
 1. Log in to GitHub and fork the [GitHub Square Circles Repository](https://github.com/malmgrenola/square-circles)
 1. Click "Code" and the copy url button on your fork.
 1. in a terminal run `git clone https://github.com/YOUR-GITHUB-NAME/square-circles.git` - to clone the repository to your local drive.
 1. in a terminal run `cd square-circles` - to change directory to project root folder.
-1. in a terminal run `python3 -m venv venv` - ta create a virtual environment.
+1. in a terminal run `python3 -m venv venv` - to create a virtual environment.
 1. in a terminal run `source venv/bin/activate` to activate the virtual environment.
 1. in a terminal run `python3 -m pip install -r requirements.txt`
 1. in a terminal run `python3 manage.py migrate && python3 manage.py createsuperuser` - to migrate the database and start the create superuser process.
@@ -590,7 +590,7 @@ It is possible to setup your dev environment to handle the stripe webhooks. Full
 
 ### Code
 
-- [Bootstrap5](https://getbootstrap.com/docs/5.1/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
+- [Bootstrap5](https://getbootstrap.com/docs/5.1/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make the site responsive using the Bootstrap Grid System.
 
 - [MDN Web Docs](https://developer.mozilla.org/) : for general javascript code examples.
 
@@ -600,7 +600,7 @@ It is possible to setup your dev environment to handle the stripe webhooks. Full
 
 ### Content
 
-- [crownpoint camping area map](https://crownpointcampingarea.com/PDF/CrownPointSiteMap_April2019_150_9.pdf) is used as underlaying template creating this sites interactive map.
+- [crownpoint camping area map](https://crownpointcampingarea.com/PDF/CrownPointSiteMap_April2019_150_9.pdf) is used as underlying template creating this sites interactive map.
 
 ### Media
 
