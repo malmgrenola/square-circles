@@ -27,7 +27,7 @@
     "fields": {
       "category": 2,
       "name": "Regular Seasonal Caravan pitch",
-      "description": "The majority of these pitches are 7 x 10 meter large grass pitches that are suitable for all units.Each pitch have electric  water & waste connections. One unit only per pitch. If you have 2 tents you must book 2 separate pitches.They come with electric hook up (min 10 amp).Please note that everything must fit on your pitch including ropes  awnings  pup tents  gazebos and your car.",
+      "description": "The majority of these pitches are 7 x 10 meter large grass pitches that are suitable for all units.Each pitch has electric  water & waste connections. One unit only per pitch. If you have 2 tents you must book 2 separate pitches.They come with electric hook up (min 10 amp).Please note that everything must fit on your pitch including ropes  awnings  pup tents  gazebos and your car.",
       "price": 2000,
 
       "image": "caravan-g2c1ea48a6_1920.jpg"
@@ -39,7 +39,7 @@
     "fields": {
       "category": 2,
       "name": "Premium Seasonal Caravan pitch",
-      "description": "The majority of these pitches are 7 x 10 meter large grass pitches that are suitable for all units.Each pitch have electric  water & waste connections. One unit only per pitch. If you have 2 tents you must book 2 separate pitches.They come with electric hook up (min 10 amp). Please note that everything must fit on your pitch including ropes  awnings  pup tents  gazebos and your car.",
+      "description": "The majority of these pitches are 7 x 10 meter large grass pitches that are suitable for all units.Each pitch has electric  water & waste connections. One unit only per pitch. If you have 2 tents you must book 2 separate pitches.They come with electric hook up (min 10 amp). Please note that everything must fit on your pitch including ropes  awnings  pup tents  gazebos and your car.",
       "price": 2500,
 
       "image": "pexels-aline-ang-8607100.jpg"
@@ -51,7 +51,7 @@
     "fields": {
       "category": 2,
       "name": "Superior Seasonal Caravan pitch",
-      "description": "The majority of these pitches are 7 x 10 meter large grass pitches that are suitable for all units.Each pitch have electric  water & waste connections.One unit only per pitch. If you have 2 tents you must book 2 separate pitches.They come with electric hook up (min 10 amp).Please note that everything must fit on your pitch including ropes  awnings  pup tents  gazebos and your car.",
+      "description": "The majority of these pitches are 7 x 10 meter large grass pitches that are suitable for all units.Each pitch has electric  water & waste connections.One unit only per pitch. If you have 2 tents you must book 2 separate pitches.They come with electric hook up (min 10 amp).Please note that everything must fit on your pitch including ropes  awnings  pup tents  gazebos and your car.",
       "price": 2800,
 
       "image": "pexels-erik-mclean-6367172.jpg"
@@ -63,7 +63,7 @@
     "fields": {
       "category": 1,
       "name": "Regular Caravan pitch",
-      "description": "The majority of these pitches are 7 x 10 meter large grass pitches that are suitable for all units.Each pitch have electric  water & waste connections.One unit only per pitch. If you have 2 tents you must book 2 separate pitches.They come with electric hook up (min 10 amp). Please note that everything must fit on your pitch including ropes  awnings  pup tents  gazebos and your car.",
+      "description": "The majority of these pitches are 7 x 10 meter large grass pitches that are suitable for all units.Each pitch has electric  water & waste connections.One unit only per pitch. If you have 2 tents you must book 2 separate pitches.They come with electric hook up (min 10 amp). Please note that everything must fit on your pitch including ropes  awnings  pup tents  gazebos and your car.",
       "price": 25,
 
       "image": "pexels-matheus-bertelli-7510676.jpg"
@@ -87,7 +87,7 @@
     "fields": {
       "category": 1,
       "name": "Superior Caravan pitch",
-      "description": "The majority of these pitches are 7 x 10 meter large grass pitches that are suitable for all units.Each pitch have electric  water & waste connections.One unit only per pitch. If you have 2 tents you must book 2 separate pitches.They come with electric hook up (min 10 amp).Please note that everything must fit on your pitch including ropes  awnings  pup tents  gazebos and your car.",
+      "description": "The majority of these pitches are 7 x 10 meter large grass pitches that are suitable for all units.Each pitch has electric  water & waste connections.One unit only per pitch. If you have 2 tents you must book 2 separate pitches.They come with electric hook up (min 10 amp).Please note that everything must fit on your pitch including ropes  awnings  pup tents  gazebos and your car.",
       "price": 45,
 
       "image": "pexels-neil-kelly-753603.jpg"
@@ -122,8 +122,8 @@
     "model": "products.product",
     "fields": {
       "category": 4,
-      "name": "Cabin bunkbed 4 people",
-      "description": "We are proud to present our beautiful Cabins which sleeps up to four guests. There is a small seating area with TV  fridge and kettle inside. Externally  there is a decked area with a table  chairs and chiminea for guests to use. is in a large  fenced enclosure which is vehicle free for your safety. There are also two camping pitches which are used at peak times.Guests staying in Millook have full use of the campsite toilets and showers  as well as the kitchen deck which is provided for our glamping guests. All bedding and one set of towels is provided  along with crockery and cutlery. Pans and cooking equipment are provided on the kitchen deck which also has gas burners  a freezer  wash up area and undercover dining area.",
+      "name": "Cabin bunk bed 4 people",
+      "description": "We are proud to present our beautiful Cabins which sleep up to four guests. There is a small seating area with a TV fridge and kettle inside. Externally  there is a decked area with table  chairs and chiminea for guests to use. is in a large  fenced enclosure which is vehicle free for your safety. There are also two camping pitches which are used at peak times.Guests staying in Millook have full use of the campsite toilets and showers  as well as the kitchen deck which is provided for our glamping guests. All bedding and one set of towels is provided  along with crockery and cutlery. Pans and cooking equipment are provided on the kitchen deck which also has gas burners  a freezer  wash up area and undercover dining area.",
       "price": 120,
 
       "image": "pexels-adriaan-greyling-749231.jpg"
@@ -134,8 +134,8 @@
     "model": "products.product",
     "fields": {
       "category": 4,
-      "name": "Cabin kingsize bed 4 people",
-      "description": "We are proud to present our beautiful Cabins which sleeps up to four guests. There is a small seating area with TV  fridge and kettle inside.Externally  there is a decked area with a table  chairs and chiminea for guests to use. is in a large  fenced enclosure which is vehicle free for your safety. There are also two camping pitches which are used at peak times. Guests staying in Millook have full use of the campsite toilets and showers  as well as the kitchen deck which is provided for our glamping guests. All bedding and one set of towels is provided  along with crockery and cutlery. Pans and cooking equipment are provided on the kitchen deck which also has gas burners  a freezer  wash up area and undercover dining area.",
+      "name": "Cabin king size bed 4 people",
+      "description": "We are proud to present our beautiful Cabins which sleep up to four guests. There is a small seating area with a TV fridge and kettle inside.Externally  there is a decked area with a table, chairs and chiminea for guests to use. is in a large  fenced enclosure which is vehicle free for your safety. There are also two camping pitches which are used at peak times. Guests staying in Millook have full use of the campsite toilets and showers  as well as the kitchen deck which is provided for our glamping guests. All bedding and one set of towels is provided  along with crockery and cutlery. Pans and cooking equipment are provided on the kitchen deck which also has gas burners  a freezer  wash up area and undercover dining area.",
       "price": 120,
 
       "image": "pexels-aleksey-kuprikov-3551230.jpg"
@@ -147,7 +147,7 @@
     "fields": {
       "category": 4,
       "name": "Cabin 8 bed",
-      "description": "We are proud to present our beautiful Cabins which sleeps up to four guests. There is a small seating area with TV  fridge and kettle inside. Externally  there is a decked area with a table  chairs and chiminea for guests to use. is in a large  fenced enclosure which is vehicle free for your safety. There are also two camping pitches which are used at peak times.Guests staying in Millook have full use of the campsite toilets and showers  as well as the kitchen deck which is provided for our glamping guests. All bedding and one set of towels is provided  along with crockery and cutlery. Pans and cooking equipment are provided on the kitchen deck which also has gas burners  a freezer  wash up area and undercover dining area.",
+      "description": "We are proud to present our beautiful Cabins which sleep up to four guests. There is a small seating area with a TV fridge and kettle inside. Externally  there is a decked area with table  chairs and chiminea for guests to use. is in a large  fenced enclosure which is vehicle free for your safety. There are also two camping pitches which are used at peak times.Guests staying in Millook have full use of the campsite toilets and showers  as well as the kitchen deck which is provided for our glamping guests. All bedding and one set of towels is provided  along with crockery and cutlery. Pans and cooking equipment are provided on the kitchen deck which also has gas burners  a freezer  wash up area and undercover dining area.",
       "price": 130,
 
       "image": "pexels-matheus-bertelli-1144694.jpg"
@@ -159,7 +159,7 @@
     "fields": {
       "category": 4,
       "name": "Cabin family 5 people",
-      "description": "We are proud to present our beautiful Cabins which sleeps up to four guests. There is a small seating area with TV  fridge and kettle inside. Externally  there is a decked area with a table  chairs and chiminea for guests to use. is in a large  fenced enclosure which is vehicle free for your safety. There are also two camping pitches which are used at peak times.Guests staying in Millook have full use of the campsite toilets and showers  as well as the kitchen deck which is provided for our glamping guests. All bedding and one set of towels is provided  along with crockery and cutlery. Pans and cooking equipment are provided on the kitchen deck which also has gas burners  a freezer  wash up area and undercover dining area.",
+      "description": "We are proud to present our beautiful Cabins which sleep up to four guests. There is a small seating area with a TV fridge and kettle inside. Externally  there is a decked area with table  chairs and chiminea for guests to use. is in a large  fenced enclosure which is vehicle free for your safety. There are also two camping pitches which are used at peak times.Guests staying in Millook have full use of the campsite toilets and showers  as well as the kitchen deck which is provided for our glamping guests. All bedding and one set of towels is provided  along with crockery and cutlery. Pans and cooking equipment are provided on the kitchen deck which also has gas burners  a freezer  wash up area and undercover dining area.",
       "price": 140,
 
       "image": "pexels-sindre-strøm-950058.jpg"
@@ -171,7 +171,7 @@
     "fields": {
       "category": 7,
       "name": "Hostel 1 person",
-      "description": "Come and stayy in our hostel facillities. showers toiltes and access to sauna is included",
+      "description": "Come and stay in our hostel facilities. showers toilets and access to sauna is included",
       "price": 35,
 
       "image": "pexels-eberhard-grossgasteiger-1290877.jpg"
@@ -183,7 +183,7 @@
     "fields": {
       "category": 7,
       "name": "Hostel 2 person",
-      "description": "Come and stayy in our hostel facillities. showers toiltes and access to sauna is included",
+      "description": "Come and stay in our hostel facilities. showers toilets and access to sauna is included",
       "price": 50,
 
       "image": "pexels-sindre-strøm-950058.jpg"
@@ -195,7 +195,7 @@
     "fields": {
       "category": 7,
       "name": "Hostel 3 person",
-      "description": "Come and stayy in our hostel facillities. showers toiltes and access to sauna is included",
+      "description": "Come and stay in our hostel facilities. showers toilets and access to sauna is included",
       "price": 55,
 
       "image": "pexels-pixabay-206648.jpg"
@@ -205,11 +205,10 @@
     "pk": 16,
     "model": "products.product",
     "fields": {
-      "category": 6,
+      "category": 5,
       "name": "motorhome parking",
-      "description": "If you would like to park your motorhome overnight  this is a good choise",
+      "description": "If you would like to park your motorhome overnight  this is a good choice",
       "price": 20,
-
       "image": "hanson-lu--Avc2AiE1_Q-unsplash.jpg"
     }
   }

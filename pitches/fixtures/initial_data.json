@@ -1,1 +1,2290 @@
-[{"pk":1,"model":"pitches.pitch","fields":{"name":"1","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":2,"model":"pitches.pitch","fields":{"name":"2","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":3,"model":"pitches.pitch","fields":{"name":"3","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":4,"model":"pitches.pitch","fields":{"name":"4","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":5,"model":"pitches.pitch","fields":{"name":"5","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":6,"model":"pitches.pitch","fields":{"name":"6","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":7,"model":"pitches.pitch","fields":{"name":"7","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":8,"model":"pitches.pitch","fields":{"name":"8","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":9,"model":"pitches.pitch","fields":{"name":"9","description":"Fullhookup w. cable","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":false,"tent":false,"seasonal":false,"product":6}},{"pk":10,"model":"pitches.pitch","fields":{"name":"10","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":11,"model":"pitches.pitch","fields":{"name":"10A","description":"Premium","electric":true,"plug":"CEE","graywaste":false,"fullwaste":true,"water":true,"tent":false,"seasonal":true,"product":3}},{"pk":12,"model":"pitches.pitch","fields":{"name":"11","description":"Full hook-up Pull thru","electric":false,"plug":"CEE","graywaste":false,"fullwaste":false,"water":false,"tent":false,"seasonal":false,"product":6}},{"pk":13,"model":"pitches.pitch","fields":{"name":"12","description":"Premium","electric":true,"plug":"CEE","graywaste":false,"fullwaste":true,"water":true,"tent":false,"seasonal":true,"product":3}},{"pk":14,"model":"pitches.pitch","fields":{"name":"13","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":15,"model":"pitches.pitch","fields":{"name":"14","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":16,"model":"pitches.pitch","fields":{"name":"15","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":17,"model":"pitches.pitch","fields":{"name":"16","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":18,"model":"pitches.pitch","fields":{"name":"17","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":19,"model":"pitches.pitch","fields":{"name":"17A","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":20,"model":"pitches.pitch","fields":{"name":"18","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":21,"model":"pitches.pitch","fields":{"name":"19","description":"Full hook-up Pull thru","electric":false,"plug":"CEE","graywaste":false,"fullwaste":false,"water":false,"tent":false,"seasonal":false,"product":6}},{"pk":22,"model":"pitches.pitch","fields":{"name":"20","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":23,"model":"pitches.pitch","fields":{"name":"21","description":"Fullhookup w. cable","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":false,"tent":false,"seasonal":false,"product":6}},{"pk":24,"model":"pitches.pitch","fields":{"name":"22","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":25,"model":"pitches.pitch","fields":{"name":"24","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":26,"model":"pitches.pitch","fields":{"name":"25","description":"Full hook-up Pull thru","electric":false,"plug":"CEE","graywaste":false,"fullwaste":false,"water":false,"tent":false,"seasonal":false,"product":6}},{"pk":27,"model":"pitches.pitch","fields":{"name":"27","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":false,"product":5}},{"pk":28,"model":"pitches.pitch","fields":{"name":"28","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":false,"product":5}},{"pk":29,"model":"pitches.pitch","fields":{"name":"29","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":false,"product":5}},{"pk":30,"model":"pitches.pitch","fields":{"name":"30","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":false,"product":5}},{"pk":31,"model":"pitches.pitch","fields":{"name":"31","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":false,"product":5}},{"pk":32,"model":"pitches.pitch","fields":{"name":"32","description":"","electric":false,"plug":"","graywaste":false,"fullwaste":false,"water":false,"tent":true,"seasonal":false,"product":7}},{"pk":33,"model":"pitches.pitch","fields":{"name":"33","description":"","electric":false,"plug":"","graywaste":false,"fullwaste":false,"water":false,"tent":true,"seasonal":false,"product":7}},{"pk":34,"model":"pitches.pitch","fields":{"name":"34","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":35,"model":"pitches.pitch","fields":{"name":"35","description":"","electric":false,"plug":"","graywaste":false,"fullwaste":false,"water":false,"tent":true,"seasonal":false,"product":7}},{"pk":36,"model":"pitches.pitch","fields":{"name":"36","description":"","electric":false,"plug":"","graywaste":false,"fullwaste":false,"water":false,"tent":true,"seasonal":false,"product":7}},{"pk":37,"model":"pitches.pitch","fields":{"name":"37","description":"","electric":false,"plug":"","graywaste":false,"fullwaste":false,"water":false,"tent":true,"seasonal":false,"product":7}},{"pk":38,"model":"pitches.pitch","fields":{"name":"38","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":false,"product":4}},{"pk":39,"model":"pitches.pitch","fields":{"name":"39","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":false,"product":5}},{"pk":40,"model":"pitches.pitch","fields":{"name":"40","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":false,"product":4}},{"pk":41,"model":"pitches.pitch","fields":{"name":"40A","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":false,"product":4}},{"pk":42,"model":"pitches.pitch","fields":{"name":"41","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":false,"product":5}},{"pk":43,"model":"pitches.pitch","fields":{"name":"42","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":false,"product":4}},{"pk":44,"model":"pitches.pitch","fields":{"name":"43","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":false,"product":5}},{"pk":45,"model":"pitches.pitch","fields":{"name":"44A","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":false,"product":4}},{"pk":46,"model":"pitches.pitch","fields":{"name":"44","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":false,"product":4}},{"pk":47,"model":"pitches.pitch","fields":{"name":"45","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":false,"product":4}},{"pk":48,"model":"pitches.pitch","fields":{"name":"46","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":false,"product":4}},{"pk":49,"model":"pitches.pitch","fields":{"name":"47","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":false,"product":4}},{"pk":50,"model":"pitches.pitch","fields":{"name":"48","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":false,"product":4}},{"pk":51,"model":"pitches.pitch","fields":{"name":"49","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":false,"product":4}},{"pk":52,"model":"pitches.pitch","fields":{"name":"50","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":false,"product":4}},{"pk":53,"model":"pitches.pitch","fields":{"name":"51","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":false,"product":5}},{"pk":54,"model":"pitches.pitch","fields":{"name":"51A","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":false,"product":4}},{"pk":55,"model":"pitches.pitch","fields":{"name":"52","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":false,"product":4}},{"pk":56,"model":"pitches.pitch","fields":{"name":"53","description":"","electric":false,"plug":"","graywaste":false,"fullwaste":false,"water":false,"tent":true,"seasonal":false,"product":7}},{"pk":57,"model":"pitches.pitch","fields":{"name":"54","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":false,"product":4}},{"pk":58,"model":"pitches.pitch","fields":{"name":"55","description":"","electric":false,"plug":"","graywaste":false,"fullwaste":false,"water":false,"tent":true,"seasonal":false,"product":7}},{"pk":59,"model":"pitches.pitch","fields":{"name":"56","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":false,"product":4}},{"pk":60,"model":"pitches.pitch","fields":{"name":"57","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":61,"model":"pitches.pitch","fields":{"name":"58","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":62,"model":"pitches.pitch","fields":{"name":"59","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":63,"model":"pitches.pitch","fields":{"name":"59A","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":64,"model":"pitches.pitch","fields":{"name":"60","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":65,"model":"pitches.pitch","fields":{"name":"60A","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":66,"model":"pitches.pitch","fields":{"name":"61","description":"","electric":false,"plug":"","graywaste":false,"fullwaste":false,"water":false,"tent":true,"seasonal":false,"product":7}},{"pk":67,"model":"pitches.pitch","fields":{"name":"62","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":false,"product":4}},{"pk":68,"model":"pitches.pitch","fields":{"name":"63","description":"Fullhookup w. cable","electric":false,"plug":"CEE","graywaste":false,"fullwaste":false,"water":false,"tent":false,"seasonal":false,"product":3}},{"pk":69,"model":"pitches.pitch","fields":{"name":"64","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":70,"model":"pitches.pitch","fields":{"name":"65","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":false,"product":5}},{"pk":71,"model":"pitches.pitch","fields":{"name":"66","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":72,"model":"pitches.pitch","fields":{"name":"67","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":73,"model":"pitches.pitch","fields":{"name":"67A","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":74,"model":"pitches.pitch","fields":{"name":"68","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":75,"model":"pitches.pitch","fields":{"name":"69","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":76,"model":"pitches.pitch","fields":{"name":"69A","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":77,"model":"pitches.pitch","fields":{"name":"70","description":"Premium","electric":true,"plug":"CEE","graywaste":false,"fullwaste":true,"water":true,"tent":false,"seasonal":true,"product":3}},{"pk":78,"model":"pitches.pitch","fields":{"name":"71","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":79,"model":"pitches.pitch","fields":{"name":"72","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":80,"model":"pitches.pitch","fields":{"name":"73","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":81,"model":"pitches.pitch","fields":{"name":"74","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":82,"model":"pitches.pitch","fields":{"name":"75","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":83,"model":"pitches.pitch","fields":{"name":"76","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":84,"model":"pitches.pitch","fields":{"name":"77","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":85,"model":"pitches.pitch","fields":{"name":"78","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":86,"model":"pitches.pitch","fields":{"name":"79","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":87,"model":"pitches.pitch","fields":{"name":"80","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":88,"model":"pitches.pitch","fields":{"name":"81","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":89,"model":"pitches.pitch","fields":{"name":"82","description":"Fullhookup w. cable","electric":false,"plug":"CEE","graywaste":false,"fullwaste":false,"water":false,"tent":false,"seasonal":false,"product":6}},{"pk":90,"model":"pitches.pitch","fields":{"name":"83","description":"Fullhookup w. cable","electric":false,"plug":"CEE","graywaste":false,"fullwaste":false,"water":false,"tent":false,"seasonal":false,"product":6}},{"pk":91,"model":"pitches.pitch","fields":{"name":"84","description":"Fullhookup w. cable","electric":false,"plug":"CEE","graywaste":false,"fullwaste":false,"water":false,"tent":false,"seasonal":false,"product":6}},{"pk":92,"model":"pitches.pitch","fields":{"name":"84A","description":"Fullhookup w. cable","electric":false,"plug":"CEE","graywaste":false,"fullwaste":false,"water":false,"tent":false,"seasonal":false,"product":6}},{"pk":93,"model":"pitches.pitch","fields":{"name":"85","description":"","electric":false,"plug":"","graywaste":false,"fullwaste":false,"water":false,"tent":true,"seasonal":false,"product":7}},{"pk":94,"model":"pitches.pitch","fields":{"name":"86","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":false,"product":5}},{"pk":95,"model":"pitches.pitch","fields":{"name":"87","description":"Premium","electric":true,"plug":"CEE","graywaste":false,"fullwaste":true,"water":true,"tent":false,"seasonal":true,"product":3}},{"pk":96,"model":"pitches.pitch","fields":{"name":"88","description":"Premium","electric":true,"plug":"CEE","graywaste":false,"fullwaste":true,"water":true,"tent":false,"seasonal":true,"product":3}},{"pk":97,"model":"pitches.pitch","fields":{"name":"89","description":"Premium","electric":true,"plug":"CEE","graywaste":false,"fullwaste":true,"water":true,"tent":false,"seasonal":true,"product":3}},{"pk":98,"model":"pitches.pitch","fields":{"name":"90","description":"Premium","electric":true,"plug":"CEE","graywaste":false,"fullwaste":true,"water":true,"tent":false,"seasonal":true,"product":3}},{"pk":99,"model":"pitches.pitch","fields":{"name":"91","description":"Premium","electric":true,"plug":"CEE","graywaste":false,"fullwaste":true,"water":true,"tent":false,"seasonal":true,"product":3}},{"pk":100,"model":"pitches.pitch","fields":{"name":"92","description":"Premium","electric":true,"plug":"CEE","graywaste":false,"fullwaste":true,"water":true,"tent":false,"seasonal":true,"product":3}},{"pk":101,"model":"pitches.pitch","fields":{"name":"93","description":"Premium","electric":true,"plug":"CEE","graywaste":false,"fullwaste":true,"water":true,"tent":false,"seasonal":true,"product":3}},{"pk":102,"model":"pitches.pitch","fields":{"name":"93A","description":"Fullhookup w. cable","electric":false,"plug":"CEE","graywaste":false,"fullwaste":false,"water":false,"tent":false,"seasonal":false,"product":6}},{"pk":103,"model":"pitches.pitch","fields":{"name":"94","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":104,"model":"pitches.pitch","fields":{"name":"95","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":105,"model":"pitches.pitch","fields":{"name":"95A","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":106,"model":"pitches.pitch","fields":{"name":"95B","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":107,"model":"pitches.pitch","fields":{"name":"96","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":108,"model":"pitches.pitch","fields":{"name":"97","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":109,"model":"pitches.pitch","fields":{"name":"98","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":110,"model":"pitches.pitch","fields":{"name":"98A","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":false,"product":5}},{"pk":111,"model":"pitches.pitch","fields":{"name":"99","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":112,"model":"pitches.pitch","fields":{"name":"100","description":"Premium","electric":true,"plug":"CEE","graywaste":false,"fullwaste":true,"water":true,"tent":false,"seasonal":true,"product":3}},{"pk":113,"model":"pitches.pitch","fields":{"name":"101","description":"Full hook-up Pull thru","electric":false,"plug":"CEE","graywaste":false,"fullwaste":false,"water":false,"tent":false,"seasonal":false,"product":6}},{"pk":114,"model":"pitches.pitch","fields":{"name":"102","description":"Premium","electric":true,"plug":"CEE","graywaste":false,"fullwaste":true,"water":true,"tent":false,"seasonal":true,"product":3}},{"pk":115,"model":"pitches.pitch","fields":{"name":"103","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":116,"model":"pitches.pitch","fields":{"name":"104","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":117,"model":"pitches.pitch","fields":{"name":"105","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":118,"model":"pitches.pitch","fields":{"name":"106","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":119,"model":"pitches.pitch","fields":{"name":"107","description":"Premium","electric":true,"plug":"CEE","graywaste":false,"fullwaste":true,"water":true,"tent":false,"seasonal":true,"product":3}},{"pk":120,"model":"pitches.pitch","fields":{"name":"108","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":121,"model":"pitches.pitch","fields":{"name":"108A","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":122,"model":"pitches.pitch","fields":{"name":"109","description":"Fullhookup w. cable","electric":false,"plug":"CEE","graywaste":false,"fullwaste":false,"water":false,"tent":false,"seasonal":true,"product":6}},{"pk":123,"model":"pitches.pitch","fields":{"name":"110","description":"Fullhookup w. cable","electric":false,"plug":"CEE","graywaste":false,"fullwaste":false,"water":false,"tent":false,"seasonal":true,"product":6}},{"pk":124,"model":"pitches.pitch","fields":{"name":"111","description":"Fullhookup w. cable","electric":false,"plug":"CEE","graywaste":false,"fullwaste":false,"water":false,"tent":false,"seasonal":true,"product":6}},{"pk":125,"model":"pitches.pitch","fields":{"name":"112","description":"Fullhookup w. cable","electric":false,"plug":"CEE","graywaste":false,"fullwaste":false,"water":false,"tent":false,"seasonal":true,"product":6}},{"pk":126,"model":"pitches.pitch","fields":{"name":"113","description":"Fullhookup w. cable","electric":false,"plug":"CEE","graywaste":false,"fullwaste":false,"water":false,"tent":false,"seasonal":true,"product":6}},{"pk":127,"model":"pitches.pitch","fields":{"name":"114","description":"Fullhookup w. cable","electric":false,"plug":"CEE","graywaste":false,"fullwaste":false,"water":false,"tent":false,"seasonal":true,"product":6}},{"pk":128,"model":"pitches.pitch","fields":{"name":"115","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":false,"product":5}},{"pk":129,"model":"pitches.pitch","fields":{"name":"116","description":"Fullhookup w. cable","electric":false,"plug":"CEE","graywaste":false,"fullwaste":false,"water":false,"tent":false,"seasonal":true,"product":6}},{"pk":130,"model":"pitches.pitch","fields":{"name":"117","description":"Full hook-up Pull thru","electric":false,"plug":"CEE","graywaste":false,"fullwaste":false,"water":false,"tent":false,"seasonal":false,"product":6}},{"pk":131,"model":"pitches.pitch","fields":{"name":"118","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":132,"model":"pitches.pitch","fields":{"name":"119","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":133,"model":"pitches.pitch","fields":{"name":"120","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":134,"model":"pitches.pitch","fields":{"name":"121","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":135,"model":"pitches.pitch","fields":{"name":"122","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":136,"model":"pitches.pitch","fields":{"name":"123","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":137,"model":"pitches.pitch","fields":{"name":"124","description":"","electric":true,"plug":"CEE","graywaste":false,"fullwaste":false,"water":true,"tent":false,"seasonal":true,"product":1}},{"pk":138,"model":"pitches.pitch","fields":{"name":"T2","description":"","electric":false,"plug":"","graywaste":false,"fullwaste":false,"water":false,"tent":true,"seasonal":false,"product":8}},{"pk":139,"model":"pitches.pitch","fields":{"name":"T3","description":"","electric":false,"plug":"","graywaste":false,"fullwaste":false,"water":false,"tent":true,"seasonal":false,"product":8}},{"pk":140,"model":"pitches.pitch","fields":{"name":"T4","description":"","electric":false,"plug":"","graywaste":false,"fullwaste":false,"water":false,"tent":true,"seasonal":false,"product":7}},{"pk":141,"model":"pitches.pitch","fields":{"name":"T5","description":"","electric":false,"plug":"","graywaste":false,"fullwaste":false,"water":false,"tent":true,"seasonal":false,"product":7}},{"pk":142,"model":"pitches.pitch","fields":{"name":"T6","description":"","electric":false,"plug":"","graywaste":false,"fullwaste":false,"water":false,"tent":true,"seasonal":false,"product":7}},{"pk":143,"model":"pitches.pitch","fields":{"name":"T7","description":"","electric":false,"plug":"","graywaste":false,"fullwaste":false,"water":false,"tent":true,"seasonal":false,"product":7}}]
+[
+  {
+    "pk": 1,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "1",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 2,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "2",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": false,
+      "tent": false,
+      "seasonal": false,
+      "product": 16
+    }
+  },
+  {
+    "pk": 3,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "3",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 4,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "4",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": false,
+      "tent": false,
+      "seasonal": false,
+      "product": 16
+    }
+  },
+  {
+    "pk": 5,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "5",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 6,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "6",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": false,
+      "tent": false,
+      "seasonal": false,
+      "product": 16
+    }
+  },
+  {
+    "pk": 7,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "7",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 8,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "8",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 9,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "9",
+      "description": "Fullhookup w. cable",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": false,
+      "tent": false,
+      "seasonal": false,
+      "product": 6
+    }
+  },
+  {
+    "pk": 10,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "10",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 11,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "10A",
+      "description": "Premium",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": true,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 3
+    }
+  },
+  {
+    "pk": 12,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "11",
+      "description": "Full hook-up Pull thru",
+      "electric": false,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": false,
+      "tent": false,
+      "seasonal": false,
+      "product": 6
+    }
+  },
+  {
+    "pk": 13,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "12",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": true,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 9
+    }
+  },
+  {
+    "pk": 14,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "13",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": true,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 9
+    }
+  },
+  {
+    "pk": 15,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "14",
+      "description": "",
+      "electric": true,
+      "plug": "fixed",
+      "graywaste": false,
+      "fullwaste": true,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 10
+    }
+  },
+  {
+    "pk": 16,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "15",
+      "description": "",
+      "electric": true,
+      "plug": "fixed",
+      "graywaste": false,
+      "fullwaste": true,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 10
+    }
+  },
+  {
+    "pk": 17,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "16",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 18,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "17",
+      "description": "",
+      "electric": true,
+      "plug": "fixed",
+      "graywaste": false,
+      "fullwaste": true,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 12
+    }
+  },
+  {
+    "pk": 19,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "17A",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 20,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "18",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 21,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "19",
+      "description": "Full hook-up Pull thru",
+      "electric": false,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": false,
+      "tent": false,
+      "seasonal": false,
+      "product": 6
+    }
+  },
+  {
+    "pk": 22,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "20",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 23,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "21",
+      "description": "Fullhookup w. cable",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": false,
+      "tent": false,
+      "seasonal": false,
+      "product": 6
+    }
+  },
+  {
+    "pk": 24,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "22",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 25,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "24",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 26,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "25",
+      "description": "Full hook-up Pull thru",
+      "electric": false,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": false,
+      "tent": false,
+      "seasonal": false,
+      "product": 6
+    }
+  },
+  {
+    "pk": 27,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "27",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 5
+    }
+  },
+  {
+    "pk": 28,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "28",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 5
+    }
+  },
+  {
+    "pk": 29,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "29",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 5
+    }
+  },
+  {
+    "pk": 30,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "30",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 5
+    }
+  },
+  {
+    "pk": 31,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "31",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 5
+    }
+  },
+  {
+    "pk": 32,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "32",
+      "description": "",
+      "electric": false,
+      "plug": "",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": false,
+      "tent": true,
+      "seasonal": false,
+      "product": 7
+    }
+  },
+  {
+    "pk": 33,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "33",
+      "description": "",
+      "electric": false,
+      "plug": "",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": false,
+      "tent": true,
+      "seasonal": false,
+      "product": 7
+    }
+  },
+  {
+    "pk": 34,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "34",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 35,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "35",
+      "description": "",
+      "electric": false,
+      "plug": "",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": false,
+      "tent": true,
+      "seasonal": false,
+      "product": 7
+    }
+  },
+  {
+    "pk": 36,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "36",
+      "description": "",
+      "electric": false,
+      "plug": "",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": false,
+      "tent": true,
+      "seasonal": false,
+      "product": 7
+    }
+  },
+  {
+    "pk": 37,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "37",
+      "description": "",
+      "electric": false,
+      "plug": "",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": false,
+      "tent": true,
+      "seasonal": false,
+      "product": 7
+    }
+  },
+  {
+    "pk": 38,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "38",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 4
+    }
+  },
+  {
+    "pk": 39,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "39",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 5
+    }
+  },
+  {
+    "pk": 40,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "40",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 4
+    }
+  },
+  {
+    "pk": 41,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "40A",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 4
+    }
+  },
+  {
+    "pk": 42,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "41",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 5
+    }
+  },
+  {
+    "pk": 43,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "42",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 4
+    }
+  },
+  {
+    "pk": 44,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "43",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 5
+    }
+  },
+  {
+    "pk": 45,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "44A",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 4
+    }
+  },
+  {
+    "pk": 46,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "44",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 4
+    }
+  },
+  {
+    "pk": 47,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "45",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 4
+    }
+  },
+  {
+    "pk": 48,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "46",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 4
+    }
+  },
+  {
+    "pk": 49,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "47",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 4
+    }
+  },
+  {
+    "pk": 50,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "48",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 4
+    }
+  },
+  {
+    "pk": 51,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "49",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 4
+    }
+  },
+  {
+    "pk": 52,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "50",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 4
+    }
+  },
+  {
+    "pk": 53,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "51",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 5
+    }
+  },
+  {
+    "pk": 54,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "51A",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 4
+    }
+  },
+  {
+    "pk": 55,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "52",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 4
+    }
+  },
+  {
+    "pk": 56,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "53",
+      "description": "",
+      "electric": false,
+      "plug": "",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": false,
+      "tent": true,
+      "seasonal": false,
+      "product": 7
+    }
+  },
+  {
+    "pk": 57,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "54",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 4
+    }
+  },
+  {
+    "pk": 58,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "55",
+      "description": "",
+      "electric": false,
+      "plug": "",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": false,
+      "tent": true,
+      "seasonal": false,
+      "product": 7
+    }
+  },
+  {
+    "pk": 59,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "56",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 4
+    }
+  },
+  {
+    "pk": 60,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "57",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 61,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "58",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 62,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "59",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 63,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "59A",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 64,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "60",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 65,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "60A",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 66,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "61",
+      "description": "",
+      "electric": false,
+      "plug": "",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": false,
+      "tent": true,
+      "seasonal": false,
+      "product": 7
+    }
+  },
+  {
+    "pk": 67,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "62",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 4
+    }
+  },
+  {
+    "pk": 68,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "63",
+      "description": "Fullhookup w. cable",
+      "electric": false,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": false,
+      "tent": false,
+      "seasonal": false,
+      "product": 3
+    }
+  },
+  {
+    "pk": 69,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "64",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 70,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "65",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 5
+    }
+  },
+  {
+    "pk": 71,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "66",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 72,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "67",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 73,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "67A",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 74,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "68",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 75,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "69",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 76,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "69A",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 77,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "70",
+      "description": "Premium",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": true,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 3
+    }
+  },
+  {
+    "pk": 78,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "71",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 79,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "72",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 80,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "73",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 81,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "74",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 82,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "75",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 83,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "76",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 84,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "77",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 85,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "78",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 86,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "79",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 87,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "80",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 88,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "81",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 89,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "82",
+      "description": "Fullhookup w. cable",
+      "electric": false,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": false,
+      "tent": false,
+      "seasonal": false,
+      "product": 6
+    }
+  },
+  {
+    "pk": 90,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "83",
+      "description": "Fullhookup w. cable",
+      "electric": false,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": false,
+      "tent": false,
+      "seasonal": false,
+      "product": 6
+    }
+  },
+  {
+    "pk": 91,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "84",
+      "description": "Fullhookup w. cable",
+      "electric": false,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": false,
+      "tent": false,
+      "seasonal": false,
+      "product": 6
+    }
+  },
+  {
+    "pk": 92,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "84A",
+      "description": "Fullhookup w. cable",
+      "electric": false,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": false,
+      "tent": false,
+      "seasonal": false,
+      "product": 6
+    }
+  },
+  {
+    "pk": 93,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "85",
+      "description": "",
+      "electric": false,
+      "plug": "",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": false,
+      "tent": true,
+      "seasonal": false,
+      "product": 7
+    }
+  },
+  {
+    "pk": 94,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "86",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 5
+    }
+  },
+  {
+    "pk": 95,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "87",
+      "description": "",
+      "electric": true,
+      "plug": "fixed",
+      "graywaste": false,
+      "fullwaste": true,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 15
+    }
+  },
+  {
+    "pk": 96,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "88",
+      "description": "Premium",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": true,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 3
+    }
+  },
+  {
+    "pk": 97,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "89",
+      "description": "",
+      "electric": true,
+      "plug": "fixed",
+      "graywaste": false,
+      "fullwaste": true,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 15
+    }
+  },
+  {
+    "pk": 98,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "90",
+      "description": "Premium",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": true,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 3
+    }
+  },
+  {
+    "pk": 99,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "91",
+      "description": "",
+      "electric": true,
+      "plug": "fixed",
+      "graywaste": false,
+      "fullwaste": true,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 15
+    }
+  },
+  {
+    "pk": 100,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "92",
+      "description": "Premium",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": true,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 3
+    }
+  },
+  {
+    "pk": 101,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "93",
+      "description": "",
+      "electric": true,
+      "plug": "fixed",
+      "graywaste": false,
+      "fullwaste": true,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 15
+    }
+  },
+  {
+    "pk": 102,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "93A",
+      "description": "Fullhookup w. cable",
+      "electric": false,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": false,
+      "tent": false,
+      "seasonal": false,
+      "product": 6
+    }
+  },
+  {
+    "pk": 103,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "94",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 104,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "95",
+      "description": "",
+      "electric": true,
+      "plug": "fixed",
+      "graywaste": false,
+      "fullwaste": true,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 14
+    }
+  },
+  {
+    "pk": 105,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "95A",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 106,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "95B",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 107,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "96",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 108,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "97",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 109,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "98",
+      "description": "",
+      "electric": true,
+      "plug": "fixed",
+      "graywaste": false,
+      "fullwaste": true,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 13
+    }
+  },
+  {
+    "pk": 110,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "98A",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 5
+    }
+  },
+  {
+    "pk": 111,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "99",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 112,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "100",
+      "description": "",
+      "electric": true,
+      "plug": "fixed",
+      "graywaste": false,
+      "fullwaste": true,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 13
+    }
+  },
+  {
+    "pk": 113,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "101",
+      "description": "",
+      "electric": false,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": false,
+      "tent": false,
+      "seasonal": false,
+      "product": 6
+    }
+  },
+  {
+    "pk": 114,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "102",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": true,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 11
+    }
+  },
+  {
+    "pk": 115,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "103",
+      "description": "",
+      "electric": true,
+      "plug": "fixed",
+      "graywaste": false,
+      "fullwaste": true,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 14
+    }
+  },
+  {
+    "pk": 116,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "104",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 117,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "105",
+      "description": "",
+      "electric": true,
+      "plug": "fixed",
+      "graywaste": false,
+      "fullwaste": true,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 14
+    }
+  },
+  {
+    "pk": 118,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "106",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 119,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "107",
+      "description": "Premium",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": true,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 3
+    }
+  },
+  {
+    "pk": 120,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "108",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 121,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "108A",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 122,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "109",
+      "description": "Fullhookup w. cable",
+      "electric": false,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": false,
+      "tent": false,
+      "seasonal": true,
+      "product": 6
+    }
+  },
+  {
+    "pk": 123,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "110",
+      "description": "Fullhookup w. cable",
+      "electric": false,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": false,
+      "tent": false,
+      "seasonal": true,
+      "product": 6
+    }
+  },
+  {
+    "pk": 124,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "111",
+      "description": "Fullhookup w. cable",
+      "electric": false,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": false,
+      "tent": false,
+      "seasonal": true,
+      "product": 6
+    }
+  },
+  {
+    "pk": 125,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "112",
+      "description": "Fullhookup w. cable",
+      "electric": false,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": false,
+      "tent": false,
+      "seasonal": true,
+      "product": 6
+    }
+  },
+  {
+    "pk": 126,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "113",
+      "description": "Fullhookup w. cable",
+      "electric": false,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": false,
+      "tent": false,
+      "seasonal": true,
+      "product": 6
+    }
+  },
+  {
+    "pk": 127,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "114",
+      "description": "Fullhookup w. cable",
+      "electric": false,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": false,
+      "tent": false,
+      "seasonal": true,
+      "product": 6
+    }
+  },
+  {
+    "pk": 128,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "115",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": false,
+      "product": 5
+    }
+  },
+  {
+    "pk": 129,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "116",
+      "description": "Fullhookup w. cable",
+      "electric": false,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": false,
+      "tent": false,
+      "seasonal": true,
+      "product": 6
+    }
+  },
+  {
+    "pk": 130,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "117",
+      "description": "Full hook-up Pull thru",
+      "electric": false,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": false,
+      "tent": false,
+      "seasonal": false,
+      "product": 6
+    }
+  },
+  {
+    "pk": 131,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "118",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 132,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "119",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 133,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "120",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 134,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "121",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 135,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "122",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 136,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "123",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 137,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "124",
+      "description": "",
+      "electric": true,
+      "plug": "CEE",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": true,
+      "tent": false,
+      "seasonal": true,
+      "product": 1
+    }
+  },
+  {
+    "pk": 138,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "T2",
+      "description": "",
+      "electric": false,
+      "plug": "",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": false,
+      "tent": true,
+      "seasonal": false,
+      "product": 8
+    }
+  },
+  {
+    "pk": 139,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "T3",
+      "description": "",
+      "electric": false,
+      "plug": "",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": false,
+      "tent": true,
+      "seasonal": false,
+      "product": 8
+    }
+  },
+  {
+    "pk": 140,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "T4",
+      "description": "",
+      "electric": false,
+      "plug": "",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": false,
+      "tent": true,
+      "seasonal": false,
+      "product": 7
+    }
+  },
+  {
+    "pk": 141,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "T5",
+      "description": "",
+      "electric": false,
+      "plug": "",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": false,
+      "tent": true,
+      "seasonal": false,
+      "product": 7
+    }
+  },
+  {
+    "pk": 142,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "T6",
+      "description": "",
+      "electric": false,
+      "plug": "",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": false,
+      "tent": true,
+      "seasonal": false,
+      "product": 7
+    }
+  },
+  {
+    "pk": 143,
+    "model": "pitches.pitch",
+    "fields": {
+      "name": "T7",
+      "description": "",
+      "electric": false,
+      "plug": "",
+      "graywaste": false,
+      "fullwaste": false,
+      "water": false,
+      "tent": true,
+      "seasonal": false,
+      "product": 7
+    }
+  }
+]
