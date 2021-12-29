@@ -24,7 +24,8 @@ The website is designed to be responsible and accessible on a range of devices, 
 - [Features](#features)
 - [Technologies Used](#technologies-used)
   - [Languages Used](#languages-used)
-  - [Frameworks, Libraries & Programs Used](#frameworks-libraries--programs-used)
+  - [Frameworks & Libraries](#frameworks--libraries)
+  - [Programs & Tools Used](#programs--tools-used)
 - [Data models](#data-models)
 - [Testing](#testing)
   - [Testing User Stories from User Experience (UX) Section](#testing-user-stories-from-user-experience-ux-section)
@@ -172,8 +173,6 @@ All wireframes can be found in the [wireframes folder](wireframes). They are all
    - Used to handle environment variables.
 1. [coverage](https://coverage.readthedocs.io/en/6.1.2/)
    - Used to measure code coverage tests
-1. [dbdiagram.io](https://dbdiagram.io/home)
-   - Used to draw Entity-Relationship Diagrams
 1. [Stripe](https://stripe.com/)
    - Used to make card payments
 1. [OpenWeather](https://openweathermap.org/)
@@ -483,7 +482,7 @@ The project was deployed to Heroku using the following steps...
 
 ### Static files
 
-The project uses [AWS S3](https://aws.amazon.com/s3/) bucket as cdn for static files served on [endpoint](http://cdn.square-circles.s3-website-eu-west-1.amazonaws.com/).
+The project uses [AWS S3](https://aws.amazon.com/s3/) bucket as cdn for static files served on endpoint `https://cdn.square-circles.s3-website-eu-west-1.amazonaws.com/`.
 
 Full S3 documentation is available on [aws documentation website](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html)
 
@@ -593,7 +592,7 @@ It is possible to setup your dev environment to handle the stripe webhooks. Full
 
 - [Bootstrap5](https://getbootstrap.com/docs/5.1/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
 
-- [MDN Web Docs](https://developer.mozilla.org/) : For Pattern Validation code. Code was modified to better fit my needs and to match an Irish phone number layout to ensure correct validation. Tutorial Found [Here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/tel#Pattern_validation)
+- [MDN Web Docs](https://developer.mozilla.org/) : for general javascript code examples.
 
 - GitHub [gitignore Python](https://github.com/github/gitignore/blob/master/Python.gitignore) and [gitignore MacOS](https://github.com/github/gitignore/blob/master/Global/macOS.gitignore) : For basic gitignore patterns. gitignore is further modified to keep repo as clean as possible.
 
