@@ -315,9 +315,56 @@ It's possible to read the report by opening the file `/coverage_html_report/inde
 
 ### Test Report
 
-Site is tested with this result.
+Site passed all tests OK with [test report](/wireframes/testreport.pdf) results.
 
-![test report](/wireframes/testreport.png)
+#### Additional Testing
+
+##### Basket App
+
+1. add assets to basket by clicking +
+2. confirm that it is not possible to add more than available items.
+3. remove assets from baskets
+4. confirm that it is not possible to remove last asset.
+
+Feature passed this test
+
+##### Checkout App tests
+
+Checkout app unit test don't test checkout with stripe and webhooks.
+
+1. set travel info.
+2. add product to basket.
+3. continue to checkout.
+4. add your details and make payment. (use card 4242 4242 4242 4242 as test)
+5. Make payment.
+6. Confirm success email is sent.
+7. Confirm Order is created correctly.
+
+Feature passed this test
+
+##### Home App tests
+
+Home app unit test don't test error is data from weather provider.
+
+1. change weather url to an invalid url.
+2. confirm error message after home reload.
+
+Feature passed this test
+
+##### square_circles App tests
+
+In settings.py, `Email backend smtp` is tested in the Checkout App Tests.
+
+In settings.py, `Heroku Database integration` is tested by the following steps
+
+1. In admin, login with credentials and confirm no errors.
+
+In settings.py, `AWS Storage` is used as media and static files cdn, integration is tested by the following steps
+
+1. Goto to main url
+2. Confirm images and static files loads.
+
+Feature passed this test
 
 ### Testing User Stories from User Experience (UX) Section
 

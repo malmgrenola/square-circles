@@ -7,7 +7,7 @@ from datetime import datetime
 from products.views import product_available
 
 
-@require_http_methods(["GET", "POST"])
+@require_http_methods(["GET"])
 def basket(request):
     """
     Render basket view and handle create reservations

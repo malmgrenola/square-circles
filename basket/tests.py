@@ -33,7 +33,6 @@ def add_basket_test_item(self):
 class TestViews(TestCase):
     def test_get_basket(self):
         """ Test basket view  """
-
         response = self.client.get('/basket/')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'basket/basket.html')
@@ -100,6 +99,12 @@ class TestViews(TestCase):
         """ Test to update item  """
 
         create_product()
+        # Test
+        response = self.client.post(
+            f'/basket/update/1/', {'add': '+'}, follow=True)
+        response = self.client.post(
+            f'/basket/update/1/', {'add': '+'}, follow=True)
+
         set_TravelInfo(self)
         add_basket_test_item(self)
         response = self.client.post(
