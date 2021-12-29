@@ -296,6 +296,19 @@ Order Line Item holds every line in each order made.
 | quantity       | integerField  | amount of pitches       |
 | lineitem_total | DecimalField  | total value of lineitem |
 
+#### Review
+
+Review holds every site reviews made by users.
+
+| field   | type         | description                 |
+| ------- | ------------ | --------------------------- |
+| \_id    | pk           | unique record id            |
+| profile | fk           | Holds profile key           |
+| name    | CharField    | Name as displayed on review |
+| review  | TextField    | Review text from user       |
+| rating  | IntegerField | Rating value                |
+| date    | CharField    | Review created date         |
+
 ## Testing
 
 [( Back to Top )](#table-of-contents)
@@ -589,7 +602,6 @@ It is possible to setup your dev environment to handle the stripe webhooks. Full
 
 ### Content
 
-- reviews https://www.kaggle.com/andrewmvd/trip-advisor-hotel-reviews & https://www.kaggle.com/soumikrakshit/anime-faces & https://www.kaggle.com/nltkdata/names
 - [crownpoint camping area map](https://crownpointcampingarea.com/PDF/CrownPointSiteMap_April2019_150_9.pdf) is used as underlaying template creating this sites interactive map.
 
 ### Media
