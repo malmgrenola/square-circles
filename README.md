@@ -6,7 +6,7 @@
 
 ## Description
 
-This is the main website for Square Circles Holiday Park. A facility hosting guests who need a place to stay with their caravan, mobile home or tent. Square holiday park also facilitates cabins and activities.
+This is the main website for Square Circles Holiday Park. A facility hosting guests who need a place to stay with their caravan, mobile home or tent. Square holiday park also facilitates cabins.
 
 The website is designed to be responsible and accessible on a range of devices, making it easy to navigate for potential campers and team members.
 
