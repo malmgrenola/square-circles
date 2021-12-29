@@ -46,14 +46,101 @@
 .st9 {
   font-size: 7.2946px;
 }
-.pitch-seasonal {
-  fill: red;
+.pitch-product-0 {
+  fill: #3366cc;
 }
-.pitch-camping {
-  fill: purple;
+.pitch-product-1 {
+  fill: #dc3912;
 }
-.pitch-camping-tent {
-  fill: blue;
+.pitch-product-2 {
+  fill: #ff9900;
+}
+.pitch-product-3 {
+  fill: #109618;
+}
+.pitch-product-4 {
+  fill: #990099;
+}
+.pitch-product-5 {
+  fill: #0099c6;
+}
+.pitch-product-6 {
+  fill: #dd4477;
+}
+.pitch-product-7 {
+  fill: #66aa00;
+}
+.pitch-product-8 {
+  fill: #66aa00;
+}
+.pitch-product-9 {
+  fill: #b82e2e;
+}
+.pitch-product-10 {
+  fill: #316395;
+}
+.pitch-product-11 {
+  fill: #994499;
+}
+.pitch-product-12 {
+  fill: #22aa99;
+}
+.pitch-product-13 {
+  fill: #aaaa11;
+}
+.pitch-product-14 {
+  fill: #6633cc;
+}
+.pitch-product-15 {
+  fill: #e67300;
+}
+.pitch-product-16 {
+  fill: #8b0707;
+}
+.pitch-product-17 {
+  fill: #651067;
+}
+.pitch-product-18 {
+  fill: #329262;
+}
+.pitch-product-19 {
+  fill: #5574a6;
+}
+.pitch-product-20 {
+  fill: #3b3eac;
+}
+.pitch-product-21 {
+  fill: #b77322;
+}
+.pitch-product-22 {
+  fill: #16d620;
+}
+.pitch-product-23 {
+  fill: #b91383;
+}
+.pitch-product-24 {
+  fill: #f4359e;
+}
+.pitch-product-25 {
+  fill: #9c5935;
+}
+.pitch-product-26 {
+  fill: #a9c413;
+}
+.pitch-product-27 {
+  fill: #2a778d;
+}
+.pitch-product-28 {
+  fill: #668d1c;
+}
+.pitch-product-29 {
+  fill: #bea413;
+}
+.pitch-product-30 {
+  fill: #0c5922;
+}
+.pitch-product-31 {
+  fill: #743411;
 }
 
 .selected {

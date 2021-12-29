@@ -50,9 +50,10 @@
                 id: `p-{{ x }}`,
                 name: '{{ x }}',
                 product: '{{ x.product.name }}',
+                productId: '{{ x.product.id }}',
                 productDetailUrl: '{% url "product_detail" x.product.id %}',
                 electric: {{ x.electric |yesno:"true,false" }}, 
-                plug: '{{ x.product.plug }}', 
+                plug: '{{ x.plug }}',
                 graywaste: {{ x.graywaste |yesno:"true,false" }},
                 fullwaste: {{ x.fullwaste |yesno:"true,false" }},
                 water: {{ x.water |yesno:"true,false" }},
@@ -61,15 +62,9 @@
             },{% endfor %}]
 
             pitches.forEach((item,idx)=> {
-
-                let color = "pitch-camping"; // Gray unkown state
-                if (item.seasonal) color = "pitch-seasonal"
-                if (item.tent) color = "pitch-camping-tent"
-
                 const shape = `product-${encodeURIComponent(item.product).toLowerCase().replace(/\.|%[0-9a-z]{2}/gi, '')}`;
-
                 $(`#${item.id} text`).text(`${item.name}`);
-                $(`#${item.id} .st4`).addClass(`${color}`)
+                $(`#${item.id} .st4`).addClass(`pitch-product-${item.productId}`)
                 $(`#${item.id}`).addClass('popover')
             });
 

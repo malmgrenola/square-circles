@@ -635,3 +635,4 @@ The photos used in this site were obtained from:
 
 - I received inspiration from [django-ordering-numerical-value-with-order-by](https://stackoverflow.com/questions/2969348/django-ordering-numerical-value-with-order-by) to order datasets in django
 - I received inspiration from [numeric-for-loop-in-django-templates](https://stackoverflow.com/questions/1107737/numeric-for-loop-in-django-templates) to use for loop counters.
+- I received inspiration from [google charts color](https://stackoverflow.com/questions/32131668/from-where-can-i-get-list-of-all-color-patterns-used-by-google-charts) for the interactive map dataset colors
