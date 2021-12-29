@@ -329,6 +329,10 @@ It's possible to read the report by opening the file `/coverage_html_report/inde
 
 Site passed all tests OK with [test report](/wireframes/testreport.pdf) results.
 
+Chrome Lighthouse has been used to measure performance of the site with the following results.
+
+![Site Performance](wireframes/lighthouse.png)
+
 #### Additional Testing
 
 ##### Basket App
@@ -509,6 +513,8 @@ After AWS new user registration the following steps are needed at a glance.
   }
 ]
 ```
+
+The AWS S3 Bucket and it's static content has been setup with cache control to serve the website user with fast content delivery.
 
 ### Database
 
