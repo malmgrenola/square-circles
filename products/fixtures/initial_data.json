@@ -15,13 +15,12 @@
     "fields": { "name": "Tent pitches" }
   },
   { "pk": 4, "model": "products.category", "fields": { "name": "Cabins" } },
-  { "pk": 5, "model": "products.category", "fields": { "name": "Activities" } },
   {
-    "pk": 6,
+    "pk": 5,
     "model": "products.category",
     "fields": { "name": "motorhome parking" }
   },
-  { "pk": 7, "model": "products.category", "fields": { "name": "Hostel" } },
+  { "pk": 6, "model": "products.category", "fields": { "name": "Hostel" } },
   {
     "pk": 1,
     "model": "products.product",
@@ -212,54 +211,6 @@
       "price": 20,
 
       "image": "hanson-lu--Avc2AiE1_Q-unsplash.jpg"
-    }
-  },
-  {
-    "pk": 17,
-    "model": "products.product",
-    "fields": {
-      "category": 5,
-      "name": "Daypass bike",
-      "description": "Spend a day on our rental bikes",
-      "price": 5,
-
-      "image": "pexels-philipp-m-100582.jpg"
-    }
-  },
-  {
-    "pk": 18,
-    "model": "products.product",
-    "fields": {
-      "category": 5,
-      "name": "Daypass pool",
-      "description": "Spend a day on in our pool facillity",
-      "price": 2,
-
-      "image": "pexels-pixabay-261327.jpg"
-    }
-  },
-  {
-    "pk": 19,
-    "model": "products.product",
-    "fields": {
-      "category": 5,
-      "name": "Minigolf",
-      "description": "Play minigolf with family and friends  we have 18 holes ready for you",
-      "price": 8,
-
-      "image": "pexels-caleb-oquendo-7514005.jpg"
-    }
-  },
-  {
-    "pk": 20,
-    "model": "products.product",
-    "fields": {
-      "category": 5,
-      "name": "Workout daypass",
-      "description": "In our gym you can do workout on any of our included machines.",
-      "price": 5,
-
-      "image": "pexels-li-sun-2475878.jpg"
     }
   }
 ]

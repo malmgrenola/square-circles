@@ -517,7 +517,7 @@ This project uses Heroku postgresQL.
 1. in the heroku app add Heroku postgresQL.
 2. use the DATABASE_URL found in environment settings in Heroku in your .env file.
 3. run `python3 manage.py migrate` to migrate the new database.
-4. run `python manage.py loaddata initial_data` to load all fixtures
+4. run `python3 manage.py loaddata initial_data` to load all fixtures
 5. run `python3 manage.py createsuperuser` to create a superuser
 
 ### Add Screenshot to Readme
