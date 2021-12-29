@@ -92,11 +92,11 @@ section {
     width: 250px;
   }
   body {
-    margin-top: 151px;
+    margin-top: 172px;
   }
   section {
     /* screen height - footer height - navbar height */
-    min-height: calc(100vh - 168px - 151px);
+    min-height: calc(100vh - 168px - 172px);
   }
 }
 

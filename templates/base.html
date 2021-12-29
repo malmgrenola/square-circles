@@ -95,6 +95,17 @@
           maxYear: minDate.getFullYear()+1,
         });
 
+        $('.btn-availability-drop-up').daterangepicker({
+          opens: 'center',
+          drops: 'up',
+          buttonClasses: 'cs btn',
+          applyButtonClasses: 'btn-light',
+          cancelButtonClasses: 'btn-light',
+          minDate: minDate,
+          maxDate: maxDate, 
+          maxYear: minDate.getFullYear()+1,
+        });
+
         function positionDatePicker(){
           const topValue = parseInt($('.daterangepicker').eq(0).css('top'), 10) 
           $('.daterangepicker').eq(0).css('top', `${topValue + 10}px`);
@@ -113,9 +124,9 @@
        });
         }
 
-        $('.btn-availability').on('show.daterangepicker', positionDatePicker);  // Apply posiition when picker opens up
-        $('.btn-availability').on('showCalendar.daterangepicker', positionDatePicker);  // Apply posiition when a selection is done in picker
-        $('.btn-availability').on('apply.daterangepicker', setDates);
+        $('.btn-availability, .btn-availability-drop-up').on('show.daterangepicker', positionDatePicker);  // Apply posiition when picker opens up
+        $('.btn-availability, .btn-availability-drop-up').on('showCalendar.daterangepicker', positionDatePicker);  // Apply posiition when a selection is done in picker
+        $('.btn-availability, .btn-availability-drop-up').on('apply.daterangepicker', setDates);
       });
 
       function attachDaterangepicker(){

@@ -23,21 +23,19 @@
                     <div class="col-md-8 product-content">
                         <div class="card-body">
                             <h4 class="card-title query-format">{{product.name}}</h4>
-                            <p><span class="badge rounded-pill bg-primary">
-                                {% if product.available == 0 %}
-                                    Not available
-                                {% else %}
-                                    {{product.available}} available
-                                {% endif %}
-                            </span></p>
-                          
+                            {% if product.available != 0 or travel_info.check_in != None and travel_info.check_out != None  %}
+                            <p><span class="badge rounded-pill bg-primary">{{product.available}} available</span></p>
+                            {% endif %}
                             <p class="card-text query-format">{{product.description}}</p>
                             <h5 class="card-text">€ {{product.price}}</h5>
-                            {% if product.available == 0 %}
-                                <button class="btn sc btn-primary btn-rounded btn-availability">Add to basket</button>
+                            <div class="text-center text-md-start">
+                                <a class="btn sc btn-primary btn-rounded m-2" href="{% url 'product_detail' product.id %}">READ MORE</a>
+                                {% if product.available == 0 %}
+                                <button class="btn sc btn-primary btn-rounded btn-availability-drop-up m-2">When would you like to visit us?</button>
                                 {% else%}
                                 <a class="btn sc btn-primary btn-rounded" href="{% url 'add_product' product.id %}">Add to basket</a>
-                                {% endif %}                                                          
+                                {% endif %}
+                            </div>                                     
                         </div>
                     </div>
                 </div>
