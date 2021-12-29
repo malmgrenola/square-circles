@@ -68,10 +68,16 @@
                 $(`#${item.id}`).addClass('popover')
             });
 
-            $('.popover').mouseenter(function(e) {
+            $('.popover').click(function(e) {
                 const pitch = pitches.find(i => i.id === e.currentTarget.id);
+
+                if ($("#pop p > strong").html() == pitch.name && $("#pop").css('display') !== 'none'){
+                    $('#pop').fadeOut(0);
+                    return
+                }
+
                 $("#pop").html(`
-                <p><strong>${pitch.name}</strong> - ${pitch.product}</p>
+                <p><strong>${pitch.name}</strong> - <a href="${pitch.productDetailUrl}">${pitch.product}</a></p>
                 <p>
                 ${pitch.seasonal ? "Is a seasonal pitch<br />" : ""}
                 ${pitch.tent ? "Is a tent pitch<br />" : ""}
@@ -82,14 +88,6 @@
                 $("#pop").css("left", x);
                 $('#pop').fadeIn(0);
             });
-            $('.popover').click(function(e) {
-                const pitch = pitches.find(i => i.id === e.currentTarget.id);
-                window.location = pitch.productDetailUrl
-            });
-            $('.popover').mouseleave(function(e) {
-                $('#pop').fadeOut(0);
-            });
-
 
             // Checkboxes
             state = {
