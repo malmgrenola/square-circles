@@ -47,22 +47,24 @@ The website is designed to be responsible and accessible on a range of devices, 
 
 #### Viewing and Navigation goals
 
-1. As a customer, I want to be able to view and list all products so that I can decide what to purchase.
-2. As a customer, I want to be able to view the totals of my purchases so that I can spend a little more without over budget.
-3. As a site user, I want to come in direct contact so I can ask any questions.
-4. As a site user, I want to get an error message if the url is wrong, so I know that the page does not exist.
-5. As a site user, I want to see the current weather so I know if I need to wear a full jacket or shorts when visiting.
-6. As a site user, I want to use an interactive map, so I can get an overview of the different pitch types.
-7. As a site user, I want to find the park on social media, so I can follow the park and it's visitors.
+1. As a customer, I want to be able to view and list all products so that I can decide what to purchase. ([screenshot](screenshots/sh-products.png))
+2. As a customer, I want to be able to view the totals of my purchases so that I can spend a little more without over budget. ([screenshot](screenshots/sh-basket.png))
+3. As a site user, I want to come in direct contact so I can ask any questions. ([screenshot](screenshots/sh-index-chat.png))
+4. As a site user, I want to get an error message if the url is wrong, so I know that the page does not exist. ([screenshot](screenshots/h-404.png))
+5. As a site user, I want to see the current weather so I know if I need to wear a full jacket or shorts when visiting. ([screenshot](screenshots/sh-index.png))
+6. As a site user, I want to use an interactive map, so I can get an overview of the different pitch types. ([screenshot](screenshots/sh-map.png))
+7. As a site user, I want to find the park on social media, so I can follow the park and it's visitors. ([screenshot](screenshots/sh-index.png))
 
 #### Registration and user accounts goals
 
-1. As a site user, I Want to be able to register for an account so that I can have a personal account and be able to view my details.
-2. As a site user, I Want to be able to login and logout so that I can access my personal account information.
-3. As a site user, I Want to be able to recover my password in case I forget it so that I can recover access to my account.
-4. As a site user, I Want to be able to have a personalized user profile so I can view my personal order history and reservations.
+1. As a site user, I Want to be able to register for an account so that I can have a personal account and be able to view my details. ([screenshot](screenshots/sh-signup.png))
+2. As a site user, I Want to be able to login and logout so that I can access my personal account information. ([screenshot](screenshots/sh-signin.png))
+3. As a site user, I Want to be able to recover my password in case I forget it so that I can recover access to my account. ([screenshot](screenshots/sh-password-reset.png))
+4. As a site user, I Want to be able to have a personalized user profile so I can view my personal order history and reservations. ([screenshot](screenshots/sh-myprofile.png))
 
 #### Sorting and searching goals
+
+([screenshot](screenshots/sh-search.png))
 
 1. As a site user, I Want to be able to list the products so that I can quickly identify the best priced product and identify the category.
 2. As a site user, I Want to be able to sort the list of products so that I can quickly find what I'm looking for.
@@ -71,21 +73,23 @@ The website is designed to be responsible and accessible on a range of devices, 
 
 #### Make Reservation goals
 
+([screenshot](screenshots/sh-dates.png))
+
 1. As a site user, I want to check for availability based on dates, so I know if I can purchase a reservation that fits in my calendar.
 
 #### Purchasing and checkout goals
 
-1. As a customer, I want to be able to schedule a reservation and put it into a basket.
-2. As a customer, I want to be able to make purchases based on my basket items.
+1. As a customer, I want to be able to schedule a reservation and put it into a basket. (screenshots: [basket](screenshots/sh-basket.png), [schedule](screenshots/sh-dates.png))
+2. As a customer, I want to be able to make purchases based on my basket items. ([screenshot](screenshots/sh-checkout.png))
 
 #### Review and rate goals
 
-1. As a visitor, I want to review and rate the facilities so I can let others know what I think.
+1. As a visitor, I want to review and rate the facilities so I can let others know what I think. (screenshots: [add review](screenshots/sh-add-review.png), [reviews](screenshots/sh-review.png))
 
 #### Site owner Administration goals
 
-1. As a site owner, I want to be able to administrate the reservations.
-2. As a cite owner, I want to be able to administrate the products the facilities has to offer.
+1. As a site owner, I want to be able to administrate the reservations. ([screenshot](screenshots/sh-admin-order.png))
+2. As a cite owner, I want to be able to administrate the products the facilities has to offer. ([screenshot](screenshots/sh-admin-product.png))
 
 ### Design
 
