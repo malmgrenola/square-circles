@@ -462,6 +462,14 @@ Feature passed this test
    3. site users can navigate to my profile and change any of the users reviews by clicking on the review and make changes to the review.
    4. site users can also delete any review created by the site user.
 
+#### Test Site owner Administration goals
+
+1. As a site owner, I want to be able to administrate the reservations.
+   1. Site owners can use the the [Django Admin Section](https://square-circles.herokuapp.com/admin/) of the site to administrate reservations.
+   2. After sign in to Admin its possible to select Orders in the side panel and perform manual tasks needed.
+2. As a cite owner, I want to be able to administrate the products the facilities has to offer.
+   1. Site owners can use the the [Django Admin Section](https://square-circles.herokuapp.com/admin/) of the site to administrate Products Categories and pitches information from the Admin side panel.
+
 ### Further Testing
 
 - The Website was tested on Google Chrome, Microsoft Edge and Safari browsers.
