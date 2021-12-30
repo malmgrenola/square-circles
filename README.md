@@ -50,7 +50,7 @@ The website is designed to be responsible and accessible on a range of devices, 
 1. As a customer, I want to be able to view and list all products so that I can decide what to purchase. ([screenshot](screenshots/sh-products.png))
 2. As a customer, I want to be able to view the totals of my purchases so that I can spend a little more without over budget. ([screenshot](screenshots/sh-basket.png))
 3. As a site user, I want to come in direct contact so I can ask any questions. ([screenshot](screenshots/sh-index-chat.png))
-4. As a site user, I want to get an error message if the url is wrong, so I know that the page does not exist. ([screenshot](screenshots/h-404.png))
+4. As a site user, I want to get an error message if the url is wrong, so I know that the page does not exist. ([screenshot](screenshots/sh-404.png))
 5. As a site user, I want to see the current weather so I know if I need to wear a full jacket or shorts when visiting. ([screenshot](screenshots/sh-index.png))
 6. As a site user, I want to use an interactive map, so I can get an overview of the different pitch types. ([screenshot](screenshots/sh-map.png))
 7. As a site user, I want to find the park on social media, so I can follow the park and it's visitors. ([screenshot](screenshots/sh-index.png))
