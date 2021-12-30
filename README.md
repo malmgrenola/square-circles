@@ -479,8 +479,8 @@ Feature passed this test
 
 ### Known Bugs
 
-- On some mobile devices something is not perfect.
-  - Something is slightly different. wit
+- On some mobile devices the interactive map is not perfect and manual zooming might be needed.
+- Season Camping can be booked on any date and does not have fixed dates.
 
 ## Deployment
 
